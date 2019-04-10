@@ -1,0 +1,14 @@
+#install.packages("devtools")
+#devtools::install_github("PMassicotte/gtrendsR")
+
+#install.packages("xml2")
+#install.packages("rvest")
+#install.packages("jsonlite")
+#install.packages("RSocrata")
+
+library(gtrendsR)
+
+library(xml2)
+library(rvest)
+library(jsonlite)
+library(RSocrata)
