@@ -15,3 +15,11 @@ library(jsonlite)
 library(RSocrata)
 library(tidyverse)
 library(magrittr)
+
+?gtrends
+
+res <- gtrends(c("esports"))
+plot(res)
+
+res <- gtrends(c("League of Legends", "Fortnite"))
+plot(res)
