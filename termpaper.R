@@ -55,12 +55,19 @@ nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat
  
 name_list <- gsub("\\s", "", name)
 name_list <- matrix(1:100, ncol = 2, byrow = T)
+<<<<<<< HEAD
 name_list <- name_list[,-2]
 name_list <- matrix(1:100, ncol = 1, byrow = T)
 head(name_list)
 
 dat <- data.frame(name_list, value)
 colnames(dat) <- c("Player ID", "Total Prize Money in 2019", "Overall Prize Money", "Share of 2019's prize money in %")
+=======
+ head(name_list)
+# 
+dat <- data.frame(name_list, value)
+colnames(dat) <- c("Player ID", "Player Name", "Total Prize Money in 2019", "Overall Prize Money", "Share of 2019's prize money in %")
+>>>>>>> bf0e2d0af0bc1fa3999777c5a87a0da4536cf2bf
 head(dat)
 
 
