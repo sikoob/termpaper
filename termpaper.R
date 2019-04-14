@@ -58,61 +58,62 @@ name_list <- matrix(as.character(name_list), ncol = 2, byrow = T)
 name_list <- name_list[,-2]
 head(name_list)
 
-dat <- data.frame(name_list, value)
-colnames(dat) <- c("Player ID", "Total Prize Money in $")
-dat["Year"] <- NA
-dat$Year <- 2018
-head(dat)
+dat2018 <- data.frame(name_list, value)
+colnames(dat2018) <- c("Player ID", "Total Prize Money in $")
+dat2018["Year"] <- NA
+dat2018$Year <- 2018
+head(dat2018)
 
 
-#trying to loop over pages for top game prize moneys 1998-2018
-
-npages <- 21
-game_prizes <- data.frame()
-
-for(i in 1998:2018) {
-  url <- paste0("https://www.esportsearnings.com/history/",i,"/games", sep = "")
-  src <- read_html(url)
-  
-  nds <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "content_main", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "highlight", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_prize", " " ))]')
-  nmbs <- html_text(nds)
-  nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
-  nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 4, byrow = T)
-  
-  
-  nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_player", " " ))]')
-  name <- html_text(nds2)
-  
-  
-  part <- data.frame(nmbs2, name)
-  game_prizes <- rbind(game_prizes, part)
-  
-}
-  
-str(game_prizes)
-
-#event prizes top100 1998 - 2018
-npages <- 21
-event_prizes <- data.frame()
-
-for(i in 1998:2018) {
-  url <- paste0("https://www.esportsearnings.com/history/",i,"/list_events", sep = "")
-  src <- read_html(url)
-  
-  nds <- html_nodes(src, xpath = '//div/div/div/div/div/dl/dd')
-  nmbs <- html_text(nds)
-  nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
-  nmbs2 <- matrix(gsub("[^0123456789,]", "", nmbs), ncol = 2, byrow = T)  
-  
-  nds2 <- html_nodes(src, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_player", " " ))] | //*+[contains(concat( " ", @class, " " ), concat( " ", "detail_list_player", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_prize", " " ))]')
-  loc <- html_text(nds2)
-  
-  part <- data.frame(nmbs2, loc)
-  event_prizes <- rbind(event_prizes, part)
-  
-}
-  
-# #API tryout
-#high_earn <- fromJSON('https://api.esportsearnings.com/v0/LookupHighestEarningPlayers?apikey=27a22c5b980f900cb6d5b7d0c3d9d548daba6a57abdec2d115919ef8b01745bd&format=json')
+# #trying to loop over pages for top game prize moneys 1998-2018
 # 
-#head(high_earn)
+# npages <- 21
+# game_prizes <- data.frame()
+# 
+# for(i in 1:npages) {
+#   url <- paste0("https://www.esportsearnings.com/history/",i,"/games", sep = "")
+#   src <- read_html(url)
+#   
+#   nds <- html_nodes(src, xpath = '//*+[contains(concat( " ", @class, " " ), concat( " ", "detail_list_player", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_prize", " " ))]')
+#   nmbs <- html_text(nds)
+#   nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
+#   class(nmbs) <- "numeric"
+#   
+#   
+#   nds2 <- html_nodes(src, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_player", " " ))]')
+#   name <- html_text(nds2)
+#   name <- matrix(as.character(name), ncol = 2, byrow = T)
+#   
+#   
+#   part <- data.frame(nmbs, name)
+#   game_prizes <- rbind(game_prizes, part)
+#   
+# }
+#   
+# str(game_prizes)
+# 
+# #event prizes top100 1998 - 2018
+# npages <- 21
+# event_prizes <- data.frame()
+# 
+# for(i in 1998:2018) {
+#   url <- paste0("https://www.esportsearnings.com/history/",i,"/list_events", sep = "")
+#   src <- read_html(url)
+#   
+#   nds <- html_nodes(src, xpath = '//div/div/div/div/div/dl/dd')
+#   nmbs <- html_text(nds)
+#   nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
+#   nmbs2 <- matrix(gsub("[^0123456789,]", "", nmbs), ncol = 2, byrow = T)  
+#   
+#   nds2 <- html_nodes(src, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_player", " " ))] | //*+[contains(concat( " ", @class, " " ), concat( " ", "detail_list_player", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_prize", " " ))]')
+#   loc <- html_text(nds2)
+#   
+#   part <- data.frame(nmbs2, loc)
+#   event_prizes <- rbind(event_prizes, part)
+#   
+# }
+#   
+# # #API tryout
+# #high_earn <- fromJSON('https://api.esportsearnings.com/v0/LookupHighestEarningPlayers?apikey=27a22c5b980f900cb6d5b7d0c3d9d548daba6a57abdec2d115919ef8b01745bd&format=json')
+# # 
+# #head(high_earn)
