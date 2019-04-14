@@ -40,8 +40,6 @@ nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
 nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 4, byrow = T)
 head(nmbs2)
 
-?gsub
-
 value <- gsub(",", ".", nmbs2)
 value[,4] <- gsub("(\\d.\\d)(\\d.\\d)", "\\1", value[,4])
 value[,3] <- gsub("(\\d)\\d", "\\1", value[,3])
@@ -77,15 +75,17 @@ for(i in 1998:2018) {
   url <- paste0("https://www.esportsearnings.com/history/",i,"/games", sep = "")
   src <- read_html(url)
   
-  nds <- html_nodes(src, xpath = '//div/div/div/div/div/dl/dd')
+  nds <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "content_main", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "highlight", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_prize", " " ))]')
   nmbs <- html_text(nds)
   nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
-  nmbs2 <- matrix(gsub("[^0123456789,]", "", nmbs), ncol = 2, byrow = T)  
+  nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 4, byrow = T)
   
-  nds2 <- html_nodes(src, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_player", " " ))] | //*+[contains(concat( " ", @class, " " ), concat( " ", "detail_list_player", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_prize", " " ))]')
-  loc <- html_text(nds2)
   
-  part <- data.frame(nmbs2, loc)
+  nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_player", " " ))]')
+  name <- html_text(nds2)
+  
+  
+  part <- data.frame(nmbs2, name)
   game_prizes <- rbind(game_prizes, part)
   
 }
