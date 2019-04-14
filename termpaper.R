@@ -54,9 +54,8 @@ name <- html_text(nds2)
 head(name)
 
 name_list <- gsub("\\s", "", name)
-name_list <- matrix(1:100, ncol = 2, byrow = T)
+name_list <- matrix(as.character(name_list), ncol = 2, byrow = T)
 name_list <- name_list[,-2]
-name_list <- matrix(1:100, ncol = 1, byrow = T)
 head(name_list)
 
 dat <- data.frame(name_list, value)
