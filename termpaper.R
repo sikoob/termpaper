@@ -46,6 +46,8 @@ value <- gsub(",", ".", nmbs2)
 value[,4] <- gsub("(\\d.\\d)(\\d.\\d)", "\\1", value[,4])
 value[,3] <- gsub("(\\d)\\d", "\\1", value[,3])
 value <- value[,-2]
+value <- value [,-2]
+value <- value [,-2]
 class(value) <- "numeric"
 head(value)
 
@@ -60,7 +62,9 @@ name_list <- matrix(1:100, ncol = 1, byrow = T)
 head(name_list)
 
 dat <- data.frame(name_list, value)
-colnames(dat) <- c("Player ID", "Total Prize Money in 2019", "Overall Prize Money", "Share of 2019's prize money in %")
+colnames(dat) <- c("Player ID", "Total Prize Money in $")
+dat["Year"] <- NA
+dat$Year <- 2018
 head(dat)
 
 
