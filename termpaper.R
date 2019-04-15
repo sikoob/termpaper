@@ -1326,11 +1326,17 @@ team_prizes <- rbind(dat_t_2018, dat_t_2017, dat_t_2016, dat_t_2015, dat_t_2014,
 
 str(team_prizes)
 
+<<<<<<< HEAD
 #noch events daten
 
 # team_prizes["ID"] <- NA
 # team_prizes$ID <- 1:2001
 # str(twam_prizes)
+=======
+# team_prizes["ID"] <- NA
+# player_prizes$ID <- 1:2001
+# str(player_prizes)
+>>>>>>> 3cb2631f9dcc754a20a2cbfc887aa0e610e111ce
 
 #   
 # # #API tryout
