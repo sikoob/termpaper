@@ -763,7 +763,7 @@ colnames(dat1998) <- c("Player ID", "Total Prize Money in $")
 dat1998["Year"] <- NA
 dat1998$Year <- 1998
 head(dat1998)
-
+#list creation top players by year---------------------------------
 player_prizes <- rbind(dat2018, dat2017, dat2016, dat2015, dat2014, dat2013, dat2012, dat2011, dat2010, dat2009, dat2008, dat2007, dat2006, dat2005, dat2004, dat2003, dat2002, dat2001, dat2000, dat1999, dat1998)
 
 str(player_prizes)
@@ -852,6 +852,485 @@ dat_t_2016["Year"] <- NA
 dat_t_2016$Year <- 2016
 head(dat_t_2016)
 
+url <- read_html("https://www.esportsearnings.com/history/2015/teams")
+
+nds <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "content_main", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "highlight", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_prize", " " ))]')
+
+nmbs <- html_text(nds)
+head(nmbs) 
+
+nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
+nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
+class(nmbs2) <- "numeric"
+nmbs2 <- format(nmbs2,2)
+head(nmbs2)
+
+nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_player", " " ))]')
+name <- html_text(nds2)
+head(name)
+
+name <- matrix(as.character(name), ncol = 1, byrow = T)
+head(name)
+
+dat_t_2015 <- data.frame(name, nmbs2)
+colnames(dat_t_2015) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+dat_t_2015["Year"] <- NA
+dat_t_2015$Year <- 2015
+head(dat_t_2015)
+
+url <- read_html("https://www.esportsearnings.com/history/2014/teams")
+
+nds <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "content_main", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "highlight", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_prize", " " ))]')
+
+nmbs <- html_text(nds)
+head(nmbs) 
+
+nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
+nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
+class(nmbs2) <- "numeric"
+nmbs2 <- format(nmbs2,2)
+head(nmbs2)
+
+nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_player", " " ))]')
+name <- html_text(nds2)
+head(name)
+
+name <- matrix(as.character(name), ncol = 1, byrow = T)
+head(name)
+
+dat_t_2014 <- data.frame(name, nmbs2)
+colnames(dat_t_2014) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+dat_t_2014["Year"] <- NA
+dat_t_2014$Year <- 2014
+head(dat_t_2014)
+
+url <- read_html("https://www.esportsearnings.com/history/2013/teams")
+
+nds <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "content_main", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "highlight", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_prize", " " ))]')
+
+nmbs <- html_text(nds)
+head(nmbs) 
+
+nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
+nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
+class(nmbs2) <- "numeric"
+nmbs2 <- format(nmbs2,2)
+head(nmbs2)
+
+nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_player", " " ))]')
+name <- html_text(nds2)
+head(name)
+
+name <- matrix(as.character(name), ncol = 1, byrow = T)
+head(name)
+
+dat_t_2013 <- data.frame(name, nmbs2)
+colnames(dat_t_2013) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+dat_t_2013["Year"] <- NA
+dat_t_2013$Year <- 2013
+head(dat_t_2013)
+
+url <- read_html("https://www.esportsearnings.com/history/2012/teams")
+
+nds <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "content_main", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "highlight", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_prize", " " ))]')
+
+nmbs <- html_text(nds)
+head(nmbs) 
+
+nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
+nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
+class(nmbs2) <- "numeric"
+nmbs2 <- format(nmbs2,2)
+head(nmbs2)
+
+nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_player", " " ))]')
+name <- html_text(nds2)
+head(name)
+
+name <- matrix(as.character(name), ncol = 1, byrow = T)
+head(name)
+
+dat_t_2012 <- data.frame(name, nmbs2)
+colnames(dat_t_2012) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+dat_t_2012["Year"] <- NA
+dat_t_2012$Year <- 2012
+head(dat_t_2012)
+
+url <- read_html("https://www.esportsearnings.com/history/2011/teams")
+
+nds <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "content_main", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "highlight", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_prize", " " ))]')
+
+nmbs <- html_text(nds)
+head(nmbs) 
+
+nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
+nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
+class(nmbs2) <- "numeric"
+nmbs2 <- format(nmbs2,2)
+head(nmbs2)
+
+nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_player", " " ))]')
+name <- html_text(nds2)
+head(name)
+
+name <- matrix(as.character(name), ncol = 1, byrow = T)
+head(name)
+
+dat_t_2011 <- data.frame(name, nmbs2)
+colnames(dat_t_2011) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+dat_t_2011["Year"] <- NA
+dat_t_2011$Year <- 2011
+head(dat_t_2011)
+
+url <- read_html("https://www.esportsearnings.com/history/2010/teams")
+
+nds <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "content_main", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "highlight", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_prize", " " ))]')
+
+nmbs <- html_text(nds)
+head(nmbs) 
+
+nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
+nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
+class(nmbs2) <- "numeric"
+nmbs2 <- format(nmbs2,2)
+head(nmbs2)
+
+nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_player", " " ))]')
+name <- html_text(nds2)
+head(name)
+
+name <- matrix(as.character(name), ncol = 1, byrow = T)
+head(name)
+
+dat_t_2010 <- data.frame(name, nmbs2)
+colnames(dat_t_2010) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+dat_t_2010["Year"] <- NA
+dat_t_2010$Year <- 2010
+head(dat_t_2010)
+
+url <- read_html("https://www.esportsearnings.com/history/2009/teams")
+
+nds <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "content_main", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "highlight", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_prize", " " ))]')
+
+nmbs <- html_text(nds)
+head(nmbs) 
+
+nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
+nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
+class(nmbs2) <- "numeric"
+nmbs2 <- format(nmbs2,2)
+head(nmbs2)
+
+nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_player", " " ))]')
+name <- html_text(nds2)
+head(name)
+
+name <- matrix(as.character(name), ncol = 1, byrow = T)
+head(name)
+
+dat_t_2009 <- data.frame(name, nmbs2)
+colnames(dat_t_2009) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+dat_t_2009["Year"] <- NA
+dat_t_2009$Year <- 2009
+head(dat_t_2009)
+
+url <- read_html("https://www.esportsearnings.com/history/2008/teams")
+
+nds <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "content_main", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "highlight", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_prize", " " ))]')
+
+nmbs <- html_text(nds)
+head(nmbs) 
+
+nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
+nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
+class(nmbs2) <- "numeric"
+nmbs2 <- format(nmbs2,2)
+head(nmbs2)
+
+nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_player", " " ))]')
+name <- html_text(nds2)
+head(name)
+
+name <- matrix(as.character(name), ncol = 1, byrow = T)
+head(name)
+
+dat_t_2008 <- data.frame(name, nmbs2)
+colnames(dat_t_2008) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+dat_t_2008["Year"] <- NA
+dat_t_2008$Year <- 2008
+head(dat_t_2008)
+
+url <- read_html("https://www.esportsearnings.com/history/2007/teams")
+
+nds <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "content_main", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "highlight", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_prize", " " ))]')
+
+nmbs <- html_text(nds)
+head(nmbs) 
+
+nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
+nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
+class(nmbs2) <- "numeric"
+nmbs2 <- format(nmbs2,2)
+head(nmbs2)
+
+nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_player", " " ))]')
+name <- html_text(nds2)
+head(name)
+
+name <- matrix(as.character(name), ncol = 1, byrow = T)
+head(name)
+
+dat_t_2007 <- data.frame(name, nmbs2)
+colnames(dat_t_2007) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+dat_t_2007["Year"] <- NA
+dat_t_2007$Year <- 2007
+head(dat_t_2007)
+
+url <- read_html("https://www.esportsearnings.com/history/2006/teams")
+
+nds <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "content_main", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "highlight", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_prize", " " ))]')
+
+nmbs <- html_text(nds)
+head(nmbs) 
+
+nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
+nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
+class(nmbs2) <- "numeric"
+nmbs2 <- format(nmbs2,2)
+head(nmbs2)
+
+nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_player", " " ))]')
+name <- html_text(nds2)
+head(name)
+
+name <- matrix(as.character(name), ncol = 1, byrow = T)
+head(name)
+
+dat_t_2006 <- data.frame(name, nmbs2)
+colnames(dat_t_2006) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+dat_t_2006["Year"] <- NA
+dat_t_2006$Year <- 2006
+head(dat_t_2006)
+
+url <- read_html("https://www.esportsearnings.com/history/2005/teams")
+
+nds <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "content_main", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "highlight", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_prize", " " ))]')
+
+nmbs <- html_text(nds)
+head(nmbs) 
+
+nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
+nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
+class(nmbs2) <- "numeric"
+nmbs2 <- format(nmbs2,2)
+head(nmbs2)
+
+nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_player", " " ))]')
+name <- html_text(nds2)
+head(name)
+
+name <- matrix(as.character(name), ncol = 1, byrow = T)
+head(name)
+
+dat_t_2005 <- data.frame(name, nmbs2)
+colnames(dat_t_2005) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+dat_t_2005["Year"] <- NA
+dat_t_2005$Year <- 2005
+head(dat_t_2005)
+
+url <- read_html("https://www.esportsearnings.com/history/2004/teams")
+
+nds <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "content_main", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "highlight", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_prize", " " ))]')
+
+nmbs <- html_text(nds)
+head(nmbs) 
+
+nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
+nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
+class(nmbs2) <- "numeric"
+nmbs2 <- format(nmbs2,2)
+head(nmbs2)
+
+nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_player", " " ))]')
+name <- html_text(nds2)
+head(name)
+
+name <- matrix(as.character(name), ncol = 1, byrow = T)
+head(name)
+
+dat_t_2004 <- data.frame(name, nmbs2)
+colnames(dat_t_2004) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+dat_t_2004["Year"] <- NA
+dat_t_2004$Year <- 2004
+head(dat_t_2004)
+
+url <- read_html("https://www.esportsearnings.com/history/2003/teams")
+
+nds <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "content_main", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "highlight", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_prize", " " ))]')
+
+nmbs <- html_text(nds)
+head(nmbs) 
+
+nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
+nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
+class(nmbs2) <- "numeric"
+nmbs2 <- format(nmbs2,2)
+head(nmbs2)
+
+nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_player", " " ))]')
+name <- html_text(nds2)
+head(name)
+
+name <- matrix(as.character(name), ncol = 1, byrow = T)
+head(name)
+
+dat_t_2003 <- data.frame(name, nmbs2)
+colnames(dat_t_2003) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+dat_t_2003["Year"] <- NA
+dat_t_2003$Year <- 2003
+head(dat_t_2003)
+
+url <- read_html("https://www.esportsearnings.com/history/2002/teams")
+
+nds <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "content_main", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "highlight", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_prize", " " ))]')
+
+nmbs <- html_text(nds)
+head(nmbs) 
+
+nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
+nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
+class(nmbs2) <- "numeric"
+nmbs2 <- format(nmbs2,2)
+head(nmbs2)
+
+nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_player", " " ))]')
+name <- html_text(nds2)
+head(name)
+
+name <- matrix(as.character(name), ncol = 1, byrow = T)
+head(name)
+
+dat_t_2002 <- data.frame(name, nmbs2)
+colnames(dat_t_2002) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+dat_t_2002["Year"] <- NA
+dat_t_2002$Year <- 2002
+head(dat_t_2002)
+
+url <- read_html("https://www.esportsearnings.com/history/2001/teams")
+
+nds <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "content_main", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "highlight", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_prize", " " ))]')
+
+nmbs <- html_text(nds)
+head(nmbs) 
+
+nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
+nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
+class(nmbs2) <- "numeric"
+nmbs2 <- format(nmbs2,2)
+head(nmbs2)
+
+nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_player", " " ))]')
+name <- html_text(nds2)
+head(name)
+
+name <- matrix(as.character(name), ncol = 1, byrow = T)
+head(name)
+
+dat_t_2001 <- data.frame(name, nmbs2)
+colnames(dat_t_2001) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+dat_t_2001["Year"] <- NA
+dat_t_2001$Year <- 2001
+head(dat_t_2001)
+
+url <- read_html("https://www.esportsearnings.com/history/2000/teams")
+
+nds <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "content_main", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "highlight", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_prize", " " ))]')
+
+nmbs <- html_text(nds)
+head(nmbs) 
+
+nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
+nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
+class(nmbs2) <- "numeric"
+nmbs2 <- format(nmbs2,2)
+head(nmbs2)
+
+nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_player", " " ))]')
+name <- html_text(nds2)
+head(name)
+
+name <- matrix(as.character(name), ncol = 1, byrow = T)
+head(name)
+
+dat_t_2000 <- data.frame(name, nmbs2)
+colnames(dat_t_2000) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+dat_t_2000["Year"] <- NA
+dat_t_2000$Year <- 2000
+head(dat_t_2000)
+
+url <- read_html("https://www.esportsearnings.com/history/1999/teams")
+
+nds <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "content_main", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "highlight", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_prize", " " ))]')
+
+nmbs <- html_text(nds)
+head(nmbs) 
+
+nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
+nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
+class(nmbs2) <- "numeric"
+nmbs2 <- format(nmbs2,2)
+head(nmbs2)
+
+nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_player", " " ))]')
+name <- html_text(nds2)
+head(name)
+
+name <- matrix(as.character(name), ncol = 1, byrow = T)
+head(name)
+
+dat_t_1999 <- data.frame(name, nmbs2)
+colnames(dat_t_1999) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+dat_t_1999["Year"] <- NA
+dat_t_1999$Year <- 1999
+head(dat_t_1999)
+
+url <- read_html("https://www.esportsearnings.com/history/1998/teams")
+
+nds <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "content_main", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "highlight", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_prize", " " ))]')
+
+nmbs <- html_text(nds)
+head(nmbs) 
+
+nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
+nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
+class(nmbs2) <- "numeric"
+nmbs2 <- format(nmbs2,2)
+head(nmbs2)
+
+nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_player", " " ))]')
+name <- html_text(nds2)
+head(name)
+
+name <- matrix(as.character(name), ncol = 1, byrow = T)
+head(name)
+
+dat_t_1998 <- data.frame(name, nmbs2)
+colnames(dat_t_1998) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+dat_t_1998["Year"] <- NA
+dat_t_1998$Year <- 1998
+head(dat_t_1998)
+
+#code creation top teams by year =================================
+
+team_prizes <- rbind(dat_t_2018, dat_t_2017, dat_t_2016, dat_t_2015, dat_t_2014, dat_t_2013, dat_t_2012, dat_t_2011, dat_t_2010, dat_t_2009, dat_t_2008, dat_t_2007, dat_t_2006, dat_t_2005, dat_t_2004, dat_t_2003, dat_t_2002, dat_t_2001, dat_t_2000, dat_t_1999, dat_t_1998)
+
+str(team_prizes)
+
+#noch events daten
+
+# team_prizes["ID"] <- NA
+# team_prizes$ID <- 1:2001
+# str(twam_prizes)
 
 #   
 # # #API tryout
