@@ -94,7 +94,7 @@ name_list <- name_list[,-2]
 head(name_list)
 
 dat2017 <- data.frame(name_list, value)
-colnames(dat2018) <- c("Player ID", "Total Prize Money in $")
+colnames(dat2017) <- c("Player ID", "Total Prize Money in $")
 dat2017["Year"] <- NA
 dat2017$Year <- 2017
 head(dat2017)
@@ -586,7 +586,7 @@ head(name_list)
 dat2003 <- data.frame(name_list, value)
 colnames(dat2003) <- c("Player ID", "Total Prize Money in $")
 dat2003["Year"] <- NA
-dat2009$Year <- 2003
+dat2003$Year <- 2003
 head(dat2003)
 
 url <- read_html("https://www.esportsearnings.com/history/2002/top_players")
@@ -764,8 +764,13 @@ dat1998["Year"] <- NA
 dat1998$Year <- 1998
 head(dat1998)
 
+player_prizes <- rbind(dat2018, dat2017, dat2016, dat2015, dat2014, dat2013, dat2012, dat2011, dat2010, dat2009, dat2008, dat2007, dat2006, dat2005, dat2004, dat2003, dat2002, dat2001, dat2000, dat1999, dat1998)
 
+str(player_prizes)
 
+player_prizes["ID"] <- NA
+player_prizes$ID <- 1:2001
+str(player_prizes)
 # #trying to loop over pages for top game prize moneys 1998-2018
 # 
 # npages <- 21
