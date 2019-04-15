@@ -27,7 +27,7 @@ plot(res)
 res <- gtrends(c("League of Legends", "Fortnite", "Fifa"), gprop="youtube")
 plot(res)
 
-#getting lists of top players and games/teams
+#getting lists of top players and games/teams ---------------------------------
 
 url <- read_html("https://www.esportsearnings.com/history/2018/top_players")
 
@@ -771,53 +771,88 @@ str(player_prizes)
 player_prizes["ID"] <- NA
 player_prizes$ID <- 1:2001
 str(player_prizes)
-# #trying to loop over pages for top game prize moneys 1998-2018
-# 
-# npages <- 21
-# game_prizes <- data.frame()
-# 
-# for(i in 1:npages) {
-#   url <- paste0("https://www.esportsearnings.com/history/",i,"/games", sep = "")
-#   src <- read_html(url)
-#   
-#   nds <- html_nodes(src, xpath = '//*+[contains(concat( " ", @class, " " ), concat( " ", "detail_list_player", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_prize", " " ))]')
-#   nmbs <- html_text(nds)
-#   nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
-#   class(nmbs) <- "numeric"
-#   
-#   
-#   nds2 <- html_nodes(src, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_player", " " ))]')
-#   name <- html_text(nds2)
-#   name <- matrix(as.character(name), ncol = 2, byrow = T)
-#   
-#   
-#   part <- data.frame(nmbs, name)
-#   game_prizes <- rbind(game_prizes, part)
-#   
-# }
-#   
-# str(game_prizes)
-# 
-# #event prizes top100 1998 - 2018
-# npages <- 21
-# event_prizes <- data.frame()
-# 
-# for(i in 1998:2018) {
-#   url <- paste0("https://www.esportsearnings.com/history/",i,"/list_events", sep = "")
-#   src <- read_html(url)
-#   
-#   nds <- html_nodes(src, xpath = '//div/div/div/div/div/dl/dd')
-#   nmbs <- html_text(nds)
-#   nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
-#   nmbs2 <- matrix(gsub("[^0123456789,]", "", nmbs), ncol = 2, byrow = T)  
-#   
-#   nds2 <- html_nodes(src, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_player", " " ))] | //*+[contains(concat( " ", @class, " " ), concat( " ", "detail_list_player", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_prize", " " ))]')
-#   loc <- html_text(nds2)
-#   
-#   part <- data.frame(nmbs2, loc)
-#   event_prizes <- rbind(event_prizes, part)
-#   
-# }
+
+
+#gathering team information =================================
+url <- read_html("https://www.esportsearnings.com/history/2018/teams")
+
+nds <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "content_main", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "highlight", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_prize", " " ))]')
+
+nmbs <- html_text(nds)
+head(nmbs) 
+
+nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
+nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
+class(nmbs2) <- "numeric"
+nmbs2 <- format(nmbs2,2)
+head(nmbs2)
+
+nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_player", " " ))]')
+name <- html_text(nds2)
+head(name)
+
+name <- matrix(as.character(name), ncol = 1, byrow = T)
+head(name)
+
+dat_t_2018 <- data.frame(name, nmbs2)
+colnames(dat_t_2018) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+dat_t_2018["Year"] <- NA
+dat_t_2018$Year <- 2018
+head(dat_t_2018)
+
+url <- read_html("https://www.esportsearnings.com/history/2017/teams")
+
+nds <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "content_main", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "highlight", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_prize", " " ))]')
+
+nmbs <- html_text(nds)
+head(nmbs) 
+
+nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
+nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
+class(nmbs2) <- "numeric"
+nmbs2 <- format(nmbs2,2)
+head(nmbs2)
+
+nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_player", " " ))]')
+name <- html_text(nds2)
+head(name)
+
+name <- matrix(as.character(name), ncol = 1, byrow = T)
+head(name)
+
+dat_t_2017 <- data.frame(name, nmbs2)
+colnames(dat_t_2017) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+dat_t_2017["Year"] <- NA
+dat_t_2017$Year <- 2017
+head(dat_t_2017)
+
+url <- read_html("https://www.esportsearnings.com/history/2016/teams")
+
+nds <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "content_main", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "highlight", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_prize", " " ))]')
+
+nmbs <- html_text(nds)
+head(nmbs) 
+
+nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
+nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
+class(nmbs2) <- "numeric"
+nmbs2 <- format(nmbs2,2)
+head(nmbs2)
+
+nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_player", " " ))]')
+name <- html_text(nds2)
+head(name)
+
+name <- matrix(as.character(name), ncol = 1, byrow = T)
+head(name)
+
+dat_t_2016 <- data.frame(name, nmbs2)
+colnames(dat_t_2016) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+dat_t_2016["Year"] <- NA
+dat_t_2016$Year <- 2016
+head(dat_t_2016)
+
+
 #   
 # # #API tryout
 # #high_earn <- fromJSON('https://api.esportsearnings.com/v0/LookupHighestEarningPlayers?apikey=27a22c5b980f900cb6d5b7d0c3d9d548daba6a57abdec2d115919ef8b01745bd&format=json')
