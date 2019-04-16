@@ -1326,17 +1326,38 @@ team_prizes <- rbind(dat_t_2018, dat_t_2017, dat_t_2016, dat_t_2015, dat_t_2014,
 
 str(team_prizes)
 
-<<<<<<< HEAD
-#noch events daten
+#data events =================================
+url <- read_html("https://www.esportsearnings.com/history/2018/list_events")
+
+nds <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_date", " " ))]')
+
+nmbs <- html_text(nds)
+head(nmbs) 
+
+nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
+nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
+class(value) <- "numeric"
+head(nmbs2)
+
+nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_event", " " ))]')
+name <- html_text(nds2)
+head(name)
+
+name <- matrix(as.character(name), ncol = 1, byrow = T)
+head(name)
+
+dat_e_2018 <- data.frame(name, nmbs2)
+colnames(dat_e_2018) <- c("Event Name", "Date", "Prize Money in $")
+dat_e_2018["Year"] <- NA
+dat_e_2018$Year <- 2018
+dat_e_2018$Date <- NULL 
+head(dat_e_2018)
+
 
 # team_prizes["ID"] <- NA
 # team_prizes$ID <- 1:2001
-# str(twam_prizes)
-=======
-# team_prizes["ID"] <- NA
-# player_prizes$ID <- 1:2001
-# str(player_prizes)
->>>>>>> 3cb2631f9dcc754a20a2cbfc887aa0e610e111ce
+# str(team_prizes)
+
 
 #   
 # # #API tryout
