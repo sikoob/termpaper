@@ -1815,7 +1815,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_e_2000 <- data.frame(name, nmbs2)
-colnames(dat_e_2009) <- c("Event Name", "Date", "Prize Money in $")
+colnames(dat_e_2000) <- c("Event Name", "Date", "Prize Money in $")
 dat_e_2000["Year"] <- NA
 dat_e_2000$Year <- 2000
 dat_e_2000$Date <- NULL 
@@ -1873,6 +1873,10 @@ dat_e_1998$Year <- 1998
 dat_e_1998$Date <- NULL 
 head(dat_e_1998)
 
+#creating inserted list for events per year =================================
+event_prizes <- rbind(dat_e_2018, dat_e_2017, dat_e_2016, dat_e_2015, dat_e_2014, dat_e_2013, dat_e_2012, dat_e_2011, dat_e_2010, dat_e_2009, dat_e_2008, dat_e_2007, dat_e_2006, dat_e_2005, dat_e_2004, dat_e_2003, dat_e_2002, dat_e_2001, dat_e_2000, dat_e_1999, dat_e_1998)
+
+str(event_prizes)
 
 # team_prizes["ID"] <- NA
 # team_prizes$ID <- 1:2001
