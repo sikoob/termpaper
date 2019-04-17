@@ -1881,8 +1881,8 @@ str(event_prizes)
 
 #calculations  =================================
 
-library(ggpubr)
-library(dplyr)
+#library(ggpubr)
+#library(dplyr)
 
 by_e_year <- group_by(event_prizes, Year)
 
