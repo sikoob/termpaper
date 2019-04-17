@@ -16,8 +16,6 @@ library(RSocrata)
 library(tidyverse)
 library(magrittr)
 library(stringr)
-library(ggpubr)
-library(dplyr)
 
 
 ?gtrends
@@ -1340,7 +1338,7 @@ head(nmbs)
 
 nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
 nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
-class(value) <- "numeric"
+class(nmbs2) <- "numeric"
 head(nmbs2)
 
 nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_event", " " ))]')
@@ -1366,7 +1364,7 @@ head(nmbs)
 
 nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
 nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
-class(value) <- "numeric"
+class(nmbs2) <- "numeric"
 head(nmbs2)
 
 nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_event", " " ))]')
@@ -1392,7 +1390,7 @@ head(nmbs)
 
 nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
 nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
-class(value) <- "numeric"
+class(nmbs2) <- "numeric"
 head(nmbs2)
 
 nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_event", " " ))]')
@@ -1418,7 +1416,7 @@ head(nmbs)
 
 nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
 nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
-class(value) <- "numeric"
+class(nmbs2) <- "numeric"
 head(nmbs2)
 
 nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_event", " " ))]')
@@ -1444,7 +1442,7 @@ head(nmbs)
 
 nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
 nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
-class(value) <- "numeric"
+class(nmbs2) <- "numeric"
 head(nmbs2)
 
 nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_event", " " ))]')
@@ -1470,7 +1468,7 @@ head(nmbs)
 
 nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
 nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
-class(value) <- "numeric"
+class(nmbs2) <- "numeric"
 head(nmbs2)
 
 nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_event", " " ))]')
@@ -1496,7 +1494,7 @@ head(nmbs)
 
 nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
 nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
-class(value) <- "numeric"
+class(nmbs2) <- "numeric"
 head(nmbs2)
 
 nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_event", " " ))]')
@@ -1522,7 +1520,7 @@ head(nmbs)
 
 nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
 nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
-class(value) <- "numeric"
+class(nmbs2) <- "numeric"
 head(nmbs2)
 
 nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_event", " " ))]')
@@ -1548,7 +1546,7 @@ head(nmbs)
 
 nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
 nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
-class(value) <- "numeric"
+class(nmbs2) <- "numeric"
 head(nmbs2)
 
 nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_event", " " ))]')
@@ -1574,7 +1572,7 @@ head(nmbs)
 
 nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
 nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
-class(value) <- "numeric"
+class(nmbs2) <- "numeric"
 head(nmbs2)
 
 nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_event", " " ))]')
@@ -1600,7 +1598,7 @@ head(nmbs)
 
 nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
 nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
-class(value) <- "numeric"
+class(nmbs2) <- "numeric"
 head(nmbs2)
 
 nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_event", " " ))]')
@@ -1626,7 +1624,7 @@ head(nmbs)
 
 nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
 nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
-class(value) <- "numeric"
+class(nmbs2) <- "numeric"
 head(nmbs2)
 
 nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_event", " " ))]')
@@ -1652,7 +1650,7 @@ head(nmbs)
 
 nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
 nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
-class(value) <- "numeric"
+class(nmbs2) <- "numeric"
 head(nmbs2)
 
 nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_event", " " ))]')
@@ -1678,7 +1676,7 @@ head(nmbs)
 
 nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
 nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
-class(value) <- "numeric"
+class(nmbs2) <- "numeric"
 head(nmbs2)
 
 nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_event", " " ))]')
@@ -1704,7 +1702,7 @@ head(nmbs)
 
 nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
 nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
-class(value) <- "numeric"
+class(nmbs2) <- "numeric"
 head(nmbs2)
 
 nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_event", " " ))]')
@@ -1730,7 +1728,7 @@ head(nmbs)
 
 nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
 nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
-class(value) <- "numeric"
+class(nmbs2) <- "numeric"
 head(nmbs2)
 
 nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_event", " " ))]')
@@ -1756,7 +1754,7 @@ head(nmbs)
 
 nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
 nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
-class(value) <- "numeric"
+class(nmbs2) <- "numeric"
 head(nmbs2)
 
 nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_event", " " ))]')
@@ -1782,7 +1780,7 @@ head(nmbs)
 
 nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
 nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
-class(value) <- "numeric"
+class(nmbs2) <- "numeric"
 head(nmbs2)
 
 nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_event", " " ))]')
@@ -1808,7 +1806,7 @@ head(nmbs)
 
 nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
 nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
-class(value) <- "numeric"
+class(nmbs2) <- "numeric"
 head(nmbs2)
 
 nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_event", " " ))]')
@@ -1834,7 +1832,7 @@ head(nmbs)
 
 nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
 nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
-class(value) <- "numeric"
+class(nmbs2) <- "numeric"
 head(nmbs2)
 
 nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_event", " " ))]')
@@ -1860,7 +1858,7 @@ head(nmbs)
 
 nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
 nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
-class(value) <- "numeric"
+class(nmbs2) <- "numeric"
 head(nmbs2)
 
 nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_event", " " ))]')
@@ -1879,15 +1877,18 @@ head(dat_e_1998)
 
 #creating inserted list for events per year =================================
 event_prizes <- rbind(dat_e_2018, dat_e_2017, dat_e_2016, dat_e_2015, dat_e_2014, dat_e_2013, dat_e_2012, dat_e_2011, dat_e_2010, dat_e_2009, dat_e_2008, dat_e_2007, dat_e_2006, dat_e_2005, dat_e_2004, dat_e_2003, dat_e_2002, dat_e_2001, dat_e_2000, dat_e_1999, dat_e_1998)
-class(event_prizes$`Prize Money in $`) <-"numeric"
 str(event_prizes)
 
 #calculations  =================================
+
+library(ggpubr)
+library(dplyr)
+
 by_e_year <- group_by(event_prizes, Year)
 
-str(by_e_year)
+sum_prize <- summarize(by_e_year, mean_prize=mean(`Prize Money in $`), na.rm= TRUE)
 
-cor.test(event_prizes$Year,event_prizes$'Prize Money in $', method=c("pearson"))
+cor.test(sum_prize$Year,sum_prize$mean_prize, method=c("pearson"))
 # team_prizes["ID"] <- NA
 # team_prizes$ID <- 1:2001
 # str(team_prizes)
