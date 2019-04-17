@@ -6,6 +6,9 @@
 #install.packages("jsonlite")
 #install.packages("RSocrata")
 #install.packages("tidyverse")
+# if(!require(devtools)) install.packages("devtools")
+# devtools::install_github("kassambara/ggpubr")
+# install.packages("ggpubr")
 
 library(gtrendsR)
 library(xml2)
@@ -15,6 +18,8 @@ library(RSocrata)
 library(tidyverse)
 library(magrittr)
 library(stringr)
+library(ggpubr)
+
 
 ?gtrends
 
@@ -1878,6 +1883,9 @@ event_prizes <- rbind(dat_e_2018, dat_e_2017, dat_e_2016, dat_e_2015, dat_e_2014
 
 str(event_prizes)
 
+#calculations  =================================
+
+corr.test(event_prizes$'Prize Money in $',event_prizes$Year)
 # team_prizes["ID"] <- NA
 # team_prizes$ID <- 1:2001
 # str(team_prizes)
