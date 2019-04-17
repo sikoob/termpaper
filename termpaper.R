@@ -1,6 +1,3 @@
-#install.packages("devtools")
-#devtools::install_github("PMassicotte/gtrendsR")
-
 #install.packages("xml2")
 #install.packages("rvest")
 #install.packages("jsonlite")
@@ -9,6 +6,7 @@
 # if(!require(devtools)) install.packages("devtools")
 # devtools::install_github("kassambara/ggpubr")
 # install.packages("ggpubr")
+#install.packages("dplyr")
 
 library(gtrendsR)
 library(xml2)
@@ -19,6 +17,7 @@ library(tidyverse)
 library(magrittr)
 library(stringr)
 library(ggpubr)
+library(dplyr)
 
 
 ?gtrends
@@ -1880,12 +1879,15 @@ head(dat_e_1998)
 
 #creating inserted list for events per year =================================
 event_prizes <- rbind(dat_e_2018, dat_e_2017, dat_e_2016, dat_e_2015, dat_e_2014, dat_e_2013, dat_e_2012, dat_e_2011, dat_e_2010, dat_e_2009, dat_e_2008, dat_e_2007, dat_e_2006, dat_e_2005, dat_e_2004, dat_e_2003, dat_e_2002, dat_e_2001, dat_e_2000, dat_e_1999, dat_e_1998)
-
+class(event_prizes$`Prize Money in $`) <-"numeric"
 str(event_prizes)
 
 #calculations  =================================
+by_e_year <- group_by(event_prizes, Year)
 
-corr.test(event_prizes$'Prize Money in $',event_prizes$Year)
+str(by_e_year)
+
+cor.test(event_prizes$Year,event_prizes$'Prize Money in $', method=c("pearson"))
 # team_prizes["ID"] <- NA
 # team_prizes$ID <- 1:2001
 # str(team_prizes)
