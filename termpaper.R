@@ -1886,9 +1886,21 @@ str(event_prizes)
 
 by_e_year <- group_by(event_prizes, Year)
 
-summa_prize <- summarize(by_e_year, sum_prize=sum(`Prize Money in $`), na.rm= TRUE)
+summa_e_prize <- summarize(by_e_year, sum_e_prize=sum(`Prize Money in $`), na.rm= TRUE)
 
-cor.test(summa_prize$Year,summa_prize$sum_prize, method=c("pearson"))
+cor.test(summa_e_prize$Year,summa_e_prize$sum_e_prize, method=c("pearson"))
+
+by_t_year <- group_by(team_prizes, Year)
+
+summa_t_prize <- summarize(by_t_year, sum_t_prize=sum(`Prize Money in $`), na.rm= TRUE)
+
+cor.test(summa_t_prize$Year,summa_t_prize$sum_t_prize, method=c("pearson"))
+
+by_p_year <- group_by(player_prizes, Year)
+
+summa_p_prize <- summarize(by_p_year, sum_p_prize=sum(`Total Prize Money in $`), na.rm= TRUE)
+
+cor.test(summa_p_prize$Year,summa_p_prize$sum_p_prize, method=c("pearson"))
 # team_prizes["ID"] <- NA
 # team_prizes$ID <- 1:2001
 # str(team_prizes)
