@@ -20,14 +20,17 @@ library(stringr)
 
 ?gtrends
 
-res <- gtrends(c("esports"))
-plot(res)
+esports <- gtrends(c("esports"))
+plot(esports)
+str(esports)
+esports_time <- as_tibble(esports$interest_over_time)
+glimpse(esports_time)
 
-res <- gtrends(c("League of Legends", "Fortnite", "Fifa"))
-plot(res)
+games <- gtrends(c("League of Legends", "Fortnite", "Fifa"))
+plot(games)
 
-res <- gtrends(c("League of Legends", "Fortnite", "Fifa"), gprop="youtube")
-plot(res)
+games_y <- gtrends(c("League of Legends", "Fortnite", "Fifa"), gprop="youtube")
+plot(games_y)
 
 #getting lists of top players and games/teams ---------------------------------
 
