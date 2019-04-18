@@ -1886,9 +1886,9 @@ str(event_prizes)
 
 by_e_year <- group_by(event_prizes, Year)
 
-sum_prize <- summarize(by_e_year, mean_prize=mean(`Prize Money in $`), na.rm= TRUE)
+summa_prize <- summarize(by_e_year, sum_prize=sum(`Prize Money in $`), na.rm= TRUE)
 
-cor.test(sum_prize$Year,sum_prize$mean_prize, method=c("pearson"))
+cor.test(summa_prize$Year,summa_prize$sum_prize, method=c("pearson"))
 # team_prizes["ID"] <- NA
 # team_prizes$ID <- 1:2001
 # str(team_prizes)
