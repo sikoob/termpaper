@@ -42,7 +42,7 @@ cor.test(summa_esports$Year,summa_esports$sum_esports_hits, method=c("pearson"))
 
 #continue here with more exploration
 
-games <- gtrends(c("League of Legends", "Fortnite", "Fifa"))
+games <- gtrends(c("League of Legends", "Fortnite", "Fifa")) #an Top Spiele anpassen
 plot(games)
 
 games_y <- gtrends(c("League of Legends", "Fortnite", "Fifa"), gprop="youtube")
