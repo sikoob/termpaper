@@ -7,6 +7,8 @@
 # devtools::install_github("kassambara/ggpubr")
 # install.packages("ggpubr")
 #install.packages("dplyr")
+#install.packages("car")
+
 
 library(gtrendsR)
 library(xml2)
@@ -16,6 +18,7 @@ library(RSocrata)
 library(tidyverse)
 library(magrittr)
 library(stringr)
+library(car)
 
 
 ?gtrends
@@ -1896,6 +1899,11 @@ by_e_year <- group_by(event_prizes, Year)
 summa_e_prize <- summarize(by_e_year, sum_e_prize=sum(`Prize Money in $`), na.rm= TRUE)
 
 cor.test(summa_e_prize$Year,summa_e_prize$sum_e_prize, method=c("pearson"))
+
+scatterplot(sum_e_prize ~ Year, data=summa_e_prize, xlab="Year", ylab="Money in Dollar", 
+            main="Scatterplot for prize money in $ by Year for events", boxplot=FALSE, smooth=FALSE)
+
+?scatterplot
 
 by_t_year <- group_by(team_prizes, Year)
 
