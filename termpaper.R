@@ -22,25 +22,7 @@ library(stringr)
 
 esports <- gtrends(c("esports"))
 plot(esports)
-str(esports)
-esports_time <- as_tibble(esports$interest_over_time)
-glimpse(esports_time)
-esports_time$keyword <- NULL
-esports_time$geo <- NULL
-esports_time$gprop <- NULL
-esports_time$category <- NULL
-glimpse(esports_time)
-esports_time %<>%
-  separate(date, c("Year", "Month", "Day"), sep = "-") %T>%
-  str(.)
 
-esports_year <- group_by(esports_time, Year)
-
-summa_esports <- summarize(esports_year, sum_esports_hits=sum(`hits`), na.rm= TRUE)
-
-cor.test(summa_esports$Year,summa_esports$sum_esports_hits, method=c("pearson"))
-
-#continue here with more exploration
 
 games <- gtrends(c("Call of Duty: WWII", "StarCraft II", "Heartstone", "Heroes of the Storm", "Overwatch", "PlayerUnknown's Battleground", "League of Legends", "Fortnite", "Counter Strike: Global Offensive", "Dota 2")) 
 plot(games)
