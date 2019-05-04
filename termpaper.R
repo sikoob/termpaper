@@ -1894,7 +1894,7 @@ str(event_prizes)
 #library(ggpubr)
 #library(dplyr)
 
-by_e_year <- group_by(event_prizes, Year)
+by_e_year <- group_by(event_prizes, Year) #get information on number of events/players/teams per year
 
 summa_e_prize <- summarize(by_e_year, sum_e_prize=sum(`Prize Money in $`), na.rm= TRUE)
 
@@ -1903,19 +1903,23 @@ cor.test(summa_e_prize$Year,summa_e_prize$sum_e_prize, method=c("pearson"))
 scatterplot(sum_e_prize ~ Year, data=summa_e_prize, xlab="Year", ylab="Money in Dollar", 
             main="Scatterplot for prize money in $ by Year for events", boxplot=FALSE, smooth=FALSE)
 
-?scatterplot
-
 by_t_year <- group_by(team_prizes, Year)
 
-summa_t_prize <- summarize(by_t_year, sum_t_prize=sum(`Prize Money in $`), na.rm= TRUE)
+summa_t_prize <- summarize(by_t_year, sum_t_prize=sum(`Total Prize Money in $`), na.rm= TRUE)
 
 cor.test(summa_t_prize$Year,summa_t_prize$sum_t_prize, method=c("pearson"))
+
+scatterplot(sum_t_prize ~ Year, data=summa_t_prize, xlab="Year", ylab="Money in Dollar", 
+            main="Scatterplot for prize money in $ by Year for teams", boxplot=FALSE, smooth=FALSE)
 
 by_p_year <- group_by(player_prizes, Year)
 
 summa_p_prize <- summarize(by_p_year, sum_p_prize=sum(`Total Prize Money in $`), na.rm= TRUE)
 
 cor.test(summa_p_prize$Year,summa_p_prize$sum_p_prize, method=c("pearson"))
+
+scatterplot(sum_p_prize ~ Year, data=summa_p_prize, xlab="Year", ylab="Money in Dollar", 
+            main="Scatterplot for prize money in $ by Year for players", boxplot=FALSE, smooth=FALSE)
 # team_prizes["ID"] <- NA
 # team_prizes$ID <- 1:2001
 # str(team_prizes)
