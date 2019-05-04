@@ -42,10 +42,10 @@ cor.test(summa_esports$Year,summa_esports$sum_esports_hits, method=c("pearson"))
 
 #continue here with more exploration
 
-games <- gtrends(c("League of Legends", "Fortnite", "Fifa")) #an Top Spiele anpassen
+games <- gtrends(c("Call of Duty: WWII", "StarCraft II", "Heartstone", "Heroes of the Storm", "Overwatch", "PlayerUnknown's Battleground", "League of Legends", "Fortnite", "Counter Strike: Global Offensive", "Dota 2")) 
 plot(games)
 
-games_y <- gtrends(c("League of Legends", "Fortnite", "Fifa"), gprop="youtube")
+games_y <- gtrends(c("Call of Duty: WWII", "StarCraft II", "Heartstone", "Heroes of the Storm", "Overwatch", "PlayerUnknown's Battleground", "League of Legends", "Fortnite", "Counter Strike: Global Offensive", "Dota 2"), gprop="youtube")
 plot(games_y)
 
 #getting lists of top players and games/teams ---------------------------------
