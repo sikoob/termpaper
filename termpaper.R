@@ -24,11 +24,17 @@ esports <- gtrends(c("esports"))
 plot(esports)
 
 
-games <- gtrends(c("Call of Duty: WWII", "StarCraft II", "Heartstone", "Heroes of the Storm", "Overwatch", "PlayerUnknown's Battleground", "League of Legends", "Fortnite", "Counter Strike: Global Offensive", "Dota 2")) 
+games <- gtrends(c("Call of Duty: WWII", "StarCraft II", "Heartstone", "Heroes of the Storm", "Overwatch")) 
 plot(games)
 
-games_y <- gtrends(c("Call of Duty: WWII", "StarCraft II", "Heartstone", "Heroes of the Storm", "Overwatch", "PlayerUnknown's Battleground", "League of Legends", "Fortnite", "Counter Strike: Global Offensive", "Dota 2"), gprop="youtube")
+games2 <- gtrends(c("PlayerUnknown's Battleground", "League of Legends", "Fortnite", "Counter Strike: Global Offensive", "Dota 2"))
+plot(games2)
+
+games_y <- gtrends(c("Call of Duty: WWII", "StarCraft II", "Heartstone", "Heroes of the Storm", "Overwatch"), gprop="youtube") 
 plot(games_y)
+
+games2_y <- gtrends(c("PlayerUnknown's Battleground", "League of Legends", "Fortnite", "Counter Strike: Global Offensive", "Dota 2"), gprop= "youtube")
+plot(games2_y)
 
 #getting lists of top players and games/teams ---------------------------------
 
