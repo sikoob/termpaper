@@ -782,6 +782,8 @@ str(player_prizes)
 
 player_prizes["ID"] <- NA
 player_prizes$ID <- 1:2001
+player_prizes["Count"] <- NA
+player_prizes$Count <- 1
 str(player_prizes)
 
 
@@ -1335,7 +1337,8 @@ head(dat_t_1998)
 #code creation top teams by year =================================
 
 team_prizes <- rbind(dat_t_2018, dat_t_2017, dat_t_2016, dat_t_2015, dat_t_2014, dat_t_2013, dat_t_2012, dat_t_2011, dat_t_2010, dat_t_2009, dat_t_2008, dat_t_2007, dat_t_2006, dat_t_2005, dat_t_2004, dat_t_2003, dat_t_2002, dat_t_2001, dat_t_2000, dat_t_1999, dat_t_1998)
-
+team_prizes["Count"] <- NA
+team_prizes$Count <- 1
 str(team_prizes)
 
 #data events =================================
@@ -1923,6 +1926,15 @@ cor.test(summa_t_prize$Year,summa_t_prize$sum_t_prize, method=c("pearson"))
 scatterplot(sum_t_prize ~ Year, data=summa_t_prize, xlab="Year", ylab="Money in Dollar", 
             main="Scatterplot for prize money in $ by Year for teams", boxplot=FALSE, smooth=FALSE)
 
+summa_t_count <- summarize(by_t_year, sum_t_count=sum(`Count`), na.rm= TRUE)
+
+cor.test(summa_t_count$Year,summa_t_count$sum_t_count, method=c("pearson"))
+
+scatterplot(sum_t_count ~ Year, data=summa_t_count, xlab="Year", ylab="Count of events", 
+            main="Scatterplot for count of eSport events by Year", boxplot=FALSE, smooth=FALSE)
+
+#getting correlations for individual players
+
 by_p_year <- group_by(player_prizes, Year)
 
 summa_p_prize <- summarize(by_p_year, sum_p_prize=sum(`Total Prize Money in $`), na.rm= TRUE)
@@ -1931,6 +1943,13 @@ cor.test(summa_p_prize$Year,summa_p_prize$sum_p_prize, method=c("pearson"))
 
 scatterplot(sum_p_prize ~ Year, data=summa_p_prize, xlab="Year", ylab="Money in Dollar", 
             main="Scatterplot for prize money in $ by Year for players", boxplot=FALSE, smooth=FALSE)
+
+summa_p_count <- summarize(by_p_year, sum_p_count=sum(`Count`), na.rm= TRUE)
+
+cor.test(summa_p_count$Year,summa_p_count$sum_p_count, method=c("pearson"))
+
+scatterplot(sum_p_count ~ Year, data=summa_p_count, xlab="Year", ylab="Count of events", 
+            main="Scatterplot for count of eSport events by Year", boxplot=FALSE, smooth=FALSE)
 
 
 
