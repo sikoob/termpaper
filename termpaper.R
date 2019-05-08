@@ -812,6 +812,7 @@ dat_t_2018 <- data.frame(name, nmbs2)
 colnames(dat_t_2018) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
 dat_t_2018["Year"] <- NA
 dat_t_2018$Year <- 2018
+dat_t_2018[,2] <- as.numeric(as.character(dat_t_2018[,2] ))
 head(dat_t_2018)
 
 url <- read_html("https://www.esportsearnings.com/history/2017/teams")
@@ -838,6 +839,7 @@ dat_t_2017 <- data.frame(name, nmbs2)
 colnames(dat_t_2017) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
 dat_t_2017["Year"] <- NA
 dat_t_2017$Year <- 2017
+dat_t_2017[,2] <- as.numeric(as.character(dat_t_2017[,2] ))
 head(dat_t_2017)
 
 url <- read_html("https://www.esportsearnings.com/history/2016/teams")
@@ -864,6 +866,7 @@ dat_t_2016 <- data.frame(name, nmbs2)
 colnames(dat_t_2016) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
 dat_t_2016["Year"] <- NA
 dat_t_2016$Year <- 2016
+dat_t_2016[,2] <- as.numeric(as.character(dat_t_2016[,2] ))
 head(dat_t_2016)
 
 url <- read_html("https://www.esportsearnings.com/history/2015/teams")
@@ -890,6 +893,7 @@ dat_t_2015 <- data.frame(name, nmbs2)
 colnames(dat_t_2015) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
 dat_t_2015["Year"] <- NA
 dat_t_2015$Year <- 2015
+dat_t_2015[,2] <- as.numeric(as.character(dat_t_2015[,2] ))
 head(dat_t_2015)
 
 url <- read_html("https://www.esportsearnings.com/history/2014/teams")
@@ -916,6 +920,7 @@ dat_t_2014 <- data.frame(name, nmbs2)
 colnames(dat_t_2014) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
 dat_t_2014["Year"] <- NA
 dat_t_2014$Year <- 2014
+dat_t_2014[,2] <- as.numeric(as.character(dat_t_2014[,2] ))
 head(dat_t_2014)
 
 url <- read_html("https://www.esportsearnings.com/history/2013/teams")
@@ -942,6 +947,7 @@ dat_t_2013 <- data.frame(name, nmbs2)
 colnames(dat_t_2013) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
 dat_t_2013["Year"] <- NA
 dat_t_2013$Year <- 2013
+dat_t_2013[,2] <- as.numeric(as.character(dat_t_2013[,2] ))
 head(dat_t_2013)
 
 url <- read_html("https://www.esportsearnings.com/history/2012/teams")
@@ -968,6 +974,7 @@ dat_t_2012 <- data.frame(name, nmbs2)
 colnames(dat_t_2012) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
 dat_t_2012["Year"] <- NA
 dat_t_2012$Year <- 2012
+dat_t_2012[,2] <- as.numeric(as.character(dat_t_2012[,2] ))
 head(dat_t_2012)
 
 url <- read_html("https://www.esportsearnings.com/history/2011/teams")
@@ -994,6 +1001,7 @@ dat_t_2011 <- data.frame(name, nmbs2)
 colnames(dat_t_2011) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
 dat_t_2011["Year"] <- NA
 dat_t_2011$Year <- 2011
+dat_t_2011[,2] <- as.numeric(as.character(dat_t_2011[,2] ))
 head(dat_t_2011)
 
 url <- read_html("https://www.esportsearnings.com/history/2010/teams")
@@ -1020,6 +1028,7 @@ dat_t_2010 <- data.frame(name, nmbs2)
 colnames(dat_t_2010) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
 dat_t_2010["Year"] <- NA
 dat_t_2010$Year <- 2010
+dat_t_2010[,2] <- as.numeric(as.character(dat_t_2010[,2] ))
 head(dat_t_2010)
 
 url <- read_html("https://www.esportsearnings.com/history/2009/teams")
@@ -1046,6 +1055,7 @@ dat_t_2009 <- data.frame(name, nmbs2)
 colnames(dat_t_2009) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
 dat_t_2009["Year"] <- NA
 dat_t_2009$Year <- 2009
+dat_t_2009[,2] <- as.numeric(as.character(dat_t_2009[,2] ))
 head(dat_t_2009)
 
 url <- read_html("https://www.esportsearnings.com/history/2008/teams")
@@ -1072,6 +1082,7 @@ dat_t_2008 <- data.frame(name, nmbs2)
 colnames(dat_t_2008) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
 dat_t_2008["Year"] <- NA
 dat_t_2008$Year <- 2008
+dat_t_2008[,2] <- as.numeric(as.character(dat_t_2008[,2] ))
 head(dat_t_2008)
 
 url <- read_html("https://www.esportsearnings.com/history/2007/teams")
@@ -1098,6 +1109,7 @@ dat_t_2007 <- data.frame(name, nmbs2)
 colnames(dat_t_2007) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
 dat_t_2007["Year"] <- NA
 dat_t_2007$Year <- 2007
+dat_t_2007[,2] <- as.numeric(as.character(dat_t_2007[,2] ))
 head(dat_t_2007)
 
 url <- read_html("https://www.esportsearnings.com/history/2006/teams")
@@ -1124,6 +1136,7 @@ dat_t_2006 <- data.frame(name, nmbs2)
 colnames(dat_t_2006) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
 dat_t_2006["Year"] <- NA
 dat_t_2006$Year <- 2006
+dat_t_2006[,2] <- as.numeric(as.character(dat_t_2006[,2] ))
 head(dat_t_2006)
 
 url <- read_html("https://www.esportsearnings.com/history/2005/teams")
@@ -1150,6 +1163,7 @@ dat_t_2005 <- data.frame(name, nmbs2)
 colnames(dat_t_2005) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
 dat_t_2005["Year"] <- NA
 dat_t_2005$Year <- 2005
+dat_t_2005[,2] <- as.numeric(as.character(dat_t_2005[,2] ))
 head(dat_t_2005)
 
 url <- read_html("https://www.esportsearnings.com/history/2004/teams")
@@ -1176,6 +1190,7 @@ dat_t_2004 <- data.frame(name, nmbs2)
 colnames(dat_t_2004) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
 dat_t_2004["Year"] <- NA
 dat_t_2004$Year <- 2004
+dat_t_2004[,2] <- as.numeric(as.character(dat_t_2004[,2] ))
 head(dat_t_2004)
 
 url <- read_html("https://www.esportsearnings.com/history/2003/teams")
@@ -1202,6 +1217,7 @@ dat_t_2003 <- data.frame(name, nmbs2)
 colnames(dat_t_2003) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
 dat_t_2003["Year"] <- NA
 dat_t_2003$Year <- 2003
+dat_t_2003[,2] <- as.numeric(as.character(dat_t_2003[,2] ))
 head(dat_t_2003)
 
 url <- read_html("https://www.esportsearnings.com/history/2002/teams")
@@ -1228,6 +1244,7 @@ dat_t_2002 <- data.frame(name, nmbs2)
 colnames(dat_t_2002) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
 dat_t_2002["Year"] <- NA
 dat_t_2002$Year <- 2002
+dat_t_2002[,2] <- as.numeric(as.character(dat_t_2002[,2] ))
 head(dat_t_2002)
 
 url <- read_html("https://www.esportsearnings.com/history/2001/teams")
@@ -1254,6 +1271,7 @@ dat_t_2001 <- data.frame(name, nmbs2)
 colnames(dat_t_2001) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
 dat_t_2001["Year"] <- NA
 dat_t_2001$Year <- 2001
+dat_t_2001[,2] <- as.numeric(as.character(dat_t_2001[,2] ))
 head(dat_t_2001)
 
 url <- read_html("https://www.esportsearnings.com/history/2000/teams")
@@ -1280,6 +1298,7 @@ dat_t_2000 <- data.frame(name, nmbs2)
 colnames(dat_t_2000) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
 dat_t_2000["Year"] <- NA
 dat_t_2000$Year <- 2000
+dat_t_2000[,2] <- as.numeric(as.character(dat_t_2000[,2] ))
 head(dat_t_2000)
 
 url <- read_html("https://www.esportsearnings.com/history/1999/teams")
@@ -1306,6 +1325,7 @@ dat_t_1999 <- data.frame(name, nmbs2)
 colnames(dat_t_1999) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
 dat_t_1999["Year"] <- NA
 dat_t_1999$Year <- 1999
+dat_t_1999[,2] <- as.numeric(as.character(dat_t_1999[,2] ))
 head(dat_t_1999)
 
 url <- read_html("https://www.esportsearnings.com/history/1998/teams")
@@ -1332,6 +1352,7 @@ dat_t_1998 <- data.frame(name, nmbs2)
 colnames(dat_t_1998) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
 dat_t_1998["Year"] <- NA
 dat_t_1998$Year <- 1998
+dat_t_1998[,2] <- as.numeric(as.character(dat_t_1998[,2] ))
 head(dat_t_1998)
 
 #code creation top teams by year =================================
@@ -1366,6 +1387,7 @@ colnames(dat_e_2018) <- c("Event Name", "Date", "Prize Money in $")
 dat_e_2018["Year"] <- NA
 dat_e_2018$Year <- 2018
 dat_e_2018$Date <- NULL 
+dat_e_2018[,2] <- as.numeric(as.character(dat_e_2018[,2] ))
 head(dat_e_2018)
 
 url <- read_html("https://www.esportsearnings.com/history/2017/list_events")
@@ -1392,6 +1414,7 @@ colnames(dat_e_2017) <- c("Event Name", "Date", "Prize Money in $")
 dat_e_2017["Year"] <- NA
 dat_e_2017$Year <- 2017
 dat_e_2017$Date <- NULL 
+dat_e_2017[,2] <- as.numeric(as.character(dat_e_2017[,2] ))
 head(dat_e_2017)
 
 url <- read_html("https://www.esportsearnings.com/history/2016/list_events")
@@ -1418,6 +1441,7 @@ colnames(dat_e_2016) <- c("Event Name", "Date", "Prize Money in $")
 dat_e_2016["Year"] <- NA
 dat_e_2016$Year <- 2016
 dat_e_2016$Date <- NULL 
+dat_e_2016[,2] <- as.numeric(as.character(dat_e_2016[,2] ))
 head(dat_e_2016)
 
 url <- read_html("https://www.esportsearnings.com/history/2015/list_events")
@@ -1444,6 +1468,7 @@ colnames(dat_e_2015) <- c("Event Name", "Date", "Prize Money in $")
 dat_e_2015["Year"] <- NA
 dat_e_2015$Year <- 2015
 dat_e_2015$Date <- NULL 
+dat_e_2015[,2] <- as.numeric(as.character(dat_e_2015[,2] ))
 head(dat_e_2015)
 
 url <- read_html("https://www.esportsearnings.com/history/2014/list_events")
@@ -1470,6 +1495,7 @@ colnames(dat_e_2014) <- c("Event Name", "Date", "Prize Money in $")
 dat_e_2014["Year"] <- NA
 dat_e_2014$Year <- 2014
 dat_e_2014$Date <- NULL 
+dat_e_2014[,2] <- as.numeric(as.character(dat_e_2014[,2] ))
 head(dat_e_2014)
 
 url <- read_html("https://www.esportsearnings.com/history/2013/list_events")
@@ -1496,6 +1522,7 @@ colnames(dat_e_2013) <- c("Event Name", "Date", "Prize Money in $")
 dat_e_2013["Year"] <- NA
 dat_e_2013$Year <- 2013
 dat_e_2013$Date <- NULL 
+dat_e_2013[,2] <- as.numeric(as.character(dat_e_2013[,2] ))
 head(dat_e_2013)
 
 url <- read_html("https://www.esportsearnings.com/history/2012/list_events")
@@ -1522,6 +1549,7 @@ colnames(dat_e_2012) <- c("Event Name", "Date", "Prize Money in $")
 dat_e_2012["Year"] <- NA
 dat_e_2012$Year <- 2012
 dat_e_2012$Date <- NULL 
+dat_e_2012[,2] <- as.numeric(as.character(dat_e_2012[,2] ))
 head(dat_e_2012)
 
 url <- read_html("https://www.esportsearnings.com/history/2011/list_events")
@@ -1548,6 +1576,7 @@ colnames(dat_e_2011) <- c("Event Name", "Date", "Prize Money in $")
 dat_e_2011["Year"] <- NA
 dat_e_2011$Year <- 2018
 dat_e_2011$Date <- NULL 
+dat_e_2011[,2] <- as.numeric(as.character(dat_e_2011[,2] ))
 head(dat_e_2011)
 
 url <- read_html("https://www.esportsearnings.com/history/2010/list_events")
@@ -1574,6 +1603,7 @@ colnames(dat_e_2010) <- c("Event Name", "Date", "Prize Money in $")
 dat_e_2010["Year"] <- NA
 dat_e_2010$Year <- 2010
 dat_e_2010$Date <- NULL 
+dat_e_2010[,2] <- as.numeric(as.character(dat_e_2010[,2] ))
 head(dat_e_2010)
 
 url <- read_html("https://www.esportsearnings.com/history/2009/list_events")
@@ -1600,6 +1630,7 @@ colnames(dat_e_2009) <- c("Event Name", "Date", "Prize Money in $")
 dat_e_2009["Year"] <- NA
 dat_e_2009$Year <- 2009
 dat_e_2009$Date <- NULL 
+dat_e_2009[,2] <- as.numeric(as.character(dat_e_2009[,2] ))
 head(dat_e_2009)
 
 url <- read_html("https://www.esportsearnings.com/history/2008/list_events")
@@ -1626,6 +1657,7 @@ colnames(dat_e_2008) <- c("Event Name", "Date", "Prize Money in $")
 dat_e_2008["Year"] <- NA
 dat_e_2008$Year <- 2008
 dat_e_2008$Date <- NULL 
+dat_e_2008[,2] <- as.numeric(as.character(dat_e_2008[,2] ))
 head(dat_e_2008)
 
 url <- read_html("https://www.esportsearnings.com/history/2007/list_events")
@@ -1652,6 +1684,7 @@ colnames(dat_e_2007) <- c("Event Name", "Date", "Prize Money in $")
 dat_e_2007["Year"] <- NA
 dat_e_2007$Year <- 2007
 dat_e_2007$Date <- NULL 
+dat_e_2007[,2] <- as.numeric(as.character(dat_e_2007[,2] ))
 head(dat_e_2007)
 
 url <- read_html("https://www.esportsearnings.com/history/2006/list_events")
@@ -1677,7 +1710,8 @@ dat_e_2006 <- data.frame(name, nmbs2)
 colnames(dat_e_2006) <- c("Event Name", "Date", "Prize Money in $")
 dat_e_2006["Year"] <- NA
 dat_e_2006$Year <- 2006
-dat_e_2006$Date <- NULL 
+dat_e_2006$Date <- NULL
+dat_e_2006[,2] <- as.numeric(as.character(dat_e_2006[,2] ))
 head(dat_e_2006)
 
 url <- read_html("https://www.esportsearnings.com/history/2005/list_events")
@@ -1704,6 +1738,7 @@ colnames(dat_e_2005) <- c("Event Name", "Date", "Prize Money in $")
 dat_e_2005["Year"] <- NA
 dat_e_2005$Year <- 2005
 dat_e_2005$Date <- NULL 
+dat_e_2005[,2] <- as.numeric(as.character(dat_e_2005[,2] ))
 head(dat_e_2005)
 
 url <- read_html("https://www.esportsearnings.com/history/2004/list_events")
@@ -1730,6 +1765,7 @@ colnames(dat_e_2004) <- c("Event Name", "Date", "Prize Money in $")
 dat_e_2004["Year"] <- NA
 dat_e_2004$Year <- 2004
 dat_e_2004$Date <- NULL 
+dat_e_2004[,2] <- as.numeric(as.character(dat_e_2004[,2] ))
 head(dat_e_2004)
 
 url <- read_html("https://www.esportsearnings.com/history/2003/list_events")
@@ -1756,6 +1792,7 @@ colnames(dat_e_2003) <- c("Event Name", "Date", "Prize Money in $")
 dat_e_2003["Year"] <- NA
 dat_e_2003$Year <- 2003
 dat_e_2003$Date <- NULL 
+dat_e_2003[,2] <- as.numeric(as.character(dat_e_2003[,2] ))
 head(dat_e_2003)
 
 url <- read_html("https://www.esportsearnings.com/history/2002/list_events")
@@ -1782,6 +1819,7 @@ colnames(dat_e_2002) <- c("Event Name", "Date", "Prize Money in $")
 dat_e_2002["Year"] <- NA
 dat_e_2002$Year <- 2002
 dat_e_2002$Date <- NULL 
+dat_e_2002[,2] <- as.numeric(as.character(dat_e_2002[,2] ))
 head(dat_e_2002)
 
 url <- read_html("https://www.esportsearnings.com/history/2001/list_events")
@@ -1808,6 +1846,7 @@ colnames(dat_e_2001) <- c("Event Name", "Date", "Prize Money in $")
 dat_e_2001["Year"] <- NA
 dat_e_2001$Year <- 2001
 dat_e_2001$Date <- NULL 
+dat_e_2001[,2] <- as.numeric(as.character(dat_e_2001[,2] ))
 head(dat_e_2001)
 
 url <- read_html("https://www.esportsearnings.com/history/2000/list_events")
@@ -1834,6 +1873,7 @@ colnames(dat_e_2000) <- c("Event Name", "Date", "Prize Money in $")
 dat_e_2000["Year"] <- NA
 dat_e_2000$Year <- 2000
 dat_e_2000$Date <- NULL 
+dat_e_2000[,2] <- as.numeric(as.character(dat_e_2000[,2] ))
 head(dat_e_2000)
 
 url <- read_html("https://www.esportsearnings.com/history/1999/list_events")
@@ -1860,6 +1900,7 @@ colnames(dat_e_1999) <- c("Event Name", "Date", "Prize Money in $")
 dat_e_1999["Year"] <- NA
 dat_e_1999$Year <- 1999
 dat_e_1999$Date <- NULL 
+dat_e_1999[,2] <- as.numeric(as.character(dat_e_1999[,2] ))
 head(dat_e_1999)
 
 url <- read_html("https://www.esportsearnings.com/history/1998/list_events")
@@ -1886,6 +1927,7 @@ colnames(dat_e_1998) <- c("Event Name", "Date", "Prize Money in $")
 dat_e_1998["Year"] <- NA
 dat_e_1998$Year <- 1998
 dat_e_1998$Date <- NULL 
+dat_e_1998[,2] <- as.numeric(as.character(dat_e_1998[,2] ))
 head(dat_e_1998)
 
 #creating inserted list for events per year =================================
