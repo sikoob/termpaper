@@ -1574,7 +1574,7 @@ head(name)
 dat_e_2011 <- data.frame(name, nmbs2)
 colnames(dat_e_2011) <- c("Event Name", "Date", "Prize Money in $")
 dat_e_2011["Year"] <- NA
-dat_e_2011$Year <- 2018
+dat_e_2011$Year <- 2011
 dat_e_2011$Date <- NULL 
 dat_e_2011[,2] <- as.numeric(as.character(dat_e_2011[,2] ))
 head(dat_e_2011)
@@ -1656,7 +1656,7 @@ dat_e_2008 <- data.frame(name, nmbs2)
 colnames(dat_e_2008) <- c("Event Name", "Date", "Prize Money in $")
 dat_e_2008["Year"] <- NA
 dat_e_2008$Year <- 2008
-dat_e_2008$Date <- NULL 
+dat_e_2008$Date <- NULL
 dat_e_2008[,2] <- as.numeric(as.character(dat_e_2008[,2] ))
 head(dat_e_2008)
 
@@ -1845,7 +1845,7 @@ dat_e_2001 <- data.frame(name, nmbs2)
 colnames(dat_e_2001) <- c("Event Name", "Date", "Prize Money in $")
 dat_e_2001["Year"] <- NA
 dat_e_2001$Year <- 2001
-dat_e_2001$Date <- NULL 
+dat_e_2001$Date <- NULL
 dat_e_2001[,2] <- as.numeric(as.character(dat_e_2001[,2] ))
 head(dat_e_2001)
 
@@ -1899,7 +1899,7 @@ dat_e_1999 <- data.frame(name, nmbs2)
 colnames(dat_e_1999) <- c("Event Name", "Date", "Prize Money in $")
 dat_e_1999["Year"] <- NA
 dat_e_1999$Year <- 1999
-dat_e_1999$Date <- NULL 
+dat_e_1999$Date <- NULL
 dat_e_1999[,2] <- as.numeric(as.character(dat_e_1999[,2] ))
 head(dat_e_1999)
 
@@ -1940,10 +1940,9 @@ str(event_prizes)
 #calculations  =================================
 
 #getting correlations for events
-
 by_e_year <- group_by(event_prizes, Year) #get information on number of events/players/teams per year
 
-summa_e_prize <- summarize(by_e_prizeyear, sum_e_prize=sum(`Prize Money in $`), na.rm= TRUE)
+summa_e_prize <- summarize(by_e_year$Year, sum_e_prize=sum(`Prize Money in $`), na.rm= TRUE)
 
 cor.test(summa_e_prize$Year,summa_e_prize$sum_e_prize, method=c("pearson"))
 
@@ -1997,6 +1996,6 @@ scatterplot(sum_p_count ~ Year, data=summa_p_count, xlab="Year", ylab="Count of 
 
 #   
 # # #API tryout
-# #high_earn <- fromJSON('https://api.esportsearnings.com/v0/LookupHighestEarningPlayers?apikey=27a22c5b980f900cb6d5b7d0c3d9d548daba6a57abdec2d115919ef8b01745bd&format=json')
+# #high_earn <- fromJSON('https://api.esportsearnings.com/v0/LookupHighestEarningPlayers?apikey=27a22c5b980f900cb6d5b7d0c3d9d548daba6a57abdec2d115919ef8b01745bd&format=json', ssl.verifypeer=FALSE)
 # # 
 # #head(high_earn)

@@ -2,12 +2,10 @@
 title: "Termpaper_TBA"
 author: "Simon Koob"
 date: "`r Sys.Date()`"
-output:
-  word_document:
-    toc: yes
-  pdf_document:
-    keep_tex: yes
-    toc: yes
+output: pdf_document
+keep_tex: yes
+toc: yes
+fontsize: 12pt
 subtitle: TBA
 ---
 
@@ -81,11 +79,17 @@ This section summarizes the results and may briefly outline advantages and limit
 ## References
 
 Larson, Andrea; Starr, Jennifer A. (1993): A network model of organization formation. Entrepreneurship theory and practice 17(2): 5-15.
+
 Granovetter, Mark (1985): Economic action and social structure: A theory of embeddedness. American Journal of Sociology 91(3): 481-510.
+
 Miller, Danny (1983): The correlates of entrepreneurship in three types of firms. Management Science 29(7): 770-791.
+
 Timmons, Jeffry A. (1980): Business plan is more than a financing device. Harvard Business Review 58(2): 198-206.
+
 Hannan, Michael T.; Freeman, John (1989): Organizational ecology. Cambridge: Harvard University Press.
+
 Learned, Kevin E. (1992): What happened before the organization? A model of organization formation. Entrepreneurship theory and practice 17(1): 39-48.
+
 Johnson, Victoria; Powell, Walter A. (2015): Poisedness and propagation: Organizational emergence and the transformation of civic order in 19th-century New York City (No. w21011). National Bureau of Economic Research.
 Thompson, Edward P. (1967): Time, work-discipline, and industrial capitalism. Past & present 37: 56-97.
 Erikson, Emily (2014): Between Monopoly and Free Trade: The English East Indian Company, 1600-1757. Princeton, NJ: Princeton University Press.
