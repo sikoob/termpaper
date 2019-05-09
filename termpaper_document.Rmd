@@ -1,34 +1,115 @@
 ---
-title: "TBA"
-subtitle: "TBA"
+title: "Termpaper_TBA"
 author: "Simon Koob"
 date: "`r Sys.Date()`"
 output:
-  pdf_document:
+  word_document:
     toc: yes
-    df_print: kable
+  pdf_document:
+    keep_tex: yes
+    toc: yes
+subtitle: TBA
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+
+```{r, include = FALSE}
+library(knitr)
+library(tidyverse)
+library(markdown)
+library(rmarkdown)
+
 ```
 
-## R Markdown
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+## Introduction
 
-```{r cars}
-summary(cars)
+Sociological analysis of emerging organizations has been linked to network analysis (e.g. Granovetter 1985, Larson & Starr 1993), individual characteristics to distinguish entrepreneurs and usual managers (e.g. Miller 1983, Timmons 1980) and the environment that the organization is expected to operate in (e.g. Hannan & Freeman 1989). Linking these different areas together, Learned’s model for emerging organizations (Learned 1992) suggests four dimensions which determine the decision to found an organization: The individual traits, intentional motivators, the opportunity to found and the final decision. In traditional sociological research on organizations, these dimensions were inspected by gathering information through case studies at companies of interest that were then generalized to the entirety of working environments (e.g. Johnson & Powell 2015, Thompson 1967). By using case studies, a single or a small group of organizations is analyzed in-depth while covering different dimensions of organizational emergence and interaction. Yet, case studies are rather time costly to gather all necessary information and observe the process in question. Moreover, the resulting data sets are also limited to a smaller number of analyzable observations putting in question the generalizability of the study in question. Even when doing retrospective analysis (e.g. Erikson 2014), researchers often face incomplete datasets that make historical analysis of emerging organizations difficult or need extensive time spent in archives to gather and analyze all necessary information.
+Yet, with the coming in existence of the World Wide Web, new opportunities arose for organizational sociologist to study organizations. Data on organizations and firms is available through annual reports, board meeting transcripts or general fact sheets that offer already a considerable amount of information to inspect organizational decisions. Furthermore, information is collected by enthusiasts in forums or dedicated websites and available to the general public. While the latter needs to be considered with caution about reliability, these online sources can be considered a useful addition to the traditional way of organizational research. This paper will use the newly available online sources to analyze the emergence of companies in a field that is tightly linked to online activity.
+With this approach, this paper will focus on the emergence of organized teams in the field of eSports. A descriptive account will be made to argue the emergence of these organized teams by the given opportunity and more available resources through the increase of popularity of video games. To make the argument, available online data will be used and analyzed. The paper follows this structure: First, an account will be given on eSports and its move into mainstream. Second, the approach to gather and prepare the available online data will be explained. The subsequent analysis of the collected data will be subject to the third part of this paper. Finally, a conclusion will be offered to explain the emergence of organized teams in eSports and the applicability of online data for this research subject. 
+
+
+
+## Data
+
+This section describes the data sources and the data gathering process.
+
+```{r}
+# A code chunk that exemplifies the data gathering process
 ```
 
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r, include = FALSE}
+# Additional code chunks that repeat tasks or do basic things can be hidden
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+## Results
+
+This section presents the main results.
+
+### Data exploration
+
+The results section may have a data exploration part, but in general the structure here depends on the specific project.
+
+```{r}
+# What happens here depends on the specific project
+```
+
+```{r}
+# What happens here depends on the specific project
+```
+
+### Analysis
+
+This section presents the main results, such as (for example) stats and graphs that show relationships, model results and/or clustering, PCA, etc.
+
+```{r}
+# What happens here depends on the specific project
+```
+
+```{r}
+# What happens here depends on the specific project
+```
+
+```{r}
+# What happens here depends on the specific project
+```
+
+## Discussion
+
+This section summarizes the results and may briefly outline advantages and limitations of the work presented.
+
+## References
+
+Larson, Andrea; Starr, Jennifer A. (1993): A network model of organization formation. Entrepreneurship theory and practice 17(2): 5-15.
+Granovetter, Mark (1985): Economic action and social structure: A theory of embeddedness. American Journal of Sociology 91(3): 481-510.
+Miller, Danny (1983): The correlates of entrepreneurship in three types of firms. Management Science 29(7): 770-791.
+Timmons, Jeffry A. (1980): Business plan is more than a financing device. Harvard Business Review 58(2): 198-206.
+Hannan, Michael T.; Freeman, John (1989): Organizational ecology. Cambridge: Harvard University Press.
+Learned, Kevin E. (1992): What happened before the organization? A model of organization formation. Entrepreneurship theory and practice 17(1): 39-48.
+Johnson, Victoria; Powell, Walter A. (2015): Poisedness and propagation: Organizational emergence and the transformation of civic order in 19th-century New York City (No. w21011). National Bureau of Economic Research.
+Thompson, Edward P. (1967): Time, work-discipline, and industrial capitalism. Past & present 37: 56-97.
+Erikson, Emily (2014): Between Monopoly and Free Trade: The English East Indian Company, 1600-1757. Princeton, NJ: Princeton University Press.
+ESBD (2018): Was ist eSport?. In ESBD -  eSport Bund Deutschland e.V. through https://esportbund.de/esport/was-ist-esport/ (last visited: ).
+Redinger, Jochen (2019): Phänomen LAN-Party – Ein Dinosaurier der Videospielkultur. In GameStar through https://www.gamestar.de/artikel/phaenomen-lan-party-der-dinosaurier-der-videospielkultur,3324928.html (last visited: ).
+Wagner, Michael G. (2006): On the Scientific Relevance of eSports. International conference on internet computing: 437-442.
+Schieber, Jonathan (2019): Video game revenue tops $43 billion in 2018, an 18% jump from 2017. In TechCrunch through https://techcrunch.com/2019/01/22/video-game-revenue-tops-43-billion-in-2018-an-18-jump-from-2017/?guccounter=1&guce_referrer_us=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_cs=70GHWyamlASU8jhJ4Gns2A (last visited: ).
+LPE (2018): The Video Games’ Industry is Bigger Than Hollywood. In LPeSport through https://lpesports.com/e-sports-news/the-video-games-industry-is-bigger-than-hollywood (last visited: ).
+Statista (2019): Anteil der privaten Haushalte in Deutschland mit einer Spielkonsole von 2006 bis 2018. In statista – Das Statistik-Portal through https://de.statista.com/statistik/daten/studie/198640/umfrage/anteil-der-haushalte-in-deutschland-mit-einer-spielkonsole-seit-2006/ (last visited: ).
+Burroughs, Benjamin; Rama, Paul (2015): The eSports Trojan Horse: Twitch and Streaming Futures. Journal of Virtual Worlds Research 8(2): 1-5.
+Niemeier, Timo (2019): 7Sports sichert sich neue eSports-Rechte für ProSieben Maxx. In DWDL.de through https://www.dwdl.de/nachrichten/71178/7sports_sichert_sich_neue_esportsrechte_fuer_prosieben_maxx/ (last visited: ).
+Johnson, Mark R.; Woodcock, Jamie (2019): ‘It’s like the gold rush’: the lives and careers of professional video game streamers on Twitch.tv. Information, Communication & Society 22(3): 336-351.
+Ward, Michael R.; Harmon, Alexander (2018): ESport Superstars. Through http://dx.doi.org/10.2139/ssrn.3154763 (last visited: ).
+Scholz, Tobias M. (2019): eSports is Business: Management in the World of Competitive Gaming. Cham: Palgrave MacMillan.
+Freeman, Guo; Wohn, Donghee Y. (2019): Understanding eSports Team Formation and Coordination. Computer supported cooperative work (CSCW) 28(1-2): 95-126.
+Heinz, Julia; Ströh, Anton (2017): The eSports Market and eSports Sponsoring. Marburg: Tectum Verlag.
+Meola, Andrew (2018): The biggest companies sponsoring eSports teams and tournaments. In Business Insider Deutschland through https://www.businessinsider.de/top-esports-sponsors-gaming-sponsorships-2018-1?r=US&IR=T (last visited: ).
+ran (2018): Diese Bundesligisten sind im eSport aktiv. In ran through https://www.ran.de/esport/bildergalerien/diese-bundesligisten-sind-im-esport-aktiv (last visited: ).
+Vu, Linh (2018): “NBA 2K muss noch aufholen“. In sport1 through https://www.sport1.de/esports/2018/09/nba-2k19-das-sagen-die-profis-zum-basketball-esports  (last visited: ).
+Hayward, Andrew (2018): The 10 Biggest Esports of 2018 by Total Prize Pool. In The eSports Observer through https://esportsobserver.com/10-biggest-prize-pools-2018/ (last visited: ).
+
+## Statutory Declaration
+„I hereby declare that the paper presented is my own work and that I have not called upon the help of a third party. In addition, I affirm that neither I nor anybody else has submitted this paper or parts of it to obtain credits elsewhere before. I have clearly marked and acknowledged all quotations or references that have been taken from the works of other. All secondary literature and other sources are marked and listed in the bibliography. The same applies to all charts, diagrams and illustrations as well as to all Internet sources. Moreover, I consent to my paper being electronically stores and sent anonymously in order to be checked for plagiarism. I am aware that the paper cannot be evaluated and may be graded “failed” (“nicht ausreichend”) if the declaration is not made.”
+
+
+
+
