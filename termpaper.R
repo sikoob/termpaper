@@ -8,7 +8,7 @@
 # install.packages("ggpubr")
 #install.packages("dplyr")
 #install.packages("car")
-
+update.packages(ask=FALSE)
 
 library(gtrendsR)
 library(xml2)
@@ -1935,12 +1935,15 @@ event_prizes <- rbind(dat_e_2018, dat_e_2017, dat_e_2016, dat_e_2015, dat_e_2014
 str(event_prizes)
 event_prizes["Count"] <- NA
 event_prizes$Count <- 1
+event_prizes[,2] <- as.numeric(as.character(event_prizes[,2] ))
 str(event_prizes)
-
+typeof(event_prizes)
+as.numeric(event_prizes)
 #calculations  =================================
 
 #getting correlations for events
 by_e_year <- group_by(event_prizes, Year) #get information on number of events/players/teams per year
+as.numeric(as.character(unlist(by_e_year)))
 
 summa_e_prize <- summarize(by_e_year$Year, sum_e_prize=sum(`Prize Money in $`), na.rm= TRUE)
 
