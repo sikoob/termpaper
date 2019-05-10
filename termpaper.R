@@ -8,7 +8,7 @@
 # install.packages("ggpubr")
 #install.packages("dplyr")
 #install.packages("car")
-update.packages(ask=FALSE)
+#update.packages(ask=FALSE)
 
 library(gtrendsR)
 library(xml2)
@@ -21,7 +21,7 @@ library(stringr)
 library(car)
 
 
-?gtrends
+#?gtrends
 
 esports <- gtrends(c("esports"))
 plot(esports)
@@ -70,11 +70,11 @@ name_list <- matrix(as.character(name_list), ncol = 2, byrow = T)
 name_list <- name_list[,-2]
 head(name_list)
 
-dat2018 <- data.frame(name_list, value)
-colnames(dat2018) <- c("Player ID", "Total Prize Money in $")
-dat2018["Year"] <- NA
-dat2018$Year <- 2018
-head(dat2018)
+dat_p_2018 <- data.frame(name_list, value)
+colnames(dat_p_2018) <- c("player", "prize_money")
+dat_p_2018["Year"] <- NA
+dat_p_2018$Year <- 2018
+head(dat_p_2018)
 
 url <- read_html("https://www.esportsearnings.com/history/2017/top_players")
 
@@ -105,11 +105,11 @@ name_list <- matrix(as.character(name_list), ncol = 2, byrow = T)
 name_list <- name_list[,-2]
 head(name_list)
 
-dat2017 <- data.frame(name_list, value)
-colnames(dat2017) <- c("Player ID", "Total Prize Money in $")
-dat2017["Year"] <- NA
-dat2017$Year <- 2017
-head(dat2017)
+dat_p_2017 <- data.frame(name_list, value)
+colnames(dat_p_2017) <- c("player", "prize_money")
+dat_p_2017["Year"] <- NA
+dat_p_2017$Year <- 2017
+head(dat_p_2017)
 
 url <- read_html("https://www.esportsearnings.com/history/2016/top_players")
 
@@ -140,11 +140,11 @@ name_list <- matrix(as.character(name_list), ncol = 2, byrow = T)
 name_list <- name_list[,-2]
 head(name_list)
 
-dat2016 <- data.frame(name_list, value)
-colnames(dat2016) <- c("Player ID", "Total Prize Money in $")
-dat2016["Year"] <- NA
-dat2016$Year <- 2016
-head(dat2016)
+dat_p_2016 <- data.frame(name_list, value)
+colnames(dat_p_2016) <- c("player", "prize_money")
+dat_p_2016["Year"] <- NA
+dat_p_2016$Year <- 2016
+head(dat_p_2016)
 
 url <- read_html("https://www.esportsearnings.com/history/2015/top_players")
 
@@ -175,11 +175,11 @@ name_list <- matrix(as.character(name_list), ncol = 2, byrow = T)
 name_list <- name_list[,-2]
 head(name_list)
 
-dat2015 <- data.frame(name_list, value)
-colnames(dat2015) <- c("Player ID", "Total Prize Money in $")
-dat2015["Year"] <- NA
-dat2015$Year <- 2015
-head(dat2015)
+dat_p_2015 <- data.frame(name_list, value)
+colnames(dat_p_2015) <- c("player", "prize_money")
+dat_p_2015["Year"] <- NA
+dat_p_2015$Year <- 2015
+head(dat_p_2015)
 
 url <- read_html("https://www.esportsearnings.com/history/2014/top_players")
 
@@ -210,11 +210,11 @@ name_list <- matrix(as.character(name_list), ncol = 2, byrow = T)
 name_list <- name_list[,-2]
 head(name_list)
 
-dat2014 <- data.frame(name_list, value)
-colnames(dat2014) <- c("Player ID", "Total Prize Money in $")
-dat2014["Year"] <- NA
-dat2014$Year <- 2014
-head(dat2014)
+dat_p_2014 <- data.frame(name_list, value)
+colnames(dat_p_2014) <- c("player", "prize_money")
+dat_p_2014["Year"] <- NA
+dat_p_2014$Year <- 2014
+head(dat_p_2014)
 
 url <- read_html("https://www.esportsearnings.com/history/2013/top_players")
 
@@ -245,11 +245,11 @@ name_list <- matrix(as.character(name_list), ncol = 2, byrow = T)
 name_list <- name_list[,-2]
 head(name_list)
 
-dat2013 <- data.frame(name_list, value)
-colnames(dat2013) <- c("Player ID", "Total Prize Money in $")
-dat2013["Year"] <- NA
-dat2013$Year <- 2013
-head(dat2013)
+dat_p_2013 <- data.frame(name_list, value)
+colnames(dat_p_2013) <- c("player", "prize_money")
+dat_p_2013["Year"] <- NA
+dat_p_2013$Year <- 2013
+head(dat_p_2013)
 
 url <- read_html("https://www.esportsearnings.com/history/2012/top_players")
 
@@ -280,11 +280,11 @@ name_list <- matrix(as.character(name_list), ncol = 2, byrow = T)
 name_list <- name_list[,-2]
 head(name_list)
 
-dat2012 <- data.frame(name_list, value)
-colnames(dat2012) <- c("Player ID", "Total Prize Money in $")
-dat2012["Year"] <- NA
-dat2012$Year <- 2012
-head(dat2012)
+dat_p_2012 <- data.frame(name_list, value)
+colnames(dat_p_2012) <- c("player", "prize_money")
+dat_p_2012["Year"] <- NA
+dat_p_2012$Year <- 2012
+head(dat_p_2012)
 
 url <- read_html("https://www.esportsearnings.com/history/2011/top_players")
 
@@ -315,11 +315,11 @@ name_list <- matrix(as.character(name_list), ncol = 2, byrow = T)
 name_list <- name_list[,-2]
 head(name_list)
 
-dat2011 <- data.frame(name_list, value)
-colnames(dat2011) <- c("Player ID", "Total Prize Money in $")
-dat2011["Year"] <- NA
-dat2011$Year <- 2011
-head(dat2011)
+dat_p_2011 <- data.frame(name_list, value)
+colnames(dat_p_2011) <- c("player", "prize_money")
+dat_p_2011["Year"] <- NA
+dat_p_2011$Year <- 2011
+head(dat_p_2011)
 
 url <- read_html("https://www.esportsearnings.com/history/2010/top_players")
 
@@ -1383,7 +1383,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_e_2018 <- data.frame(name, nmbs2)
-colnames(dat_e_2018) <- c("Event Name", "Date", "Prize Money in $")
+colnames(dat_e_2018) <- c("event_name", "date", "prize_money")
 dat_e_2018["Year"] <- NA
 dat_e_2018$Year <- 2018
 dat_e_2018$Date <- NULL 
@@ -1937,8 +1937,7 @@ event_prizes["Count"] <- NA
 event_prizes$Count <- 1
 event_prizes[,2] <- as.numeric(as.character(event_prizes[,2] ))
 str(event_prizes)
-typeof(event_prizes)
-as.numeric(event_prizes)
+
 #calculations  =================================
 
 #getting correlations for events
