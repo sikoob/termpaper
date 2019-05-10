@@ -811,7 +811,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_t_2018 <- data.frame(name, nmbs2)
-colnames(dat_t_2018) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+colnames(dat_t_2018) <- c("team_name", "prize_money", "number_tournaments")
 dat_t_2018["Year"] <- NA
 dat_t_2018$Year <- 2018
 dat_t_2018[,2] <- as.numeric(as.character(dat_t_2018[,2] ))
@@ -838,7 +838,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_t_2017 <- data.frame(name, nmbs2)
-colnames(dat_t_2017) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+colnames(dat_t_2017) <- c("team_name", "prize_money", "number_tournaments")
 dat_t_2017["Year"] <- NA
 dat_t_2017$Year <- 2017
 dat_t_2017[,2] <- as.numeric(as.character(dat_t_2017[,2] ))
@@ -865,7 +865,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_t_2016 <- data.frame(name, nmbs2)
-colnames(dat_t_2016) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+colnames(dat_t_2016) <- c("team_name", "prize_money", "number_tournaments")
 dat_t_2016["Year"] <- NA
 dat_t_2016$Year <- 2016
 dat_t_2016[,2] <- as.numeric(as.character(dat_t_2016[,2] ))
@@ -892,7 +892,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_t_2015 <- data.frame(name, nmbs2)
-colnames(dat_t_2015) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+colnames(dat_t_2015) <- c("team_name", "prize_money", "number_tournaments")
 dat_t_2015["Year"] <- NA
 dat_t_2015$Year <- 2015
 dat_t_2015[,2] <- as.numeric(as.character(dat_t_2015[,2] ))
@@ -919,7 +919,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_t_2014 <- data.frame(name, nmbs2)
-colnames(dat_t_2014) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+colnames(dat_t_2014) <- c("team_name", "prize_money", "number_tournaments")
 dat_t_2014["Year"] <- NA
 dat_t_2014$Year <- 2014
 dat_t_2014[,2] <- as.numeric(as.character(dat_t_2014[,2] ))
@@ -946,7 +946,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_t_2013 <- data.frame(name, nmbs2)
-colnames(dat_t_2013) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+colnames(dat_t_2013) <- c("team_name", "prize_money", "number_tournaments")
 dat_t_2013["Year"] <- NA
 dat_t_2013$Year <- 2013
 dat_t_2013[,2] <- as.numeric(as.character(dat_t_2013[,2] ))
@@ -973,7 +973,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_t_2012 <- data.frame(name, nmbs2)
-colnames(dat_t_2012) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+colnames(dat_t_2012) <- c("team_name", "prize_money", "number_tournaments")
 dat_t_2012["Year"] <- NA
 dat_t_2012$Year <- 2012
 dat_t_2012[,2] <- as.numeric(as.character(dat_t_2012[,2] ))
@@ -1000,7 +1000,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_t_2011 <- data.frame(name, nmbs2)
-colnames(dat_t_2011) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+colnames(dat_t_2011) <- c("team_name", "prize_money", "number_tournaments")
 dat_t_2011["Year"] <- NA
 dat_t_2011$Year <- 2011
 dat_t_2011[,2] <- as.numeric(as.character(dat_t_2011[,2] ))
@@ -1027,7 +1027,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_t_2010 <- data.frame(name, nmbs2)
-colnames(dat_t_2010) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+colnames(dat_t_2010) <- c("team_name", "prize_money", "number_tournaments")
 dat_t_2010["Year"] <- NA
 dat_t_2010$Year <- 2010
 dat_t_2010[,2] <- as.numeric(as.character(dat_t_2010[,2] ))
@@ -1054,7 +1054,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_t_2009 <- data.frame(name, nmbs2)
-colnames(dat_t_2009) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+colnames(dat_t_2009) <- c("team_name", "prize_money", "number_tournaments")
 dat_t_2009["Year"] <- NA
 dat_t_2009$Year <- 2009
 dat_t_2009[,2] <- as.numeric(as.character(dat_t_2009[,2] ))
@@ -1081,7 +1081,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_t_2008 <- data.frame(name, nmbs2)
-colnames(dat_t_2008) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+colnames(dat_t_2008) <- c("team_name", "prize_money", "number_tournaments")
 dat_t_2008["Year"] <- NA
 dat_t_2008$Year <- 2008
 dat_t_2008[,2] <- as.numeric(as.character(dat_t_2008[,2] ))
@@ -1108,7 +1108,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_t_2007 <- data.frame(name, nmbs2)
-colnames(dat_t_2007) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+colnames(dat_t_2007) <- c("team_name", "prize_money", "number_tournaments")
 dat_t_2007["Year"] <- NA
 dat_t_2007$Year <- 2007
 dat_t_2007[,2] <- as.numeric(as.character(dat_t_2007[,2] ))
@@ -1135,7 +1135,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_t_2006 <- data.frame(name, nmbs2)
-colnames(dat_t_2006) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+colnames(dat_t_2006) <- c("team_name", "prize_money", "number_tournaments")
 dat_t_2006["Year"] <- NA
 dat_t_2006$Year <- 2006
 dat_t_2006[,2] <- as.numeric(as.character(dat_t_2006[,2] ))
@@ -1162,7 +1162,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_t_2005 <- data.frame(name, nmbs2)
-colnames(dat_t_2005) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+colnames(dat_t_2005) <- c("team_name", "prize_money", "number_tournaments")
 dat_t_2005["Year"] <- NA
 dat_t_2005$Year <- 2005
 dat_t_2005[,2] <- as.numeric(as.character(dat_t_2005[,2] ))
@@ -1189,7 +1189,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_t_2004 <- data.frame(name, nmbs2)
-colnames(dat_t_2004) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+colnames(dat_t_2004) <- c("team_name", "prize_money", "number_tournaments")
 dat_t_2004["Year"] <- NA
 dat_t_2004$Year <- 2004
 dat_t_2004[,2] <- as.numeric(as.character(dat_t_2004[,2] ))
@@ -1216,7 +1216,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_t_2003 <- data.frame(name, nmbs2)
-colnames(dat_t_2003) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+colnames(dat_t_2003) <- c("team_name", "prize_money", "number_tournaments")
 dat_t_2003["Year"] <- NA
 dat_t_2003$Year <- 2003
 dat_t_2003[,2] <- as.numeric(as.character(dat_t_2003[,2] ))
@@ -1243,7 +1243,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_t_2002 <- data.frame(name, nmbs2)
-colnames(dat_t_2002) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+colnames(dat_t_2002) <- c("team_name", "prize_money", "number_tournaments")
 dat_t_2002["Year"] <- NA
 dat_t_2002$Year <- 2002
 dat_t_2002[,2] <- as.numeric(as.character(dat_t_2002[,2] ))
@@ -1270,7 +1270,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_t_2001 <- data.frame(name, nmbs2)
-colnames(dat_t_2001) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+colnames(dat_t_2001) <- c("team_name", "prize_money", "number_tournaments")
 dat_t_2001["Year"] <- NA
 dat_t_2001$Year <- 2001
 dat_t_2001[,2] <- as.numeric(as.character(dat_t_2001[,2] ))
@@ -1297,7 +1297,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_t_2000 <- data.frame(name, nmbs2)
-colnames(dat_t_2000) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+colnames(dat_t_2000) <- c("team_name", "prize_money", "number_tournaments")
 dat_t_2000["Year"] <- NA
 dat_t_2000$Year <- 2000
 dat_t_2000[,2] <- as.numeric(as.character(dat_t_2000[,2] ))
@@ -1324,42 +1324,42 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_t_1999 <- data.frame(name, nmbs2)
-colnames(dat_t_1999) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
+colnames(dat_t_1999) <- c("team_name", "prize_money", "number_tournaments")
 dat_t_1999["Year"] <- NA
 dat_t_1999$Year <- 1999
 dat_t_1999[,2] <- as.numeric(as.character(dat_t_1999[,2] ))
 head(dat_t_1999)
 
-url <- read_html("https://www.esportsearnings.com/history/1998/teams")
-
-nds <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "content_main", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "highlight", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_prize", " " ))]')
-
-nmbs <- html_text(nds)
-head(nmbs) 
-
-nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
-nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
-class(nmbs2) <- "numeric"
-nmbs2 <- format(nmbs2,2)
-head(nmbs2)
-
-nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_player", " " ))]')
-name <- html_text(nds2)
-head(name)
-
-name <- matrix(as.character(name), ncol = 1, byrow = T)
-head(name)
-
-dat_t_1998 <- data.frame(name, nmbs2)
-colnames(dat_t_1998) <- c("Team Name", "Total Prize Money in $", "Number of Tournaments")
-dat_t_1998["Year"] <- NA
-dat_t_1998$Year <- 1998
-dat_t_1998[,2] <- as.numeric(as.character(dat_t_1998[,2] ))
-head(dat_t_1998)
+# url <- read_html("https://www.esportsearnings.com/history/1998/teams")
+# 
+# nds <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "content_main", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "highlight", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_prize", " " ))]')
+# 
+# nmbs <- html_text(nds)
+# head(nmbs) 
+# 
+# nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
+# nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
+# class(nmbs2) <- "numeric"
+# nmbs2 <- format(nmbs2,2)
+# head(nmbs2)
+# 
+# nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_player", " " ))]')
+# name <- html_text(nds2)
+# head(name)
+# 
+# name <- matrix(as.character(name), ncol = 1, byrow = T)
+# head(name)
+# 
+# dat_t_1998 <- data.frame(name, nmbs2)
+# colnames(dat_t_1998) <- c("team_name", "prize_money", "number_tournaments")
+# dat_t_1998["Year"] <- NA
+# dat_t_1998$Year <- 1998
+# dat_t_1998[,2] <- as.numeric(as.character(dat_t_1998[,2] ))
+# head(dat_t_1998)            ##no teams in 1998
 
 #code creation top teams by year =================================
 
-team_prizes <- rbind(dat_t_2018, dat_t_2017, dat_t_2016, dat_t_2015, dat_t_2014, dat_t_2013, dat_t_2012, dat_t_2011, dat_t_2010, dat_t_2009, dat_t_2008, dat_t_2007, dat_t_2006, dat_t_2005, dat_t_2004, dat_t_2003, dat_t_2002, dat_t_2001, dat_t_2000, dat_t_1999, dat_t_1998)
+team_prizes <- rbind(dat_t_2018, dat_t_2017, dat_t_2016, dat_t_2015, dat_t_2014, dat_t_2013, dat_t_2012, dat_t_2011, dat_t_2010, dat_t_2009, dat_t_2008, dat_t_2007, dat_t_2006, dat_t_2005, dat_t_2004, dat_t_2003, dat_t_2002, dat_t_2001, dat_t_2000, dat_t_1999)
 team_prizes["Count"] <- NA
 team_prizes$Count <- 1
 str(team_prizes)
@@ -1385,7 +1385,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_e_2018 <- data.frame(name, nmbs2)
-colnames(dat_e_2018) <- c("event_name", "date", "prize_money")
+colnames(dat_e_2018) <- c("event_name", "Date", "prize_money")
 dat_e_2018["Year"] <- NA
 dat_e_2018$Year <- 2018
 dat_e_2018$Date <- NULL 
@@ -1412,7 +1412,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_e_2017 <- data.frame(name, nmbs2)
-colnames(dat_e_2017) <- c("Event Name", "Date", "Prize Money in $")
+colnames(dat_e_2017) <- c("event_name", "Date", "prize_money")
 dat_e_2017["Year"] <- NA
 dat_e_2017$Year <- 2017
 dat_e_2017$Date <- NULL 
@@ -1439,7 +1439,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_e_2016 <- data.frame(name, nmbs2)
-colnames(dat_e_2016) <- c("Event Name", "Date", "Prize Money in $")
+colnames(dat_e_2016) <- c("event_name", "Date", "prize_money")
 dat_e_2016["Year"] <- NA
 dat_e_2016$Year <- 2016
 dat_e_2016$Date <- NULL 
@@ -1466,7 +1466,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_e_2015 <- data.frame(name, nmbs2)
-colnames(dat_e_2015) <- c("Event Name", "Date", "Prize Money in $")
+colnames(dat_e_2015) <- c("event_name", "Date", "prize_money")
 dat_e_2015["Year"] <- NA
 dat_e_2015$Year <- 2015
 dat_e_2015$Date <- NULL 
@@ -1493,7 +1493,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_e_2014 <- data.frame(name, nmbs2)
-colnames(dat_e_2014) <- c("Event Name", "Date", "Prize Money in $")
+colnames(dat_e_2014) <- c("event_name", "Date", "prize_money")
 dat_e_2014["Year"] <- NA
 dat_e_2014$Year <- 2014
 dat_e_2014$Date <- NULL 
@@ -1520,7 +1520,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_e_2013 <- data.frame(name, nmbs2)
-colnames(dat_e_2013) <- c("Event Name", "Date", "Prize Money in $")
+colnames(dat_e_2013) <- c("event_name", "Date", "prize_money")
 dat_e_2013["Year"] <- NA
 dat_e_2013$Year <- 2013
 dat_e_2013$Date <- NULL 
@@ -1547,7 +1547,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_e_2012 <- data.frame(name, nmbs2)
-colnames(dat_e_2012) <- c("Event Name", "Date", "Prize Money in $")
+colnames(dat_e_2012) <- c("event_name", "Date", "prize_money")
 dat_e_2012["Year"] <- NA
 dat_e_2012$Year <- 2012
 dat_e_2012$Date <- NULL 
@@ -1574,7 +1574,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_e_2011 <- data.frame(name, nmbs2)
-colnames(dat_e_2011) <- c("Event Name", "Date", "Prize Money in $")
+colnames(dat_e_2011) <- c("event_name", "Date", "prize_money")
 dat_e_2011["Year"] <- NA
 dat_e_2011$Year <- 2011
 dat_e_2011$Date <- NULL 
@@ -1601,7 +1601,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_e_2010 <- data.frame(name, nmbs2)
-colnames(dat_e_2010) <- c("Event Name", "Date", "Prize Money in $")
+colnames(dat_e_2010) <- c("event_name", "Date", "prize_money")
 dat_e_2010["Year"] <- NA
 dat_e_2010$Year <- 2010
 dat_e_2010$Date <- NULL 
@@ -1628,7 +1628,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_e_2009 <- data.frame(name, nmbs2)
-colnames(dat_e_2009) <- c("Event Name", "Date", "Prize Money in $")
+colnames(dat_e_2009) <- c("event_name", "Date", "prize_money")
 dat_e_2009["Year"] <- NA
 dat_e_2009$Year <- 2009
 dat_e_2009$Date <- NULL 
@@ -1655,7 +1655,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_e_2008 <- data.frame(name, nmbs2)
-colnames(dat_e_2008) <- c("Event Name", "Date", "Prize Money in $")
+colnames(dat_e_2008) <- c("event_name", "Date", "prize_money")
 dat_e_2008["Year"] <- NA
 dat_e_2008$Year <- 2008
 dat_e_2008$Date <- NULL
@@ -1682,7 +1682,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_e_2007 <- data.frame(name, nmbs2)
-colnames(dat_e_2007) <- c("Event Name", "Date", "Prize Money in $")
+colnames(dat_e_2007) <- c("event_name", "Date", "prize_money")
 dat_e_2007["Year"] <- NA
 dat_e_2007$Year <- 2007
 dat_e_2007$Date <- NULL 
@@ -1709,7 +1709,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_e_2006 <- data.frame(name, nmbs2)
-colnames(dat_e_2006) <- c("Event Name", "Date", "Prize Money in $")
+colnames(dat_e_2006) <- c("event_name", "Date", "prize_money")
 dat_e_2006["Year"] <- NA
 dat_e_2006$Year <- 2006
 dat_e_2006$Date <- NULL
@@ -1736,7 +1736,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_e_2005 <- data.frame(name, nmbs2)
-colnames(dat_e_2005) <- c("Event Name", "Date", "Prize Money in $")
+colnames(dat_e_2005) <- c("event_name", "Date", "prize_money")
 dat_e_2005["Year"] <- NA
 dat_e_2005$Year <- 2005
 dat_e_2005$Date <- NULL 
@@ -1763,7 +1763,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_e_2004 <- data.frame(name, nmbs2)
-colnames(dat_e_2004) <- c("Event Name", "Date", "Prize Money in $")
+colnames(dat_e_2004) <- c("event_name", "Date", "prize_money")
 dat_e_2004["Year"] <- NA
 dat_e_2004$Year <- 2004
 dat_e_2004$Date <- NULL 
@@ -1790,7 +1790,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_e_2003 <- data.frame(name, nmbs2)
-colnames(dat_e_2003) <- c("Event Name", "Date", "Prize Money in $")
+colnames(dat_e_2003) <- c("event_name", "Date", "prize_money")
 dat_e_2003["Year"] <- NA
 dat_e_2003$Year <- 2003
 dat_e_2003$Date <- NULL 
@@ -1817,7 +1817,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_e_2002 <- data.frame(name, nmbs2)
-colnames(dat_e_2002) <- c("Event Name", "Date", "Prize Money in $")
+colnames(dat_e_2002) <- c("event_name", "Date", "prize_money")
 dat_e_2002["Year"] <- NA
 dat_e_2002$Year <- 2002
 dat_e_2002$Date <- NULL 
@@ -1844,7 +1844,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_e_2001 <- data.frame(name, nmbs2)
-colnames(dat_e_2001) <- c("Event Name", "Date", "Prize Money in $")
+colnames(dat_e_2001) <- c("event_name", "Date", "prize_money")
 dat_e_2001["Year"] <- NA
 dat_e_2001$Year <- 2001
 dat_e_2001$Date <- NULL
@@ -1871,7 +1871,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_e_2000 <- data.frame(name, nmbs2)
-colnames(dat_e_2000) <- c("Event Name", "Date", "Prize Money in $")
+colnames(dat_e_2000) <- c("event_name", "Date", "prize_money")
 dat_e_2000["Year"] <- NA
 dat_e_2000$Year <- 2000
 dat_e_2000$Date <- NULL 
@@ -1898,7 +1898,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_e_1999 <- data.frame(name, nmbs2)
-colnames(dat_e_1999) <- c("Event Name", "Date", "Prize Money in $")
+colnames(dat_e_1999) <- c("event_name", "Date", "prize_money")
 dat_e_1999["Year"] <- NA
 dat_e_1999$Year <- 1999
 dat_e_1999$Date <- NULL
@@ -1925,7 +1925,7 @@ name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
 dat_e_1998 <- data.frame(name, nmbs2)
-colnames(dat_e_1998) <- c("Event Name", "Date", "Prize Money in $")
+colnames(dat_e_1998) <- c("event_name", "Date", "prize_money")
 dat_e_1998["Year"] <- NA
 dat_e_1998$Year <- 1998
 dat_e_1998$Date <- NULL 
@@ -1944,9 +1944,9 @@ str(event_prizes)
 
 #getting correlations for events
 by_e_year <- group_by(event_prizes, Year) #get information on number of events/players/teams per year
-as.numeric(as.character(unlist(by_e_year)))
 
-summa_e_prize <- summarize(by_e_year$Year, sum_e_prize=sum(`Prize Money in $`), na.rm= TRUE)
+
+summa_e_prize <- summarize(by_e_year$Year, sum_e_prize=sum(`prize_money`), na.rm= TRUE)
 
 cor.test(summa_e_prize$Year,summa_e_prize$sum_e_prize, method=c("pearson"))
 
@@ -1964,7 +1964,7 @@ scatterplot(sum_e_count ~ Year, data=summa_e_count, xlab="Year", ylab="Count of 
 
 by_t_year <- group_by(team_prizes, Year)
 
-summa_t_prize <- summarize(by_t_year, sum_t_prize=sum(`Total Prize Money in $`), na.rm= TRUE)
+summa_t_prize <- summarize(by_t_year, sum_t_prize=sum(prize_money), na.rm= TRUE)
 
 cor.test(summa_t_prize$Year,summa_t_prize$sum_t_prize, method=c("pearson"))
 
@@ -1982,7 +1982,7 @@ scatterplot(sum_t_count ~ Year, data=summa_t_count, xlab="Year", ylab="Count of 
 
 by_p_year <- group_by(player_prizes, Year)
 
-summa_p_prize <- summarize(by_p_year, sum_p_prize=sum(`Total Prize Money in $`), na.rm= TRUE)
+summa_p_prize <- summarize(by_p_year, sum_p_prize=sum(prize_money), na.rm= TRUE)
 
 cor.test(summa_p_prize$Year,summa_p_prize$sum_p_prize, method=c("pearson"))
 
