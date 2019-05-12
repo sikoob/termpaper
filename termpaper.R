@@ -1946,7 +1946,7 @@ str(event_prizes)
 by_e_year <- group_by(event_prizes, Year) #get information on number of events/players/teams per year
 
 
-summa_e_prize <- summarize(by_e_year$Year, sum_e_prize=sum(`prize_money`), na.rm= TRUE)
+summa_e_prize <- summarize(by_e_year, sum_e_prize=sum(prize_money), na.rm= TRUE)
 
 cor.test(summa_e_prize$Year,summa_e_prize$sum_e_prize, method=c("pearson"))
 
