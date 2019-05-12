@@ -1989,13 +1989,6 @@ cor.test(summa_p_prize$Year,summa_p_prize$sum_p_prize, method=c("pearson"))
 scatterplot(sum_p_prize ~ Year, data=summa_p_prize, xlab="Year", ylab="Money in Dollar", 
             main="Scatterplot for prize money in $ by Year for players", boxplot=FALSE, smooth=FALSE)
 
-summa_p_count <- summarize(by_p_year, sum_p_count=sum(`Count`), na.rm= TRUE)
-
-cor.test(summa_p_count$Year,summa_p_count$sum_p_count, method=c("pearson"))
-
-scatterplot(sum_p_count ~ Year, data=summa_p_count, xlab="Year", ylab="Count of players", 
-            main="Scatterplot for count of eSport players by Year", boxplot=FALSE, smooth=FALSE)
-
 
 
 #   
