@@ -23,41 +23,81 @@ library(RSocrata)
 library(magrittr)
 library(stringr)
 library(car)
-
+library(tinytex)
 ```
 
 
-```{r echo=TRUE}
+```{r echo=FALSE, include=FALSE, cache=TRUE}
 source('termpaper.R', print.eval = FALSE) #work on
 
 ```
 
 
-## Introduction
+## 1. Introduction
 
 Sociological analysis of emerging organizations has been linked to network analysis (e.g. Granovetter 1985, Larson & Starr 1993), individual characteristics to distinguish entrepreneurs and usual managers (e.g. Miller 1983, Timmons 1980) and the environment that the organization is expected to operate in (e.g. Hannan & Freeman 1989). Linking these different areas together, Learned’s model for emerging organizations (Learned 1992) suggests four dimensions which determine the decision to found an organization: The individual traits, intentional motivators, the opportunity to found and the final decision. In traditional sociological research on organizations, these dimensions were inspected by gathering information through case studies at companies of interest that were then generalized to the entirety of working environments (e.g. Johnson & Powell 2015, Thompson 1967). By using case studies, a single or a small group of organizations is analyzed in-depth while covering different dimensions of organizational emergence and interaction. Yet, case studies are rather time costly to gather all necessary information and observe the process in question. Moreover, the resulting data sets are also limited to a smaller number of analyzable observations putting in question the generalizability of the study in question. Even when doing retrospective analysis (e.g. Erikson 2014), researchers often face incomplete datasets that make historical analysis of emerging organizations difficult or need extensive time spent in archives to gather and analyze all necessary information.
 Yet, with the coming in existence of the World Wide Web, new opportunities arose for organizational sociologist to study organizations. Data on organizations and firms is available through annual reports, board meeting transcripts or general fact sheets that offer already a considerable amount of information to inspect organizational decisions. Furthermore, information is collected by enthusiasts in forums or dedicated websites and available to the general public. While the latter needs to be considered with caution about reliability, these online sources can be considered a useful addition to the traditional way of organizational research. This paper will use the newly available online sources to analyze the emergence of companies in a field that is tightly linked to online activity.
 With this approach, this paper will focus on the emergence of organized teams in the field of eSports. A descriptive account will be made to argue the emergence of these organized teams by the given opportunity and more available resources through the increase of popularity of video games. To make the argument, available online data will be used and analyzed. The paper follows this structure: First, an account will be given on eSports and its move into mainstream. Second, the approach to gather and prepare the available online data will be explained. The subsequent analysis of the collected data will be subject to the third part of this paper. Finally, a conclusion will be offered to explain the emergence of organized teams in eSports and the applicability of online data for this research subject. 
 
+## 2. TITLE
+
+eSports is the “direct competition between human players by usage of suitable video and computer games with different devices and on digital platforms with specified rules” (ESBD 2018, translation by author). This digital sport developed out of private video game partys or LAN partys (Redinger 2019) that grew into larger tournaments that eventually offered monetary and other prizes to the single winner or the winning team (Wagner 2006: 437-438). While the participation and interest in these tournaments can be argued to have been only with a few dedicated people who love gaming, video gaming has apparently made the move into the mainstream. Revenues created through video games are constantly rising and are becoming the number one form of leisure entertainment in the Western world (e.g. Schieber 2019, LPE 2018). Additionally, increasing numbers of households own video game consoles (e.g. statista 2019) which further supports the notion that video games moved from being a niche entertainment into the mainstream and are enjoyed by the public. But not only playing video games is becoming increasingly popular, also watching others play them is enjoying an increasing viewership. Streams of people playing video games and commenting their playing experience have increasing numbers of viewers which leads to entire platforms like Twitch being dedicated to provide these streams (Burroughs & Rama 2015). While eSport events are also streaming on these platforms, the increasing popularity led to eSports also being covered on sports channels on TV (ibid, see also e.g. Niemeier 2019). 
+Although started as a leisure activity for the providers for spectators interested, popular players on streaming platforms (Johnson & Woodcock 2019) and successful eSport participants (Ward & Harmon 2018) can nowadays make a living out of playing video games. Additionally, an entire industry is forming and growing around eSports and the business opportunities provided through this new form of entertainment (Scholz 2019). An argument to be made here is that with increasing business opportunities and parties involved, the complexity of the environment grows too much for just one individual to handle. At this point, organizations in form of teams or joint ventures can be expected to be created to distribute the complexity along all members or even have specialized people with specific responsibilities (e.g. Freeman & Wohn 2019). Another reason for team formation would be the opportunity for outside providers to benefit from emerging business opportunities within eSports. As with other sports, a usual way for increasing the money involved in a professional sport is by sponsorship. This has and is still happening in eSports (e.g. Heinz & Ströh 2017) with companies pouring money into tournaments and even dedicated teams. The rising popularity of eSports led to big name companies making their name known as supporters of the relatively young sport (e.g. Meola 2018). Even more interesting is the move of established teams of physical sports to create eSport divisions and have their digital counterparts compete in eSport leagues and tournaments (e.g. Vu 2018, ran 2018).
+Opportunities for companies and individuals who are involved in eSports to create specialized teams as an organizable entity within eSports seem to be driven by the value that is formed through public attention which in turn drives revenues in terms of prize money and sponsoring. Nevertheless, important for this research paper’s approach is the fact that research on eSports is using traditional research methods to gain insights on this new organizational area. Yet, with the digitalization of sports by gaming and eSports, data and material for research can be expected to also be found in a digital manner. Therefore, the next chapter will explain this paper’s approach to collect useful information for a descriptive account on the emergence of organization in eSports, mainly driven by the opportunities provided to gain upon.
 
 
-## Data
 
-This section describes the data sources and the data gathering process.
+## 3. TITLE
+
+eSports as the new form of digital contesting for video gamers by its nature provides a fruitful ground for this paper’s approach of new data sources. When not happening in a physical location, gamers use the Internet to play together in a game remotely, which is also true for teams and training (Freeman & Wohn 2019). Moreover, games, players and other topics concerning video games can be discussed by players and people interest in various online platforms like forums.
+Resulting, a lot of information about video games and more importantly eSports can be expected and is found online. Yet, the concern with data, that is produced by individuals who do not have the production of scientific data in mind, is that the data is messy and not useable for empirical analysis. For a first approach to eSports and the emergence of organization, a Google Trends Query with the gtrends package in RStudio Version 1.2.1335 was approached. First, the general term of esports was looked up with the ratio of searches through the Google Search engine. The trend implicates that CONTINUE
+
 
 ```{r}
 # A code chunk that exemplifies the data gathering process
 ```
 
+These results would indicate that the public interest in general eSports declined over time judging by the amount of Google searches. Yet, one way to think about the development of eSports could be that general knowledge about eSports exists and only special knowledge is requested. To test this approach, Google Trends Query was used to look at the development of the named top games for eSport contests (Hayward 2018). The developments here (Figure 2) indicate that 
+
 ```{r, include = FALSE}
 # Additional code chunks that repeat tasks or do basic things can be hidden
 ```
 
-## Results
+Additionally, looking besides the plain searches for a certain key term, the described watching of gamers during competitions by streaming is an increasing entertainment market. APIs to get information from the main streaming platform of Twitch are sadly limited to approved usage by the Twitch decision makers which exceeded the amount of research time available for this paper. But as YouTube, the video platform by Google, also provides users with the ability to upload streaming videos and make live streams, Google Trend Query was again used by looking at the earlier top eSports games and their search inquiries on YouTube. The numbers (Figure 3) show that 
 
-This section presents the main results.
+```{r}
 
-### Data exploration
+```
+
+This first approach by using data available through Google and YouTube gives a hint that eSports and more particular the specific games developed RESULTS SUM UP. Importantly, this data only covered the public interest and not yet the business opportunities by investment into eSports and various tournaments. An analysis of available online data on this matter will be done in the next section.
+
+## 4. TITLE
+
+After finding proof by online available data through Google and YouTube that RESULTS, this section will analyze available data on the business opportunities given through eSports. With online available data in contrast to more traditional datasets there are several concerns and hurdles. One concern is that online data, especially the one produced through people interested in the topic in forums and dedicated platforms, can be messy and without proven ground. Additionally, certain data can be hidden behind paywalls for the provider to benefit. Yet, for a student’s project without monetary support, paywalls do provide a stop of usage of a dataset.
+Faced with the described problems during the search for useable datasets for a deeper analysis of emergence of organizations in eSports, I came across the website eSports Earnings (https://www.esportsearnings.com/). Proofing to be very useful for this paper’s research question, the website provides lists for prize money divided by teams, countries and single players as well as prize money offered in tournaments, games and leagues dating back to 1998. Additionally, all entries in the lists need to have a proven ground so that the data is verified before being offered online. Of most interest for a descriptive analysis and an argument for a business opportunity for actors to get into eSports and have organizations emerge, the development of prize money involved in eSports is of most interest with the provided data. Although the website offers several APIs to directly gather data, issues with processing through RStudio prevented the usage of these APIs. Therefore, data was collected manually from the respective sites for each year.
+For the individual players, the players’ name, nickname while playing and total prize money won in eSports competition for the respective year were collected. For each year, collection was restricted to the best 100 players in each year. This decision was made due to the complexity of data collection unreasonably increasing while trying to get data for players out of the most winning 100 players by the website’s structure. Additionally, although the distribution of won prize money by players can be expected to be highly skewed with the best players earning the most, the distribution should not affect the development of prize money overall with the best players per year included. After collecting data for the years 2018 to 1998, with 2019 being left out for not being completed as of the time of the writing of this text, prize money by all players won was summed up by the respective year. Subsequently, Pearson’s r was calculated to find out the relation of prize money won and the year.
+
+```{r}
+
+```
+
+The strong correlation between prize money won by players and year is replicated with the prize money attached to single tournaments (GRAPH). After doing similar data preparation for the entire lists of tournaments and eSport events taking place between 2018 and 1998, analysis provides prize money and number of events (NOCH MACHEN!) are both strongly positive correlated with the year. This result leads to the notion that not only did the prize money for the individual tournament or event increased but they also increased in number. For this paper’s question about emerging organization in eSports, this finding is important as business opportunities grew not only in individual size but also in numbers, meaning more opportunities are provided for one to gain from.
+
+```{r}
+
+```
+
+When looking at the provided data for teams and their won prize money through eSports activities, similar results as for the individual players and the events can be found. In the timeframe from 1998 to 2018 with the full list of teams for each year, the amount of prize money won by all the teams summed up as well as the number of teams are both positively correlated with years (GRAPH AND RESULTS). So not only does the amount of money available through and number of eSport activities increase, but also the individual as well as collective benefits increase as well as the number of teams involved in the eSport world.
+```{r}
+
+```
+
+The implications drawn from these findings through the online dataset imply that with increasing number of business opportunities in eSports through more prize money being available, emergence of organizations in the form of teams did indeed happen. While the prize money won by individual players increased, the money won by teams also increased. Yet, the important thing to note here is that while no data is available for this paper, an overlap of players being members of teams can be expected. For the descriptive approach of this paper, this circumstance does not create to big of a problem. Important is that with increasing business opportunities by available prize money, individual players did not stay alone and took up all the opportunities by themselves. Teams increased in numbers and winning share of the prize money. Pushing this argument further, emergence of organized teams in eSports may have come due to two possible mechanisms discussed in this paper. First, individual players started to organize themselves in teams because of an increasing complexity in eSports that increased to an amount to be too much for one individual. The indicator in this paper’s dataset would be the strong correlation between the year and the amount of listed eSport events and would replicate the finding by Freeman and Wohn (2019).Yet, the increasing business opportunities is also indicated by the strong correlation of prize money either offered by eSport events or won by individual or teams and year. This finding supports the notion of opportunists outside of eSports getting involved through sponsoring their own team (Heinz & Ströh 2017) or otherwise creating a dedicated department for eSport participation (e.g. Vu 2018, ran 2018). While the motivations for participating in eSports with a team cannot be distinguished by the data at hand, arguments for the drivers of emergence of organizations in eSports have been found in the data that was collected online. NOCH ANZAHL TEAMS ETC REINMACHEN
+
+
+
+
+### 5. Concluison
 
 The results section may have a data exploration part, but in general the structure here depends on the specific project.
 
@@ -142,7 +182,6 @@ Hayward, Andrew (2018): The 10 Biggest Esports of 2018 by Total Prize Pool. In T
 
 ## Statutory Declaration
 „I hereby declare that the paper presented is my own work and that I have not called upon the help of a third party. In addition, I affirm that neither I nor anybody else has submitted this paper or parts of it to obtain credits elsewhere before. I have clearly marked and acknowledged all quotations or references that have been taken from the works of other. All secondary literature and other sources are marked and listed in the bibliography. The same applies to all charts, diagrams and illustrations as well as to all Internet sources. Moreover, I consent to my paper being electronically stores and sent anonymously in order to be checked for plagiarism. I am aware that the paper cannot be evaluated and may be graded “failed” (“nicht ausreichend”) if the declaration is not made.”
-
 
 
 
