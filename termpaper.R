@@ -1975,8 +1975,8 @@ summa_t_count <- summarize(by_t_year, sum_t_count=sum(`Count`), na.rm= TRUE)
 
 cor.test(summa_t_count$Year,summa_t_count$sum_t_count, method=c("pearson"))
 
-scatterplot(sum_t_count ~ Year, data=summa_t_count, xlab="Year", ylab="Count of events", 
-            main="Scatterplot for count of eSport events by Year", boxplot=FALSE, smooth=FALSE)
+scatterplot(sum_t_count ~ Year, data=summa_t_count, xlab="Year", ylab="Count of teams", 
+            main="Scatterplot for count of eSport teamss by Year", boxplot=FALSE, smooth=FALSE)
 
 #getting correlations for individual players
 
@@ -1993,8 +1993,8 @@ summa_p_count <- summarize(by_p_year, sum_p_count=sum(`Count`), na.rm= TRUE)
 
 cor.test(summa_p_count$Year,summa_p_count$sum_p_count, method=c("pearson"))
 
-scatterplot(sum_p_count ~ Year, data=summa_p_count, xlab="Year", ylab="Count of events", 
-            main="Scatterplot for count of eSport events by Year", boxplot=FALSE, smooth=FALSE)
+scatterplot(sum_p_count ~ Year, data=summa_p_count, xlab="Year", ylab="Count of players", 
+            main="Scatterplot for count of eSport players by Year", boxplot=FALSE, smooth=FALSE)
 
 
 
