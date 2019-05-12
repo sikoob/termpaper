@@ -28,8 +28,7 @@ library(tinytex)
 
 
 ```{r, echo=FALSE, include=FALSE, cache=TRUE}
-source('termpaper.R', print.eval = FALSE) #work on
-
+source('termpaper.R', print.eval = FALSE) 
 ```
 
 
