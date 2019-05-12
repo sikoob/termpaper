@@ -2,16 +2,14 @@
 title: "Termpaper_TBA"
 author: "Simon Koob"
 date: "`r Sys.Date()`"
-output:
-  word_document: default
-  pdf_document: default
+output: pdf_document
 geometry: margin=1in
 keep_tex: yes
-lang: English
 mainfont: Arial
 fontsize: 12pt
 subtitle: TBA
 documentclass: article
+urlcolor: blue
 toc: yes
 ---
 
@@ -39,54 +37,47 @@ source('termpaper.R', print.eval = FALSE)
 ```
 
 
-## 1. Introduction
+# 1. Introduction
 
 Sociological analysis of emerging organizations has been linked to network analysis (e.g. Granovetter 1985, Larson & Starr 1993), individual characteristics to distinguish entrepreneurs and usual managers (e.g. Miller 1983, Timmons 1980) and the environment that the organization is expected to operate in (e.g. Hannan & Freeman 1989). Linking these different areas together, Learned’s model for emerging organizations (Learned 1992) suggests four dimensions which determine the decision to found an organization: The individual traits, intentional motivators, the opportunity to found and the final decision. In traditional sociological research on organizations, these dimensions were inspected by gathering information through case studies at companies of interest that were then generalized to the entirety of working environments (e.g. Johnson & Powell 2015, Thompson 1967). By using case studies, a single or a small group of organizations is analyzed in-depth while covering different dimensions of organizational emergence and interaction. Yet, case studies are rather time costly to gather all necessary information and observe the process in question. Moreover, the resulting data sets are also limited to a smaller number of analyzable observations putting in question the generalizability of the study in question. Even when doing retrospective analysis (e.g. Erikson 2014), researchers often face incomplete datasets that make historical analysis of emerging organizations difficult or need extensive time spent in archives to gather and analyze all necessary information.
 Yet, with the coming in existence of the World Wide Web, new opportunities arose for organizational sociologist to study organizations. Data on organizations and firms is available through annual reports, board meeting transcripts or general fact sheets that offer already a considerable amount of information to inspect organizational decisions. Furthermore, information is collected by enthusiasts in forums or dedicated websites and available to the general public. While the latter needs to be considered with caution about reliability, these online sources can be considered a useful addition to the traditional way of organizational research. This paper will use the newly available online sources to analyze the emergence of companies in a field that is tightly linked to online activity.
 With this approach, this paper will focus on the emergence of organized teams in the field of eSports. A descriptive account will be made to argue the emergence of these organized teams by the given opportunity and more available resources through the increase of popularity of video games. To make the argument, available online data will be used and analyzed. The paper follows this structure: First, an account will be given on eSports and its move into mainstream. Second, the approach to gather and prepare the available online data will be explained. The subsequent analysis of the collected data will be subject to the third part of this paper. Finally, a conclusion will be offered to explain the emergence of organized teams in eSports and the applicability of online data for this research subject. 
 
-## 2. TITLE
+# 2. TITLE
 
 eSports is the “direct competition between human players by usage of suitable video and computer games with different devices and on digital platforms with specified rules” (ESBD 2018, translation by author). This digital sport developed out of private video game partys or LAN partys (Redinger 2019) that grew into larger tournaments that eventually offered monetary and other prizes to the single winner or the winning team (Wagner 2006: 437-438). While the participation and interest in these tournaments can be argued to have been only with a few dedicated people who love gaming, video gaming has apparently made the move into the mainstream. Revenues created through video games are constantly rising and are becoming the number one form of leisure entertainment in the Western world (e.g. Schieber 2019, LPE 2018). Additionally, increasing numbers of households own video game consoles (e.g. statista 2019) which further supports the notion that video games moved from being a niche entertainment into the mainstream and are enjoyed by the public. But not only playing video games is becoming increasingly popular, also watching others play them is enjoying an increasing viewership. Streams of people playing video games and commenting their playing experience have increasing numbers of viewers which leads to entire platforms like Twitch being dedicated to provide these streams (Burroughs & Rama 2015). While eSport events are also streaming on these platforms, the increasing popularity led to eSports also being covered on sports channels on TV (ibid, see also e.g. Niemeier 2019). 
 Although started as a leisure activity for the providers for spectators interested, popular players on streaming platforms (Johnson & Woodcock 2019) and successful eSport participants (Ward & Harmon 2018) can nowadays make a living out of playing video games. Additionally, an entire industry is forming and growing around eSports and the business opportunities provided through this new form of entertainment (Scholz 2019). An argument to be made here is that with increasing business opportunities and parties involved, the complexity of the environment grows too much for just one individual to handle. At this point, organizations in form of teams or joint ventures can be expected to be created to distribute the complexity along all members or even have specialized people with specific responsibilities (e.g. Freeman & Wohn 2019). Another reason for team formation would be the opportunity for outside providers to benefit from emerging business opportunities within eSports. As with other sports, a usual way for increasing the money involved in a professional sport is by sponsorship. This has and is still happening in eSports (e.g. Heinz & Stroeh 2017) with companies pouring money into tournaments and even dedicated teams. The rising popularity of eSports led to big name companies making their name known as supporters of the relatively young sport (e.g. Meola 2018). Even more interesting is the move of established teams of physical sports to create eSport divisions and have their digital counterparts compete in eSport leagues and tournaments (e.g. Vu 2018, ran 2018).
 Opportunities for companies and individuals who are involved in eSports to create specialized teams as an organizable entity within eSports seem to be driven by the value that is formed through public attention which in turn drives revenues in terms of prize money and sponsoring. Nevertheless, important for this research paper’s approach is the fact that research on eSports is using traditional research methods to gain insights on this new organizational area. Yet, with the digitalization of sports by gaming and eSports, data and material for research can be expected to also be found in a digital manner. Therefore, the next chapter will explain this paper’s approach to collect useful information for a descriptive account on the emergence of organization in eSports, mainly driven by the opportunities provided to gain upon.
 
-
-
-## 3. TITLE
+# 3. TITLE
 
 eSports as the new form of digital contesting for video gamers by its nature provides a fruitful ground for this paper’s approach of new data sources. When not happening in a physical location, gamers use the Internet to play together in a game remotely, which is also true for teams and training (Freeman & Wohn 2019). Moreover, games, players and other topics concerning video games can be discussed by players and people interest in various online platforms like forums.
 Resulting, a lot of information about video games and more importantly eSports can be expected and is found online. Yet, the concern with data, that is produced by individuals who do not have the production of scientific data in mind, is that the data is messy and not useable for empirical analysis. For a first approach to eSports and the emergence of organization, a Google Trends Query with the gtrends package in RStudio Version 1.2.1335 was approached. First, the general term of esports was looked up with the ratio of searches through the Google Search engine. The trend implicates that CONTINUE
 
 
 ```{r,echo=FALSE, include=TRUE}
-esports <- gtrends(c("esports"))
 plot(esports)
 ```
 
 These results would indicate that the public interest in general eSports declined over time judging by the amount of Google searches. Yet, one way to think about the development of eSports could be that general knowledge about eSports exists and only special knowledge is requested. To test this approach, Google Trends Query was used to look at the development of the named top games for eSport contests (Hayward 2018). The developments here (Figure 2) indicate that 
 
 ```{r, echo=TRUE, include = TRUE}
-games <- gtrends(c("Call of Duty: WWII", "StarCraft II", "Heartstone", "Heroes of the Storm", "Overwatch")) 
 plot(games)
 
-games2 <- gtrends(c("PlayerUnknown's Battleground", "League of Legends", "Fortnite", "Counter Strike: Global Offensive", "Dota 2"))
 plot(games2)
 ```
 
 Additionally, looking besides the plain searches for a certain key term, the described watching of gamers during competitions by streaming is an increasing entertainment market. APIs to get information from the main streaming platform of Twitch are sadly limited to approved usage by the Twitch decision makers which exceeded the amount of research time available for this paper. But as YouTube, the video platform by Google, also provides users with the ability to upload streaming videos and make live streams, Google Trend Query was again used by looking at the earlier top eSports games and their search inquiries on YouTube. The numbers (Figure 3) show that 
 
 ```{r, echo=TRUE, include=TRUE}
-games_y <- gtrends(c("Call of Duty: WWII", "StarCraft II", "Heartstone", "Heroes of the Storm", "Overwatch"), gprop="youtube") 
 plot(games_y)
 
-games2_y <- gtrends(c("PlayerUnknown's Battleground", "League of Legends", "Fortnite", "Counter Strike: Global Offensive", "Dota 2"), gprop= "youtube")
 plot(games2_y)
 ```
 
 This first approach by using data available through Google and YouTube gives a hint that eSports and more particular the specific games developed RESULTS SUM UP. Importantly, this data only covered the public interest and not yet the business opportunities by investment into eSports and various tournaments. An analysis of available online data on this matter will be done in the next section.
 
-## 4. TITLE
+# 4. TITLE
 
 After finding proof by online available data through Google and YouTube that RESULTS, this section will analyze available data on the business opportunities given through eSports. With online available data in contrast to more traditional datasets there are several concerns and hurdles. One concern is that online data, especially the one produced through people interested in the topic in forums and dedicated platforms, can be messy and without proven ground. Additionally, certain data can be hidden behind paywalls for the provider to benefit. Yet, for a student’s project without monetary support, paywalls do provide a stop of usage of a dataset.
 Faced with the described problems during the search for useable datasets for a deeper analysis of emergence of organizations in eSports, I came across the website eSports Earnings (https://www.esportsearnings.com/). Proofing to be very useful for this paper’s research question, the website provides lists for prize money divided by teams, countries and single players as well as prize money offered in tournaments, games and leagues dating back to 1998. Additionally, all entries in the lists need to have a proven ground so that the data is verified before being offered online. Of most interest for a descriptive analysis and an argument for a business opportunity for actors to get into eSports and have organizations emerge, the development of prize money involved in eSports is of most interest with the provided data. Although the website offers several APIs to directly gather data, issues with processing through RStudio prevented the usage of these APIs. Therefore, data was collected manually from the respective sites for each year and then binding all years to get one data set.
@@ -127,7 +118,7 @@ The implications drawn from these findings through the online dataset imply that
 
 
 
-### 5. Concluison
+# 5. Concluison
 
 The results section may have a data exploration part, but in general the structure here depends on the specific project.
 
@@ -157,37 +148,67 @@ This section presents the main results, such as (for example) stats and graphs t
 
 This section summarizes the results and may briefly outline advantages and limitations of the work presented.
 
-## References
+# References
 
 Burroughs, Benjamin; Rama, Paul (2015): The eSports Trojan Horse: Twitch and Streaming Futures. Journal of Virtual Worlds Research 8(2): 1-5.
+
 Erikson, Emily (2014): Between Monopoly and Free Trade: The English East Indian Company, 1600-1757. Princeton, NJ: Princeton University Press.
+
 ESBD (2018): Was ist eSport?. In ESBD -  eSport Bund Deutschland e.V. through https://esportbund.de/esport/was-ist-esport/ (last visited: ).
+
 Freeman, Guo; Wohn, Donghee Y. (2019): Understanding eSports Team Formation and Coordination. Computer supported cooperative work (CSCW) 28(1-2): 95-126.
+
 Granovetter, Mark (1985): Economic action and social structure: A theory of embeddedness. American Journal of Sociology 91(3): 481-510.
+
 Hannan, Michael T.; Freeman, John (1989): Organizational ecology. Cambridge: Harvard University Press.
+
 Hayward, Andrew (2018): The 10 Biggest Esports of 2018 by Total Prize Pool. In The eSports Observer through https://esportsobserver.com/10-biggest-prize-pools-2018/ (last visited: ).
+
 Heinz, Julia; Stroeh, Anton (2017): The eSports Market and eSports Sponsoring. Marburg: Tectum Verlag.
+
 Johnson, Mark R.; Woodcock, Jamie (2019): ‘It’s like the gold rush’: the lives and careers of professional video game streamers on Twitch.tv. Information, Communication & Society 22(3): 336-351.
+
 Johnson, Victoria; Powell, Walter A. (2015): Poisedness and propagation: Organizational emergence and the transformation of civic order in 19th-century New York City (No. w21011). National Bureau of Economic Research.
+
 Larson, Andrea; Starr, Jennifer A. (1993): A network model of organization formation. Entrepreneurship theory and practice 17(2): 5-15.
+
 Learned, Kevin E. (1992): What happened before the organization? A model of organization formation. Entrepreneurship theory and practice 17(1): 39-48.
+
 LPE (2018): The Video Games’ Industry is Bigger Than Hollywood. In LPeSport through https://lpesports.com/e-sports-news/the-video-games-industry-is-bigger-than-hollywood (last visited: ).
+
 Meola, Andrew (2018): The biggest companies sponsoring eSports teams and tournaments. In Business Insider Deutschland through https://www.businessinsider.de/top-esports-sponsors-gaming-sponsorships-2018-1?r=US&IR=T (last visited: ).
+
 Miller, Danny (1983): The correlates of entrepreneurship in three types of firms. Management Science 29(7): 770-791.
+
 Niemeier, Timo (2019): 7Sports sichert sich neue eSports-Rechte fuer ProSieben Maxx. In DWDL.de through https://www.dwdl.de/nachrichten/71178/7sports_sichert_sich_neue_esportsrechte_fuer_prosieben_maxx/ (last visited: ).
+
 ran (2018): Diese Bundesligisten sind im eSport aktiv. In ran through https://www.ran.de/esport/bildergalerien/diese-bundesligisten-sind-im-esport-aktiv (last visited: ).
+
 Redinger, Jochen (2019): Phaenomen LAN-Party – Ein Dinosaurier der Videospielkultur. In GameStar through https://www.gamestar.de/artikel/phaenomen-lan-party-der-dinosaurier-der-videospielkultur,3324928.html (last visited: ).
+
 Schieber, Jonathan (2019): Video game revenue tops $43 billion in 2018, an 18% jump from 2017. In TechCrunch through https://techcrunch.com/2019/01/22/video-game-revenue-tops-43-billion-in-2018-an-18-jump-from-2017/?guccounter=1&guce_referrer_us=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_cs=70GHWyamlASU8jhJ4Gns2A (last visited: ).
+
 Scholz, Tobias M. (2019): eSports is Business: Management in the World of Competitive Gaming. Cham: Palgrave MacMillan.
+
 Statista (2019): Anteil der privaten Haushalte in Deutschland mit einer Spielkonsole von 2006 bis 2018. In statista – Das Statistik-Portal through https://de.statista.com/statistik/daten/studie/198640/umfrage/anteil-der-haushalte-in-deutschland-mit-einer-spielkonsole-seit-2006/ (last visited: ).
+
 Thompson, Edward P. (1967): Time, work-discipline, and industrial capitalism. Past & present 37: 56-97.
+
 Timmons, Jeffry A. (1980): Business plan is more than a financing device. Harvard Business Review 58(2): 198-206.
+
 Vu, Linh (2018): “NBA 2K muss noch aufholen“. In sport1 through https://www.sport1.de/esports/2018/09/nba-2k19-das-sagen-die-profis-zum-basketball-esports  (last visited: ).
+
 Wagner, Michael G. (2006): On the Scientific Relevance of eSports. International conference on internet computing: 437-442.
+
 Ward, Michael R.; Harmon, Alexander (2018): ESport Superstars. Through http://dx.doi.org/10.2139/ssrn.3154763 (last visited: ).
 
 
-## Statutory Declaration
+# Statutory Declaration
 "I hereby declare that the paper presented is my own work and that I have not called upon the help of a third party. In addition, I affirm that neither I nor anybody else has submitted this paper or parts of it to obtain credits elsewhere before. I have clearly marked and acknowledged all quotations or references that have been taken from the works of other. All secondary literature and other sources are marked and listed in the bibliography. The same applies to all charts, diagrams and illustrations as well as to all Internet sources. Moreover, I consent to my paper being electronically stores and sent anonymously in order to be checked for plagiarism. I am aware that the paper cannot be evaluated and may be graded “failed” (“nicht ausreichend”) if the declaration is not made.”
 
+```{r, include=FALSE}
+options(tinytex.verbose = TRUE)
+
+
+```
 
