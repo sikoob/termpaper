@@ -10,6 +10,7 @@ fontsize: 12pt
 subtitle: TBA
 documentclass: article
 urlcolor: blue
+fig_caption: yes
 toc: yes
 ---
 
@@ -55,13 +56,13 @@ eSports as the new form of digital contesting for video gamers by its nature pro
 Resulting, a lot of information about video games and more importantly eSports can be expected and is found online. Yet, the concern with data, that is produced by individuals who do not have the production of scientific data in mind, is that the data is messy and not useable for empirical analysis. For a first approach to eSports and the emergence of organization, a Google Trends Query with the gtrends package in RStudio Version 1.2.1335 was approached. First, the general term of esports was looked up with the ratio of searches through the Google Search engine. The trend implicates that CONTINUE
 
 
-```{r,echo=FALSE, include=TRUE}
+```{r fig1,echo=FALSE, include=TRUE, fig.cap="\\label{fig:fig1}Search for term 'eSports' globally in Google Search over time, Source: Google."}
 plot(esports)
 ```
 
 These results would indicate that the public interest in general eSports declined over time judging by the amount of Google searches. Yet, one way to think about the development of eSports could be that general knowledge about eSports exists and only special knowledge is requested. To test this approach, Google Trends Query was used to look at the development of the named top games for eSport contests (Hayward 2018). The developments here (Figure 2) indicate that 
 
-```{r, echo=TRUE, include = TRUE}
+```{r fig2, echo=TRUE, include = TRUE, fig.cap="\\label{fig:fig2}Search for top 10 eSport games globally in Google Search over time, Source: Google."}
 plot(games)
 
 plot(games2)
@@ -69,7 +70,7 @@ plot(games2)
 
 Additionally, looking besides the plain searches for a certain key term, the described watching of gamers during competitions by streaming is an increasing entertainment market. APIs to get information from the main streaming platform of Twitch are sadly limited to approved usage by the Twitch decision makers which exceeded the amount of research time available for this paper. But as YouTube, the video platform by Google, also provides users with the ability to upload streaming videos and make live streams, Google Trend Query was again used by looking at the earlier top eSports games and their search inquiries on YouTube. The numbers (Figure 3) show that 
 
-```{r, echo=TRUE, include=TRUE}
+```{r fig3, echo=TRUE, include=TRUE, fig.cap="\\label{fig:fig3}Search for top 10 eSport games globally in YouTube over time, Source: YouTube."}
 plot(games_y)
 
 plot(games2_y)
@@ -84,7 +85,7 @@ Faced with the described problems during the search for useable datasets for a d
 
 For the individual players, the players’ name, nickname while playing and total prize money won in eSports competition for the respective year were collected. For each year, collection was restricted to the best 100 players in each year. This decision was made due to the complexity of data collection unreasonably increasing while trying to get data for players out of the most winning 100 players by the website’s structure. Additionally, although the distribution of won prize money by players can be expected to be highly skewed with the best players earning the most, the distribution should not affect the development of prize money overall with the best players per year included. After collecting data for the years 2018 to 1998, with 2019 being left out for not being completed as of the time of the writing of this text, prize money by all players won was summed up by the respective year. Subsequently, Pearson’s r was calculated to find out the relation of prize money won and the year.
 
-```{r}
+```{r fig 4, fig.cap="\\label{fig:fig4} Correlation of prize money won in dollars by individual players over time, Source: eSports Earnings."}
 
 scatterplot(sum_p_prize ~ Year, data=summa_p_prize, xlab="Year", ylab="Money in Dollar", 
             main="Scatterplot for prize money in $ by year for top 100 players", boxplot=FALSE, smooth=FALSE)
@@ -93,22 +94,25 @@ scatterplot(sum_p_prize ~ Year, data=summa_p_prize, xlab="Year", ylab="Money in 
 
 The strong correlation between prize money won by players and year is replicated with the prize money attached to single tournaments (GRAPH). After doing similar data preparation for the entire lists of tournaments and eSport events taking place between 2018 and 1998, analysis provides prize money and number of events (NOCH MACHEN!) are both strongly positive correlated with the year. This result leads to the notion that not only did the prize money for the individual tournament or event increased but they also increased in number. For this paper’s question about emerging organization in eSports, this finding is important as business opportunities grew not only in individual size but also in numbers, meaning more opportunities are provided for one to gain from.
 
-```{r}
+```{r fig5, fig.cap="\\label{fig:fig5} Correlation of prize money in dollars offered in eSport events over time, Source: eSports Earnings."}
 
 scatterplot(sum_e_prize ~ Year, data=summa_e_prize, xlab="Year", ylab="Money in Dollar", 
             main="Scatterplot for prize money in $ by year for events", boxplot=FALSE, smooth=FALSE)
+```
 
-
+```{r fig6, fig.cap="\\label{fig:fig6} Correlation of number of eSport events over time, Source: eSports Earnings."}
 scatterplot(sum_e_count ~ Year, data=summa_e_count, xlab="Year", ylab="Count of events", 
             main="Scatterplot for count of eSport events by year", boxplot=FALSE, smooth=FALSE)
 ```
 
 When looking at the provided data for teams and their won prize money through eSports activities, similar results as for the individual players and the events can be found. In the timeframe from 1998 to 2018 with the full list of teams for each year, the amount of prize money won by all the teams summed up as well as the number of teams are both positively correlated with years (GRAPH AND RESULTS). So not only does the amount of money available through and number of eSport activities increase, but also the individual as well as collective benefits increase as well as the number of teams involved in the eSport world.
-```{r}
+```{r fig7, fig.cap="\\label{fig:fig7} Correlation of prize money in dollars won by eSport teams over time, Source: eSports Earnings."}
 
 scatterplot(sum_t_prize ~ Year, data=summa_t_prize, xlab="Year", ylab="Money in Dollar", 
             main="Scatterplot for prize money in $ by year for teams", boxplot=FALSE, smooth=FALSE)
+```
 
+```{r fig8, fig.cap="\\label{fig:fig8} Correlation of number of eSport teams over time, Source: eSports Earnings."}
 scatterplot(sum_t_count ~ Year, data=summa_t_count, xlab="Year", ylab="Count of teamss", 
             main="Scatterplot for count of eSport teams by year", boxplot=FALSE, smooth=FALSE)
 ```
