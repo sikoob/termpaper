@@ -111,7 +111,9 @@ scatterplot(sum_e_count ~ Year, data=summa_e_count, xlab="Year", ylab="Count of 
             main="Scatterplot for count of eSport events by year", boxplot=FALSE, smooth=FALSE)
 ```
 
-When looking at the provided data for teams and their won prize money through eSports activities, similar results as for the individual players and the events can be found. In the timeframe from 1998 to 2018 with the full list of teams for each year, the amount of prize money won by all the teams summed up as well as the number of teams are both positively correlated with years (GRAPH AND RESULTS). So not only does the amount of money available through and number of eSport activities increase, but also the individual as well as collective benefits increase as well as the number of teams involved in the eSport world.
+When looking at the provided data for teams as organizations in eSports, data provides proof for increasing emergence of organization. The correlation of prize money won by teams over the years (Figure 9) with a r= .79 WEITER
+
+numbers of  and their won prize money through eSports activities, similar results as for the individual players and the events can be found. In the timeframe from 1998 to 2018 with the full list of teams for each year, the amount of prize money won by all the teams summed up as well as the number of teams are both positively correlated with years (GRAPH AND RESULTS). So not only does the amount of money available through and number of eSport activities increase, but also the individual as well as collective benefits increase as well as the number of teams involved in the eSport world.
 ```{r fig9, echo=FALSE, fig.width=7,fig.height=6, fig.cap="\\label{fig:fig9} Correlation of prize money in dollars won by eSport teams over time, Source: eSports Earnings."}
 
 scatterplot(sum_t_prize ~ Year, data=summa_t_prize, xlab="Year", ylab="Money in Dollar", 
@@ -130,7 +132,7 @@ The implications drawn from these findings through the online dataset imply that
 
 # 5. Concluison
 
-The results section may have a data exploration part, but in general the structure here depends on the specific project.
+KOMBI MI INTERESSE PUBLIC UND BUSINESS OPPORTUNITY
 
 
 
