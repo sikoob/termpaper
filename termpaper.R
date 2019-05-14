@@ -1330,32 +1330,32 @@ dat_t_1999$Year <- 1999
 dat_t_1999[,2] <- as.numeric(as.character(dat_t_1999[,2] ))
 head(dat_t_1999)
 
-# url <- read_html("https://www.esportsearnings.com/history/1998/teams")
-# 
-# nds <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "content_main", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "highlight", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_prize", " " ))]')
-# 
-# nmbs <- html_text(nds)
-# head(nmbs) 
-# 
-# nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
-# nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
-# class(nmbs2) <- "numeric"
-# nmbs2 <- format(nmbs2,2)
-# head(nmbs2)
-# 
-# nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_player", " " ))]')
-# name <- html_text(nds2)
-# head(name)
-# 
-# name <- matrix(as.character(name), ncol = 1, byrow = T)
-# head(name)
-# 
-# dat_t_1998 <- data.frame(name, nmbs2)
-# colnames(dat_t_1998) <- c("team_name", "prize_money", "number_tournaments")
-# dat_t_1998["Year"] <- NA
-# dat_t_1998$Year <- 1998
-# dat_t_1998[,2] <- as.numeric(as.character(dat_t_1998[,2] ))
-# head(dat_t_1998)            ##no teams in 1998
+url <- read_html("https://www.esportsearnings.com/history/1998/teams")
+
+nds <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "content_main", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "highlight", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_prize", " " ))]')
+
+nmbs <- html_text(nds)
+head(nmbs)
+
+nmbs <- nmbs[nmbs != "Kein Bild hinterlegt"]
+nmbs2 <- matrix(gsub("[^0123456789.]", "", nmbs), ncol = 2, byrow = T)
+class(nmbs2) <- "numeric"
+nmbs2 <- format(nmbs2,2)
+head(nmbs2)
+
+nds2 <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "detail_list_player", " " ))]')
+name <- html_text(nds2)
+head(name)
+
+name <- matrix(as.character(name), ncol = 1, byrow = T)
+head(name)
+
+dat_t_1998 <- data.frame(name, nmbs2)
+colnames(dat_t_1998) <- c("team_name", "prize_money", "number_tournaments")
+dat_t_1998["Year"] <- NA
+dat_t_1998$Year <- 1998
+dat_t_1998[,2] <- as.numeric(as.character(dat_t_1998[,2] ))
+head(dat_t_1998)            ##no teams in 1998
 
 #code creation top teams by year =================================
 
