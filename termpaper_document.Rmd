@@ -52,14 +52,14 @@ Opportunities for companies and individuals who are involved in eSports to creat
 # 3. TITLE
 
 eSports as the new form of digital contesting for video gamers by its nature provides a fruitful ground for this paper’s approach of new data sources. When not happening in a physical location, gamers use the Internet to play together in a game remotely, which is also true for teams and training (Freeman & Wohn 2019). Moreover, games, players and other topics concerning video games can be discussed by players and people interest in various online platforms like forums.
-Resulting, a lot of information about video games and more importantly eSports can be expected and is found online. Yet, the concern with data, that is produced by individuals who do not have the production of scientific data in mind, is that the data is messy and not useable for empirical analysis. For a first approach to eSports and the emergence of organization, a Google Trends Query with the gtrends package in RStudio Version 1.2.1335 was approached. First, the general term of esports was looked up with the ratio of searches through the Google Search engine. The trend implicates that CONTINUE
+Resulting, a lot of information about video games and more importantly eSports can be expected and is found online. Yet, the concern with data, that is produced by individuals who do not have the production of scientific data in mind, is that the data is messy and not useable for empirical analysis. For a first approach to eSports and the emergence of organization, a Google Trends Query with the gtrends package in RStudio Version 1.2.1335 was approached. First, the general term of esports was looked up with the ratio of searches through the Google Search engine. The trend (Figure 1) implicates that search trends for eSports peaked around mid 2014 and in the last third of 2015 but are now at a relatively lower but stable level. The same procedure for the term "eSport" produced a similar graph which is not displayed here.
 
 
 ```{r fig1,echo=FALSE, include=TRUE, fig.width=7,fig.height=6, fig.cap="\\label{fig:fig1}Search for term 'eSports' globally in Google Search over time, Source: Google."}
 plot(esports)
 ```
 
-These results would indicate that the public interest in general eSports declined over time judging by the amount of Google searches. Yet, one way to think about the development of eSports could be that general knowledge about eSports exists and only special knowledge is requested. To test this approach, Google Trends Query was used to look at the development of the named top games for eSport contests (Hayward 2018). The developments here (Figure 2) indicate that 
+These results would indicate that the public interest in general eSports in terms of Googles searches declined over time. Yet, it would be a too fast conclusion to draw that interest in the field of eSports in general declined. Perhaps general knowledge about eSports exists and only special knowledge is requested. To test this approach, Google Trends Query was used to look at the development of the top ten games for eSport contests (Hayward 2018). The developments here (Figure 2 & 3) indicate that there is a constant shift in interest for games with the decrease of amounts of searches for one game resulting in the increase for another. This circle of search development might find its explanation in the publishing of a new game catching the interest of the community until being replaced by another one.
 
 ```{r fig2, echo=FALSE, include = TRUE, fig.width=7,fig.height=6, fig.cap="\\label{fig:fig2}Search for top 1-5 eSport games globally in Google Search over time, Source: Google."}
 plot(games)
@@ -70,7 +70,7 @@ plot(games)
 plot(games2)
 ```
 
-Additionally, looking besides the plain searches for a certain key term, the described watching of gamers during competitions by streaming is an increasing entertainment market. APIs to get information from the main streaming platform of Twitch are sadly limited to approved usage by the Twitch decision makers which exceeded the amount of research time available for this paper. But as YouTube, the video platform by Google, also provides users with the ability to upload streaming videos and make live streams, Google Trend Query was again used by looking at the earlier top eSports games and their search inquiries on YouTube. The numbers (Figure 3) show that 
+Additionally, looking besides the plain searches for a certain key term, the described watching of gamers during competitions by streaming is an increasing entertainment market. APIs to get information from the main streaming platform of Twitch are sadly limited to approved usage by the Twitch decision makers which exceeded the amount of research time available for this paper. But as YouTube, the video platform by Google, also provides users with the ability to upload streaming videos and make live streams, Google Trend Query was again used by looking at the top ten eSports games and their search inquiries on YouTube. The findings (Figure 4 & 5) show very similar patterns to the Google Search results. 
 
 ```{r fig4, echo=FALSE, include=TRUE, fig.width=7,fig.height=6, fig.cap="\\label{fig:fig4}Search for top 1-5 eSport games globally in YouTube over time, Source: YouTube."}
 
@@ -82,7 +82,7 @@ plot(games_y)
 plot(games2_y)
 ```
 
-This first approach by using data available through Google and YouTube gives a hint that eSports and more particular the specific games developed RESULTS SUM UP. Importantly, this data only covered the public interest and not yet the business opportunities by investment into eSports and various tournaments. An analysis of available online data on this matter will be done in the next section.
+Thus, by first approaching eSports by popularity, Google Search trends indicate that while Search interest for general knowledge on eSports declined, interest in specific eSports contest games and their streams indicate a rather stable popularity base. To sum up these findings, public interest and popularity seem to be existing for eSports but depending on the games to be contested in. Therefore, a first hint by this online data is that organization might develop along these trends in game interest or that organizations in eSports even spread their portfolio to be adaptable to new trends and not only specify on one single game whose hype is bound to end. Yet, information on possible business opportunities is not that easy to interpret from this graphical analysis. An analysis of data online available for the business opportunities in eSports will be given in the next section.
 
 # 4. TITLE
 
@@ -125,9 +125,7 @@ scatterplot(sum_t_count ~ Year, data=summa_t_count, xlab="Year", ylab="Count of 
             main="Scatterplot for count of eSport teams by year", boxplot=FALSE, smooth=FALSE)
 ```
 
-The implications drawn from these findings through the online dataset imply that with increasing number of business opportunities in eSports through more prize money being available, emergence of organizations in the form of teams did indeed happen. While the prize money won by individual players increased, the money won by teams also increased. Yet, the important thing to note here is that while no data is available for this paper, an overlap of players being members of teams can be expected. For the descriptive approach of this paper, this circumstance does not create to big of a problem. Important is that with increasing business opportunities by available prize money, individual players did not stay alone and took up all the opportunities by themselves. Teams increased in numbers and winning share of the prize money. Pushing this argument further, emergence of organized teams in eSports may have come due to two possible mechanisms discussed in this paper. First, individual players started to organize themselves in teams because of an increasing complexity in eSports that increased to an amount to be too much for one individual. The indicator in this paper’s dataset would be the strong correlation between the year and the amount of listed eSport events and would replicate the finding by Freeman and Wohn (2019).Yet, the increasing business opportunities is also indicated by the strong correlation of prize money either offered by eSport events or won by individual or teams and year. This finding supports the notion of opportunists outside of eSports getting involved through sponsoring their own team (Heinz & Stroeh 2017) or otherwise creating a dedicated department for eSport participation (e.g. Vu 2018, ran 2018). While the motivations for participating in eSports with a team cannot be distinguished by the data at hand, arguments for the drivers of emergence of organizations in eSports have been found in the data that was collected online. NOCH ANZAHL TEAMS ETC REINMACHEN
-
-
+The implications drawn from these findings through the online dataset imply that with increasing number of business opportunities in eSports through more prize money being available, emergence of organizations in the form of teams did indeed happen. While the prize money won by individual players increased, the money won by teams also increased. Yet, the important thing to note here is that while no data is available for this paper, an overlap of players being members of teams can be expected. For the descriptive approach of this paper, this circumstance does not create to big of a problem. Important is that with increasing business opportunities by available prize money, individual players did not stay alone and took up all the opportunities by themselves. Teams increased in numbers and winning share of the prize money. Pushing this argument further, emergence of organized teams in eSports may have come due to two possible mechanisms discussed in this paper. First, individual players started to organize themselves in teams because of an increasing complexity in eSports that increased to an amount to be too much for one individual. The indicator in this paper’s dataset would be the strong correlation between the year and the amount of listed eSport events and would replicate the finding by Freeman and Wohn (2019).Yet, the increasing business opportunities is also indicated by the strong correlation of prize money either offered by eSport events or won by individual or teams and year. This finding supports the notion of opportunists outside of eSports getting involved through sponsoring their own team (Heinz & Stroeh 2017) or otherwise creating a dedicated department for eSport participation (e.g. Vu 2018, ran 2018). While the motivations for participating in eSports with a team cannot be distinguished by the data at hand, arguments for the drivers of emergence of organizations in eSports have been found in the data that was collected online.
 
 
 # 5. Concluison
@@ -137,28 +135,6 @@ KOMBI MI INTERESSE PUBLIC UND BUSINESS OPPORTUNITY
 
 
 
-
-
-
-### Analysis
-
-This section presents the main results, such as (for example) stats and graphs that show relationships, model results and/or clustering, PCA, etc.
-
-```{r}
-# What happens here depends on the specific project
-```
-
-```{r}
-# What happens here depends on the specific project
-```
-
-```{r}
-# What happens here depends on the specific project
-```
-
-## Discussion
-
-This section summarizes the results and may briefly outline advantages and limitations of the work presented.
 
 # References
 

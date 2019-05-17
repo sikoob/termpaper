@@ -1353,12 +1353,12 @@ head(name)
 name <- matrix(as.character(name), ncol = 1, byrow = T)
 head(name)
 
-dat_t_1998 <- data.frame(name, nmbs2)
-colnames(dat_t_1998) <- c("team_name", "prize_money", "number_tournaments")
-dat_t_1998["Year"] <- NA
-dat_t_1998$Year <- 1998
-dat_t_1998[,2] <- as.numeric(as.character(dat_t_1998[,2] ))
-head(dat_t_1998)            ##no teams in 1998
+# dat_t_1998 <- data.frame(name, nmbs2)
+# colnames(dat_t_1998) <- c("team_name", "prize_money", "number_tournaments")
+# dat_t_1998["Year"] <- NA
+# dat_t_1998$Year <- 1998
+# dat_t_1998[,2] <- as.numeric(as.character(dat_t_1998[,2] ))
+# head(dat_t_1998)            ##no teams in 1998
 
 #code creation top teams by year =================================
 
