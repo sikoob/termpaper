@@ -23,6 +23,9 @@ library(car)
 
 #?gtrends
 
+esport <- gtrends(c("esport"))
+plot(esport)
+
 esports <- gtrends(c("esports"))
 plot(esports)
 
