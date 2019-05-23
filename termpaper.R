@@ -1956,7 +1956,7 @@ cor.test(summa_e_prize$Year,summa_e_prize$sum_e_prize, method=c("pearson"))
 scatterplot(sum_e_prize ~ Year, data=summa_e_prize, xlab="Year", ylab="Money in Dollar", 
             main="Scatterplot for prize money in $ by year for events", boxplot=FALSE, smooth=FALSE, regLine=FALSE)
 
-boxplot(prize_money~Year, data=by_e_year, col= "blue", border="black")
+boxplot(prize_money~Year, data=by_e_year, col= "yellow", border="black")
 
 mean_e_prize <- tapply(by_e_year$prize_money, INDEX= by_e_year$Year, FUN=mean)
 list(mean_e_prize)
@@ -1980,7 +1980,7 @@ cor.test(summa_t_prize$Year,summa_t_prize$sum_t_prize, method=c("pearson"))
 scatterplot(sum_t_prize ~ Year, data=summa_t_prize, xlab="Year", ylab="Money in Dollar", 
             main="Scatterplot for prize money in $ by year for teams", boxplot=FALSE, smooth=FALSE, regLine=FALSE)
 
-boxplot(prize_money~Year, data=by_t_year, col= "blue", border="black")
+boxplot(prize_money~Year, data=by_t_year, col= "yellow", border="black")
 
 
 mean_t_prize <- tapply(by_t_year$prize_money, INDEX= by_t_year$Year, FUN=mean)
@@ -2004,3 +2004,7 @@ cor.test(summa_p_prize$Year,summa_p_prize$sum_p_prize, method=c("pearson"))
 scatterplot(sum_p_prize ~ Year, data=summa_p_prize, xlab="Year", ylab="Money in Dollar", 
             main="Scatterplot for prize money in $ by year for top 100 players", boxplot=FALSE, smooth=FALSE, regLine=FALSE)
 
+boxplot(prize_money~Year, data=by_p_year, col= "yellow", border="black")
+
+mean_p_prize <- tapply(by_p_year$prize_money, INDEX= by_p_year$Year, FUN=mean)
+list(mean_p_prize)
