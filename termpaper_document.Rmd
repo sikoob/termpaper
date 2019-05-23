@@ -94,7 +94,7 @@ For the individual players, the players’ name, nickname while playing and tota
 ```{r fig 6, echo=FALSE, fig.width=7,fig.height=6,  fig.cap="\\label{fig:fig6} Correlation of prize money won in dollars by individual players over time, Source: eSports Earnings."}
 
 scatterplot(sum_p_prize ~ Year, data=summa_p_prize, xlab="Year", ylab="Money in Dollar", 
-            main="Scatterplot for prize money in $ by year for top 100 players", boxplot=FALSE, smooth=FALSE)
+            main="Scatterplot for prize money in $ by year for top 100 players", boxplot=FALSE, smooth=FALSE, regLine=FALSE)
 
 ```
 
@@ -103,12 +103,12 @@ The strong correlation between prize money won by players and year is replicated
 ```{r fig7, echo=FALSE, fig.width=7,fig.height=6, fig.cap="\\label{fig:fig7} Correlation of prize money in dollars offered in eSport events over time, Source: eSports Earnings."}
 
 scatterplot(sum_e_prize ~ Year, data=summa_e_prize, xlab="Year", ylab="Money in Dollar", 
-            main="Scatterplot for prize money in $ by year for events", boxplot=FALSE, smooth=FALSE)
+            main="Scatterplot for prize money in $ by year for events", boxplot=FALSE, smooth=FALSE, regLine=FALSE)
 ```
 
 ```{r fig8, echo=FALSE, fig.width=7,fig.height=6, fig.cap="\\label{fig:fig8} Correlation of number of eSport events over time, Source: eSports Earnings."}
 scatterplot(sum_e_count ~ Year, data=summa_e_count, xlab="Year", ylab="Count of events", 
-            main="Scatterplot for count of eSport events by year", boxplot=FALSE, smooth=FALSE)
+            main="Scatterplot for count of eSport events by year", boxplot=FALSE, smooth=FALSE, regLine=FALSE)
 ```
 
 When looking at the provided data for teams as organizations in eSports, data provides proof for increasing emergence of organization. The correlation of prize money won by teams over the years (Figure 9) with a r= .79 WEITER
@@ -117,12 +117,12 @@ numbers of  and their won prize money through eSports activities, similar result
 ```{r fig9, echo=FALSE, fig.width=7,fig.height=6, fig.cap="\\label{fig:fig9} Correlation of prize money in dollars won by eSport teams over time, Source: eSports Earnings."}
 
 scatterplot(sum_t_prize ~ Year, data=summa_t_prize, xlab="Year", ylab="Money in Dollar", 
-            main="Scatterplot for prize money in $ by year for teams", boxplot=FALSE, smooth=FALSE)
+            main="Scatterplot for prize money in $ by year for teams", boxplot=FALSE, smooth=FALSE,regLine=FALSE)
 ```
 
 ```{r fig10, echo=FALSE, fig.width=7,fig.height=6, fig.cap="\\label{fig:fig10} Correlation of number of eSport teams over time, Source: eSports Earnings."}
 scatterplot(sum_t_count ~ Year, data=summa_t_count, xlab="Year", ylab="Count of teams", 
-            main="Scatterplot for count of eSport teams by year", boxplot=FALSE, smooth=FALSE)
+            main="Scatterplot for count of eSport teams by year", boxplot=FALSE, smooth=FALSE,regLine=FALSE)
 ```
 
 The implications drawn from these findings through the online dataset imply that with increasing number of business opportunities in eSports through more prize money being available, emergence of organizations in the form of teams did indeed happen. While the prize money won by individual players increased, the money won by teams also increased. Yet, the important thing to note here is that while no data is available for this paper, an overlap of players being members of teams can be expected. For the descriptive approach of this paper, this circumstance does not create to big of a problem. Important is that with increasing business opportunities by available prize money, individual players did not stay alone and took up all the opportunities by themselves. Teams increased in numbers and winning share of the prize money. Pushing this argument further, emergence of organized teams in eSports may have come due to two possible mechanisms discussed in this paper. First, individual players started to organize themselves in teams because of an increasing complexity in eSports that increased to an amount to be too much for one individual. The indicator in this paper’s dataset would be the strong correlation between the year and the amount of listed eSport events and would replicate the finding by Freeman and Wohn (2019).Yet, the increasing business opportunities is also indicated by the strong correlation of prize money either offered by eSport events or won by individual or teams and year. This finding supports the notion of opportunists outside of eSports getting involved through sponsoring their own team (Heinz & Stroeh 2017) or otherwise creating a dedicated department for eSport participation (e.g. Vu 2018, ran 2018). While the motivations for participating in eSports with a team cannot be distinguished by the data at hand, arguments for the drivers of emergence of organizations in eSports have been found in the data that was collected online.

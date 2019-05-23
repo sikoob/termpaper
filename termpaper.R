@@ -1954,14 +1954,14 @@ summa_e_prize <- summarize(by_e_year, sum_e_prize=sum(prize_money), na.rm= TRUE)
 cor.test(summa_e_prize$Year,summa_e_prize$sum_e_prize, method=c("pearson"))
 
 scatterplot(sum_e_prize ~ Year, data=summa_e_prize, xlab="Year", ylab="Money in Dollar", 
-            main="Scatterplot for prize money in $ by year for events", boxplot=FALSE, smooth=FALSE)
+            main="Scatterplot for prize money in $ by year for events", boxplot=FALSE, smooth=FALSE, regLine=FALSE)
 
 summa_e_count <- summarize(by_e_year, sum_e_count=sum(`Count`), na.rm= TRUE)
 
 cor.test(summa_e_count$Year,summa_e_count$sum_e_count, method=c("pearson"))
 
 scatterplot(sum_e_count ~ Year, data=summa_e_count, xlab="Year", ylab="Count of events", 
-            main="Scatterplot for count of eSport events by year", boxplot=FALSE, smooth=FALSE)
+            main="Scatterplot for count of eSport events by year", boxplot=FALSE, smooth=FALSE, regLine=FALSE)
 
 #getting correlations for teams
 
@@ -1972,14 +1972,14 @@ summa_t_prize <- summarize(by_t_year, sum_t_prize=sum(prize_money), na.rm= TRUE)
 cor.test(summa_t_prize$Year,summa_t_prize$sum_t_prize, method=c("pearson"))
 
 scatterplot(sum_t_prize ~ Year, data=summa_t_prize, xlab="Year", ylab="Money in Dollar", 
-            main="Scatterplot for prize money in $ by year for teams", boxplot=FALSE, smooth=FALSE)
+            main="Scatterplot for prize money in $ by year for teams", boxplot=FALSE, smooth=FALSE, regLine=FALSE)
 
 summa_t_count <- summarize(by_t_year, sum_t_count=sum(`Count`), na.rm= TRUE)
 
 cor.test(summa_t_count$Year,summa_t_count$sum_t_count, method=c("pearson"))
 
 scatterplot(sum_t_count ~ Year, data=summa_t_count, xlab="Year", ylab="Count of teams", 
-            main="Scatterplot for count of eSport teams by year", boxplot=FALSE, smooth=FALSE)
+            main="Scatterplot for count of eSport teams by year", boxplot=FALSE, smooth=FALSE, regLine=FALSE)
 
 #getting correlations for individual players
 
@@ -1990,12 +1990,5 @@ summa_p_prize <- summarize(by_p_year, sum_p_prize=sum(prize_money), na.rm= TRUE)
 cor.test(summa_p_prize$Year,summa_p_prize$sum_p_prize, method=c("pearson"))
 
 scatterplot(sum_p_prize ~ Year, data=summa_p_prize, xlab="Year", ylab="Money in Dollar", 
-            main="Scatterplot for prize money in $ by year for top 100 players", boxplot=FALSE, smooth=FALSE)
+            main="Scatterplot for prize money in $ by year for top 100 players", boxplot=FALSE, smooth=FALSE, regLine=FALSE)
 
-
-
-#   
-# # #API tryout
-# #high_earn <- fromJSON('https://api.esportsearnings.com/v0/LookupHighestEarningPlayers?apikey=27a22c5b980f900cb6d5b7d0c3d9d548daba6a57abdec2d115919ef8b01745bd&format=json', ssl.verifypeer=FALSE)
-# # 
-# #head(high_earn)
