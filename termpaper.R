@@ -1956,6 +1956,12 @@ cor.test(summa_e_prize$Year,summa_e_prize$sum_e_prize, method=c("pearson"))
 scatterplot(sum_e_prize ~ Year, data=summa_e_prize, xlab="Year", ylab="Money in Dollar", 
             main="Scatterplot for prize money in $ by year for events", boxplot=FALSE, smooth=FALSE, regLine=FALSE)
 
+boxplot(prize_money~Year, data=by_e_year, col= "blue", border="black")
+
+mean_e_prize <- tapply(by_e_year$prize_money, INDEX= by_e_year$Year, FUN=mean)
+list(mean_e_prize)
+
+
 summa_e_count <- summarize(by_e_year, sum_e_count=sum(`Count`), na.rm= TRUE)
 
 cor.test(summa_e_count$Year,summa_e_count$sum_e_count, method=c("pearson"))
