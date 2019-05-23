@@ -1980,6 +1980,9 @@ cor.test(summa_t_prize$Year,summa_t_prize$sum_t_prize, method=c("pearson"))
 scatterplot(sum_t_prize ~ Year, data=summa_t_prize, xlab="Year", ylab="Money in Dollar", 
             main="Scatterplot for prize money in $ by year for teams", boxplot=FALSE, smooth=FALSE, regLine=FALSE)
 
+mean_t_prize <- tapply(by_t_year$prize_money, INDEX= by_t_year$Year, FUN=mean)
+list(mean_t_prize)
+
 summa_t_count <- summarize(by_t_year, sum_t_count=sum(`Count`), na.rm= TRUE)
 
 cor.test(summa_t_count$Year,summa_t_count$sum_t_count, method=c("pearson"))
