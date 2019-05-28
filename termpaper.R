@@ -20,7 +20,6 @@ library(magrittr)
 library(stringr)
 library(car)
 
-
 #?gtrends
 
 esport <- gtrends(c("esport"))
