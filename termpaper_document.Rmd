@@ -36,7 +36,7 @@ library(tinytex)
 source('termpaper.R', print.eval = FALSE) 
 ```
 
-
+\newpage
 # 1. Introduction
 
 Sociological analysis of emerging organizations has been linked to network analysis (e.g. Granovetter 1985, Larson & Starr 1993), individual characteristics to distinguish entrepreneurs and ordinary managers (e.g. Miller 1983, Timmons 1980) and the environment that the organization is expected to operate in (e.g. Hannan & Freeman 1989). Linking these different areas together, Learned’s model for emerging organizations (Learned 1992) suggests four dimensions which determine the decision to found an organization: The individual traits, intentional motivators, the opportunity to found and the final decision. In traditional sociological research on organizations, these dimensions are inspected by gathering information through case studies about companies of interest. Findings are then generalized to the entirety of working environments (e.g. Johnson & Powell 2015, Thompson 1967). By using case studies, a single or a small group of organizations is analyzed in-depth while covering different dimensions of organizational emergence and interaction. Yet, case studies are time costly to collect all necessary information and observe the processes in question. Moreover, the resulting data sets are also limited to a smaller number of analyzable observations putting in question the generalizability of the study in question. Even when doing retrospective analysis (e.g. Erikson 2014), researchers often face incomplete data sets that make historical analysis of emerging organizations difficult or need extensive time spent in archives to gather and analyze all necessary information.
@@ -133,7 +133,7 @@ The purpose of this paper was to identify emergence of organization in the field
 
 With the presented findings, analytical problems did exist which should be improved upon in future research. No causal inference was possible with the available data, limiting this paper's findings to parallel observations. Yet, it can only be argued that public interest and business opportunities cause emergence of organization in eSports. No empirical causality test was possible for this assumption. Time ordering of datasets in future research should be approached to single out causal effects. Furthermore, no in-depth data on motivation of players to join teams was available for this paper. As data for this purpose would only be available through published interviews that may lack certain scientific control for research purpose, it may be questionable whether online data has an adavantage to traditional case studies in organizational research with this point. An approach for future research would be a combination of traditional organizational sociological methods in an online environment. This would for example lay with a case study on specific eSport teams or sponsors, tracking their development and organizational decisions through online data. Additionally, interviews and observations of the teams and sponsors in question could be conducted to enrich the understanding of motivators and benefitors for a decision to form a team in eSports competition. This approach would combine the benefits of online data and traditional methods in organizational sociology to achieve better research results and get more adequate answers on the emergence of organization in eSports.
 
-
+\newpage
 # References
 
 Burroughs, Benjamin; Rama, Paul (2015): The eSports Trojan Horse: Twitch and Streaming Futures. Journal of Virtual Worlds Research 8(2): 1-5.
@@ -188,7 +188,7 @@ Wagner, Michael G. (2006): On the Scientific Relevance of eSports. International
 
 Ward, Michael R.; Harmon, Alexander (2018): ESport Superstars. Through http://dx.doi.org/10.2139/ssrn.3154763 (last visited: 18.05.2019).
 
-
+\newpage
 # Statutory Declaration
 "I hereby declare that the paper presented is my own work and that I have not called upon the help of a third party. In addition, I affirm that neither I nor anybody else has submitted this paper or parts of it to obtain credits elsewhere before. I have clearly marked and acknowledged all quotations or references that have been taken from the works of other. All secondary literature and other sources are marked and listed in the bibliography. The same applies to all charts, diagrams and illustrations as well as to all Internet sources. Moreover, I consent to my paper being electronically stores and sent anonymously in order to be checked for plagiarism. I am aware that the paper cannot be evaluated and may be graded “failed” (“nicht ausreichend”) if the declaration is not made.”
 
