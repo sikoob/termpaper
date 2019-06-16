@@ -56,32 +56,22 @@ eSports as the new form of digital contesting for video gamers by its nature pro
 For a first approach to eSports and the emergence of organization, a Google Trends Query with the gtrends package in RStudio Version 1.2.1335 (R Core Team 2018) was globally approached. First, the general term of "eSports" was looked up with the ratio of searches through the Google Search engine. The trend (Figure 1) implicates that search trends for eSports peaked around mid 2014 and in the last third of 2015 but are now at a relatively lower but stable level. The same procedure for the term "eSport" produced a similar graph which is not displayed here.
 
 
-```{r fig1,echo=FALSE, include=TRUE, fig.width=7,fig.height=6, fig.cap="\\label{fig:fig1}Search for term 'eSports' globally in Google Search over time, Source: Google."}
+```{r fig1,echo=FALSE, include=TRUE, fig.width=7,fig.height=6, fig.cap="\\label{fig:fig1}Search for term 'eSports' globally in Google Search over time, Source: Google Trends Query."}
 plot(esports)
 ```
 
 These results would indicate that the public interest in general eSports in terms of Googles searches declined over time. Yet, this might only apply for general interest in the field but maybe not special games and competition around them. To test this approach, Google Trends Query was used to look at the development of the top ten games for eSport contests (Hayward 2018). The developments here (Figure 2 & 3) indicate that there is a constant shift in interest for games with the decrease of searches for one game being replaced by the increase for another. This cycle of search development might find its explanation in the publishing of a new game catching the interest of the community until being replaced by newer game.
 
-```{r fig2, echo=FALSE, include = TRUE, fig.width=7,fig.height=6, fig.cap="\\label{fig:fig2}Search for top 1-5 eSport games globally in Google Search over time, Source: Google."}
+```{r fig2, echo=FALSE, include = TRUE, fig.width=7,fig.height=6, fig.cap="\\label{fig:fig2}Search for top 1-5 eSport games globally in Google Search over time, Source: Google Trends Query."}
 plot(games)
 ```
 
-```{r fig3, echo=FALSE, include = TRUE, fig.width=7,fig.height=6, fig.cap="\\label{fig:fig3}Search for top 6-10 eSport games globally in Google Search over time, Source: Google."}
+```{r fig3, echo=FALSE, include = TRUE, fig.width=7,fig.height=6, fig.cap="\\label{fig:fig3}Search for top 6-10 eSport games globally in Google Search over time, Source: Google Trends Query."}
 
 plot(games2)
 ```
 
-Additionally, the described streaming of eSports competition is an increasing entertainment market. APIs to get information from the main streaming platform Twitch are sadly limited to approved usage which was not obtained during the work for this paper. But as YouTube, the video platform by Google, also provides users with the ability to upload streaming videos and make live streams, Google Trend Query was again used by looking at the top ten eSports games and their search inquiries on YouTube. The findings (Figure 4 & 5) show very similar patterns to the Google Search results. 
-
-```{r fig4, echo=FALSE, include=TRUE, fig.width=7,fig.height=6, fig.cap="\\label{fig:fig4}Search for top 1-5 eSport games globally in YouTube over time, Source: YouTube."}
-
-plot(games_y)
-```
-
-```{r fig5, echo=FALSE, include = TRUE, fig.width=7,fig.height=6, fig.cap="\\label{fig:fig5}Search for top 6-10 eSport games globally in YouTube over time, Source: Google."}
-
-plot(games2_y)
-```
+Additionally, the described streaming of eSports competition is an increasing entertainment market. APIs to get information from the main streaming platform Twitch are sadly limited to approved usage which was not obtained during the work for this paper. But as YouTube, the video platform by Google, also provides users with the ability to upload streaming videos and make live streams, Google Trend Query was again used by looking at the top ten eSports games and their search inquiries on YouTube. The findings in the Appendix (Figure 9 & 10) show very similar patterns to the Google Search results. 
 
 Thus, by first approaching eSports by public interest, Google Search trends indicate that while search interest for general knowledge on eSports declined, interest in specific eSports contest games and their streams indicate a shifting popularity base. To sum up these findings, public interest seems to be existing for eSports but depending on the games themselves. Therefore, a first hint by this online data is that organization might develop along these trends in game interest or might spread their portfolio to be adaptable to new trends and not only specify on one single game whose hype is bound to end. Sadly, this approach is limited to visiual inspection. Additionally, information on possible business opportunities or individual traits is hardly interpretable from this graphical analysis. Therefore, available data on the other influences on organizational decision will be approached in the next section.
 
@@ -92,7 +82,7 @@ Faced with the described problems during the search for useable datasets for a d
 
 For the individual players, the player’s name and total prize money won in eSports competition for the respective year were collected. For each year, collection was restricted to the best 100 players. This decision was made due to the complexity of data collection unreasonably increasing while trying to get data for players outside of the top 100 players by the website’s structure. Additionally, although the distribution of won prize money by players can be expected to be highly skewed with the best players earning the most, the distribution should not affect the development of prize money overall with the best players per year included. After collecting data for the years 2018 to 1998, with 2019 being left out for not being completed as of the time of the writing of this paper, prize money by all players was summed up by the respective year. Subsequently, Pearson’s r was calculated to find out the relation of prize money won and the year. A Pearson's correlation test found a correlation of amount in won prize money in $ and the year of r= .81 for the top 100 players in each year (Figure 6). Although limiting the players to 100 in each year, the positive strong correlation indicates a strong increase of prize money won with continuing years. A visual check of boxplots on unsummed won prize money by year as well as means over years provided that there was an overall increase in won prize money at least in the top 100 players and no centralization on only an elite group. At least an argument against a strong left skewed distribution of won prize money with some deviation in prize money distribution existing can be made. As a second check, the amount of prize money available in events and won by teams will be looked at in the subsequently.
 
-```{r fig 6, echo=FALSE, fig.width=7,fig.height=6,  fig.cap="\\label{fig:fig6} Correlation of prize money won in dollars by individual players over time, Source: eSports Earnings."}
+```{r fig 4, echo=FALSE, fig.width=7,fig.height=6,  fig.cap="\\label{fig:fig4} Correlation of prize money won in dollars by individual players over time, Source: eSports Earnings."}
 
 scatterplot(sum_p_prize ~ Year, data=summa_p_prize, xlab="Year", ylab="Money in Dollar", 
             main="Scatterplot for prize money in $ by year for top 100 players", boxplot=FALSE, smooth=FALSE, regLine=FALSE)
@@ -101,25 +91,25 @@ scatterplot(sum_p_prize ~ Year, data=summa_p_prize, xlab="Year", ylab="Money in 
 
 The strong positive correlation between prize money won by players and year is replicated with the summed prize money offered in tournaments per year (Figure 7) with a correlation of r= .77. Visual checking of boxplots and means of prize money offered by eSport events over years provided that there as an overall increase of medium offered prize money. Subsequently, while strong outliers were detectable, the increase in offered prize money did not concentrate solely on one or two special events but included several. eSport events in total increased their prize money pool over years. Additionally, the number of eSport events taking place increased (Figure 8) with a correlation of r= .87 over years. This finding is especially interesting when considering business opportunities that become more widely available. With this setup, actors interested in taking a business opportunity in eSports are arguably provided with more chances since they have more possibilities of events to choose from. The final assessment for this paper's topic of emergence of organization will see whether increased chances also have increased numbers of organizations intending to profit of them.
 
-```{r fig7, echo=FALSE, fig.width=7,fig.height=6, fig.cap="\\label{fig:fig7} Correlation of prize money in dollars offered in eSport events over time, Source: eSports Earnings."}
+```{r fig5, echo=FALSE, fig.width=7,fig.height=6, fig.cap="\\label{fig:fig5} Correlation of prize money in dollars offered in eSport events over time, Source: eSports Earnings."}
 
 scatterplot(sum_e_prize ~ Year, data=summa_e_prize, xlab="Year", ylab="Money in Dollar", 
             main="Scatterplot for prize money in $ by year for events", boxplot=FALSE, smooth=FALSE, regLine=FALSE)
 ```
 
-```{r fig8, echo=FALSE, fig.width=7,fig.height=6, fig.cap="\\label{fig:fig8} Correlation of number of eSport events over time, Source: eSports Earnings."}
+```{r fig6, echo=FALSE, fig.width=7,fig.height=6, fig.cap="\\label{fig:fig6} Correlation of number of eSport events over time, Source: eSports Earnings."}
 scatterplot(sum_e_count ~ Year, data=summa_e_count, xlab="Year", ylab="Count of events", 
             main="Scatterplot for count of eSport events by year", boxplot=FALSE, smooth=FALSE, regLine=FALSE)
 ```
 
 When looking at the provided data for teams as organizations in eSports, it needs to be noted that no team data was available for the year 1998. Thus, 1998 was dropped from the dataset. In general, data provides proof for increasing emergence of organization. The correlation of summed prize money won by teams over years (Figure 9) with a r= .79 shows a similar pattern as the data on events and individual players. Again, visiual inspection of boxplots and means of won prize money over years provided an overall increase of mean won money over years. Boxplots provided again strong outliers but no centralization on just one team. Also the number of teams (Figure 10) increased over years with a calculated r= .93. As this increase seemingly answers the question about emergence of organization, the combination with the finding on won prize money by teams provides that teams actually cease the business opportunities in eSports in terms of getting involved in competition for prize money.
-```{r fig9, echo=FALSE, fig.width=7,fig.height=6, fig.cap="\\label{fig:fig9} Correlation of prize money in dollars won by eSport teams over time, Source: eSports Earnings."}
+```{r fig7, echo=FALSE, fig.width=7,fig.height=6, fig.cap="\\label{fig:fig7} Correlation of prize money in dollars won by eSport teams over time, Source: eSports Earnings."}
 
 scatterplot(sum_t_prize ~ Year, data=summa_t_prize, xlab="Year", ylab="Money in Dollar", 
             main="Scatterplot for prize money in $ by year for teams", boxplot=FALSE, smooth=FALSE,regLine=FALSE)
 ```
 
-```{r fig10, echo=FALSE, fig.width=7,fig.height=6, fig.cap="\\label{fig:fig10} Correlation of number of eSport teams over time, Source: eSports Earnings."}
+```{r fig8, echo=FALSE, fig.width=7,fig.height=6, fig.cap="\\label{fig:fig8} Correlation of number of eSport teams over time, Source: eSports Earnings."}
 scatterplot(sum_t_count ~ Year, data=summa_t_count, xlab="Year", ylab="Count of teams", 
             main="Scatterplot for count of eSport teams by year", boxplot=FALSE, smooth=FALSE,regLine=FALSE)
 ```
@@ -132,6 +122,20 @@ The implications drawn from these findings through online data imply that at lea
 The purpose of this paper was to identify emergence of organization in the field of eSports through online data. This way of gathering information on organizations is intended to even out weaknesses of sociological research on organizations like long time frames for data collection or incomplete datasets. The pre-conditions for emergence of organizations were identified through public interest and existing buisness opportunities in accordance with Learned's (1992) model for organization formation. Interest development for eSports and the top ten eSport games in Google Search and YouTube indicated that the public interest is existing with specialized knowledge for games and a time trend increasing for new games and then steadily declining. This finding indicates that the interested public is already educated with existing experience in eSports. Business opportunities were analyzed by using data from eSports Earnings. Strong positive correlations were found for prize money won by individuals and teams. Additionally, also strong positive correlations were found for prize money offered by and numbers of eSport events over years. These findings indicate that business opportunities increased in eSports over time which providing ground for an increased emergence of organization. Indeed, a strong positive correlation of number of teams in eSports over years as indicator for organization was found. Thus, the conclusion was drawn that public interest as well as existing business opportunities at least hint at positively influencing emergence of organization.
 
 With the presented findings, analytical problems did exist which should be improved upon in future research. No causal inference was possible with the available data, limiting this paper's findings to parallel observations. Thus, it can only be argued that public interest and business opportunities cause emergence of organization in eSports. No empirical causality test was possible for this assumption. Time ordering of datasets in future research should be approached to single out causal effects. Furthermore, no data for individual traits like motivation of players to join teams or networks were available for this paper. As data for this purpose would only be available through published interviews that may lack certain scientific control for research purpose, it may be questionable whether online data has an adavantage over traditional case studies in organizational here. Suggesting, an approach for future research would be a combination of traditional organizational sociological methods in an online environment. This would for example lay with a case study on specific eSport teams or sponsors, tracking their development and organizational decisions through online data. Additionally, interviews and observations of the teams and sponsors in question could be conducted to enrich the understanding of motivators and benefitors for a decision to form a team in eSports competition. This approach would combine the benefits of online data and traditional methods in organizational sociology to achieve better research results and get more adequate answers on the emergence of organization in eSports.
+
+\newpage
+#Appendix
+
+```{r fig9, echo=FALSE, include=TRUE, fig.width=7,fig.height=6, fig.cap="\\label{fig:fig9}Search for top 1-5 eSport games globally in YouTube over time, Source: Google Trends Query."}
+
+plot(games_y)
+```
+
+```{r fig10, echo=FALSE, include = TRUE, fig.width=7,fig.height=6, fig.cap="\\label{fig:fig10}Search for top 6-10 eSport games globally in YouTube over time, Source: Google Trends Query."}
+
+plot(games2_y)
+```
+
 
 \newpage
 # References
