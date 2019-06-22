@@ -140,7 +140,7 @@ Burroughs, Benjamin; Rama, Paul (2015): The eSports Trojan Horse: Twitch and Str
 
 Erikson, Emily (2014): Between Monopoly and Free Trade: The English East Indian Company, 1600-1757. Princeton, NJ: Princeton University Press.
 
-ESBD (2018): Was ist eSport?. In ESBD -  eSport Bund Deutschland e.V. through https://esportbund.de/esport/was-ist-esport/ (last visited: 18.05.2019).
+ESBD (2018): Was ist eSport?. In ESBD -  eSport Bund Deutschland e.V. through https://esportbund.de/esport/was-ist-esport/ (last visited: 22.06.2019).
 
 Freeman, Guo; Wohn, Donghee Y. (2019): Understanding eSports Team Formation and Coordination. Computer supported cooperative work (CSCW) 28(1-2): 95-126.
 
@@ -148,7 +148,7 @@ Granovetter, Mark (1985): Economic action and social structure: A theory of embe
 
 Hannan, Michael T.; Freeman, John (1989): Organizational ecology. Cambridge: Harvard University Press.
 
-Hayward, Andrew (2018): The 10 Biggest Esports of 2018 by Total Prize Pool. In The eSports Observer through https://esportsobserver.com/10-biggest-prize-pools-2018/ (last visited: 18.05.2019).
+Hayward, Andrew (2018): The 10 Biggest Esports of 2018 by Total Prize Pool. In The eSports Observer through https://esportsobserver.com/10-biggest-prize-pools-2018/ (last visited: 22.06.2019).
 
 Heinz, Julia; Stroeh, Anton (2017): The eSports Market and eSports Sponsoring. Marburg: Tectum Verlag.
 
@@ -158,35 +158,35 @@ Larson, Andrea; Starr, Jennifer A. (1993): A network model of organization forma
 
 Learned, Kevin E. (1992): What happened before the organization? A model of organization formation. Entrepreneurship theory and practice 17(1): 39-48.
 
-LPE (2018): The Video Games’ Industry is Bigger Than Hollywood. In LPeSport through https://lpesports.com/e-sports-news/the-video-games-industry-is-bigger-than-hollywood (last visited: 18.05.2019).
+LPE (2018): The Video Games’ Industry is Bigger Than Hollywood. In LPeSport through https://lpesports.com/e-sports-news/the-video-games-industry-is-bigger-than-hollywood (last visited: 22.06.2019).
 
-Meola, Andrew (2018): The biggest companies sponsoring eSports teams and tournaments. In Business Insider Deutschland through https://www.businessinsider.de/top-esports-sponsors-gaming-sponsorships-2018-1?r=US&IR=T (last visited: 18.05.2019).
+Meola, Andrew (2018): The biggest companies sponsoring eSports teams and tournaments. In Business Insider Deutschland through https://www.businessinsider.de/top-esports-sponsors-gaming-sponsorships-2018-1?r=US&IR=T (last visited: 22.06.2019).
 
 Miller, Danny (1983): The correlates of entrepreneurship in three types of firms. Management Science 29(7): 770-791.
 
-Niemeier, Timo (2019): 7Sports sichert sich neue eSports-Rechte fuer ProSieben Maxx. In DWDL.de through https://www.dwdl.de/nachrichten/71178/7sports_sichert_sich_neue_esportsrechte_fuer_prosieben_maxx/ (last visited: 18.05.2019).
+Niemeier, Timo (2019): 7Sports sichert sich neue eSports-Rechte fuer ProSieben Maxx. In DWDL.de through https://www.dwdl.de/nachrichten/71178/7sports_sichert_sich_neue_esportsrechte_fuer_prosieben_maxx/ (last visited: 22.06.2019).
 
 R Core Team (2018). R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. URL: https://www.R-project.org/.
 
-ran (2018): Diese Bundesligisten sind im eSport aktiv. In ran through https://www.ran.de/esport/bildergalerien/diese-bundesligisten-sind-im-esport-aktiv (last visited: 18.05.2019).
+ran (2018): Diese Bundesligisten sind im eSport aktiv. In ran through https://www.ran.de/esport/bildergalerien/diese-bundesligisten-sind-im-esport-aktiv (last visited: 22.06.2019).
 
-Redinger, Jochen (2019): Phaenomen LAN-Party – Ein Dinosaurier der Videospielkultur. In GameStar through https://www.gamestar.de/artikel/phaenomen-lan-party-der-dinosaurier-der-videospielkultur,3324928.html (last visited: 18.05.2019).
+Redinger, Jochen (2019): Phaenomen LAN-Party – Ein Dinosaurier der Videospielkultur. In GameStar through https://www.gamestar.de/artikel/phaenomen-lan-party-der-dinosaurier-der-videospielkultur,3324928.html (last visited: 22.06.2019).
 
-Schieber, Jonathan (2019): Video game revenue tops $43 billion in 2018, an 18% jump from 2017. In TechCrunch through https://techcrunch.com/2019/01/22/video-game-revenue-tops-43-billion-in-2018-an-18-jump-from-2017/?guccounter=1&guce_referrer_us=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_cs=70GHWyamlASU8jhJ4Gns2A (last visited: 18.05.2019).
+Schieber, Jonathan (2019): Video game revenue tops $43 billion in 2018, an 18% jump from 2017. In TechCrunch through https://techcrunch.com/2019/01/22/video-game-revenue-tops-43-billion-in-2018-an-18-jump-from-2017/?guccounter=1&guce_referrer_us=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_cs=70GHWyamlASU8jhJ4Gns2A (last visited: 22.06.2019).
 
 Scholz, Tobias M. (2019): eSports is Business: Management in the World of Competitive Gaming. Cham: Palgrave MacMillan.
 
-Statista (2019): Anteil der privaten Haushalte in Deutschland mit einer Spielkonsole von 2006 bis 2018. In statista – Das Statistik-Portal through https://de.statista.com/statistik/daten/studie/198640/umfrage/anteil-der-haushalte-in-deutschland-mit-einer-spielkonsole-seit-2006/ (last visited: 18.05.2019).
+Statista (2019): Anteil der privaten Haushalte in Deutschland mit einer Spielkonsole von 2006 bis 2018. In statista – Das Statistik-Portal through https://de.statista.com/statistik/daten/studie/198640/umfrage/anteil-der-haushalte-in-deutschland-mit-einer-spielkonsole-seit-2006/ (last visited: 22.06.2019).
 
 Thompson, Edward P. (1967): Time, work-discipline, and industrial capitalism. Past & present 37: 56-97.
 
 Timmons, Jeffry A. (1980): Business plan is more than a financing device. Harvard Business Review 58(2): 198-206.
 
-Vu, Linh (2018): “NBA 2K muss noch aufholen“. In sport1 through https://www.sport1.de/esports/2018/09/nba-2k19-das-sagen-die-profis-zum-basketball-esports  (last visited: 18.05.2019).
+Vu, Linh (2018): “NBA 2K muss noch aufholen“. In sport1 through https://www.sport1.de/esports/2018/09/nba-2k19-das-sagen-die-profis-zum-basketball-esports  (last visited: 22.06.2019).
 
 Wagner, Michael G. (2006): On the Scientific Relevance of eSports. International conference on internet computing: 437-442.
 
-Ward, Michael R.; Harmon, Alexander (2018): ESport Superstars. Through http://dx.doi.org/10.2139/ssrn.3154763 (last visited: 18.05.2019).
+Ward, Michael R.; Harmon, Alexander (2018): ESport Superstars. Through http://dx.doi.org/10.2139/ssrn.3154763 (last visited: 22.06.2019).
 
 \newpage
 # Statutory Declaration
